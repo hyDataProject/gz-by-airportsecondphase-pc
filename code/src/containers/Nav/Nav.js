@@ -13,7 +13,7 @@ export default class Nav extends Component {
         return (
             <div className={"Layer"}>
                 <div className={"Nav"}>
-                    哈哈哈哈或者这个时nav
+                    哈哈哈哈或者这个时n
                 </div>
             </div>
         )

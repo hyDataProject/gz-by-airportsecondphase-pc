@@ -9,8 +9,14 @@
 import Router from  './Router/Router';
 import Main from './Main/Main';
 import Nav from './Nav/Nav';
+import FlyCont from "./FlyCont/FlyCont";
+import PublicArea from "./PublicArea/PublicArea";
+import TerminalCont from "./TerminalCont/TerminalCont";
 export {
     Main,
     Nav,
-    Router
+    Router,
+    TerminalCont,
+    FlyCont,
+    PublicArea
 }

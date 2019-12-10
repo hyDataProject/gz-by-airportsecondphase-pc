@@ -64,6 +64,7 @@ export default class FlightSecurity extends Component {
                     renderItem: this.renderItem,
                     silent: true,
                     data: [100, 100],
+                    silent: true,
                     itemStyle: {
                         borderColor: 'red',
                         borderWidth: 3

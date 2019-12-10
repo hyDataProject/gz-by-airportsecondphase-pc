@@ -13,6 +13,12 @@ if (NODE_ENV === "pro") {
   InterfaceSwitch = true;
 }
 export const InterfaceList = {
+  /* 张琴开始 */
+  TaxiingFlightCount: true,
+  FltSafeguardAnalyze: true,
+  PsgEnterOutCount: true,
+  PsgHourlyDistribution: true,
+  /* 张琴结束 */
   ReleaseRate: true,
   FltDelaySortieCount:true,
 };

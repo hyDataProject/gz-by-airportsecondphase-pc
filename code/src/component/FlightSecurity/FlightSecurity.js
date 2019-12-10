@@ -3,25 +3,63 @@
  */
 import './FlightSecurity.scss';
 import { TitleCom } from "com/index";
+import barBg from 'img/FlightSecurity_bar_bg.png';
+import CountUp from 'react-countup';
 export default class FlightSecurity extends Component {
     constructor(props){
         super(props);
         this.state = {
-
+            plan: 0
         }
         this.myChart = null;
     }
     componentDidMount(){
         this.myChart = echarts.init(document.getElementById('FlightSecurity'))
-        this.draw()
+        this.getData();
+        this.reloadId = setInterval(() => {
+            this.getData()
+        },globalTimer.fltSafeguardAnalyze)
     }
     componentWillReceiveProps(nextProps){
 
     }
-    draw(){
+    componentWillUnmount(){
+        clearInterval(this.reloadId);
+    }
+    getData(){
+        axios({
+            method: 'get',
+            url: realAddress[0].url + '/pc/fltSafeguardAnalyze',
+        }).then((res) => {
+            if(res.data.code === 0){
+                let result = res.data.result;
+                this.setState({
+                    plan: result.plan
+                })
+                this.draw(result)
+            }
+        });
+    }
+    renderItem(params, api) {
+        // 自定义系列
+        let categoryIndex = api.value(1);
+        let start = api.coord([api.value(1), categoryIndex]);
+        return {// 背景阴影
+            type: 'image',
+            style: {
+                image: barBg,
+                //   width: 500,
+                width: 250,
+                height: 25,
+                x: 34,
+                y: start[1] - 12.8,
+            }
+        }
+    }
+    draw(result){
+        this.myChart.clear();
         let option = {
-            // backgroundColor: '#1e3367',
-            color: ['red','#09EDB4', '#00C2F5', '#DAF3FF'],
+            color: ['red','#09eeb4', '#00c2f5', '#daf3ff'],
             legend: {
                 itemWidth: 11,
                 itemHeight: 11,
@@ -31,18 +69,19 @@ export default class FlightSecurity extends Component {
                 },
                 itemGap: 18,
                 right: 13,
-                bottom: 15,
+                bottom: 25,
                 data: ['保障完成', '保障中', '待保障']
             },
             grid: {
                 left: '12%',
-                right: '5%',
-                top: -35,
+                right: 17,
+                top: -45,
                 bottom: 0
             },
             xAxis: {
                 type: 'value',
                 show: false,
+                max: result.done+result.process+result.wait
             },
             yAxis: {
                 type: 'category',
@@ -84,7 +123,18 @@ export default class FlightSecurity extends Component {
                     },
                     barWidth: 21,
                     silent: true,
-                    data: [100],
+                    data: [{
+                        value: result.done,
+                        itemStyle: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 1, 0,
+                                [
+                                    { offset: 0, color: 'rgba(11,147,168,0.7)' },
+                                    { offset: 1, color: 'rgba(6,231,157,0.7)' }
+                                ]
+                            )
+                        },
+                    }],
                 },
                 {
                     name: '保障中',
@@ -99,7 +149,18 @@ export default class FlightSecurity extends Component {
                     },
                     barWidth: 21,
                     silent: true,
-                    data: [30],
+                    data: [{
+                        value: result.process,
+                        itemStyle: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 1, 0,
+                                [
+                                    { offset: 0, color: 'rgba(10,71,175,0.3)' },
+                                    { offset: 1, color: 'rgba(10,71,175,0.7)' }
+                                ]
+                            )
+                        },
+                    }],
                     animationDelay: 100
                 },
                 {
@@ -117,12 +178,24 @@ export default class FlightSecurity extends Component {
                         //         return item.value + '%';
                         //     }
                         // },
+                        
                         fontFamily: 'lcd',
                         fontSize: 14
                     },
                     barWidth: 21,
                     silent: true,
-                    data: [40],
+                    data: [{
+                        value: result.wait,
+                        itemStyle: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 1, 0,
+                                [
+                                    { offset: 0, color: 'rgba(172,205,255,0.3)' },
+                                    { offset: 1, color: 'rgba(172,205,255,0.7)' }
+                                ]
+                            )
+                        },
+                    }],
                     animationDelay: 200
                 },
             ]
@@ -130,10 +203,11 @@ export default class FlightSecurity extends Component {
         this.myChart.setOption(option)
     }
     render(){
+        let {plan} = this.state
         return(
             <div className="FlightSecurityCom">
                 <TitleCom title="航班保障实时分析"></TitleCom>
-                <p>今日计划：<span>170</span></p>
+                <p>今日计划：<CountUp end={plan} /></p>
                 <div id="FlightSecurity"></div>
             </div>
         )

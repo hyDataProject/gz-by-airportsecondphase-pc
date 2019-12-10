@@ -7,6 +7,12 @@
  * }
  * 每一个组件名称最后必须以,结尾
  */
+/* 张琴开始 */
+import * as TaxiingFlightCount from './TaxiingFlightCount/mock.TaxiingFlightCount.js';
+import * as FltSafeguardAnalyze from './FltSafeguardAnalyze/mock.FltSafeguardAnalyze.js';
+import * as PsgEnterOutCount from './PsgEnterOutCount/mock.PsgEnterOutCount.js';
+import * as PsgHourlyDistribution from './PsgHourlyDistribution/mock.PsgHourlyDistribution.js';
+/* 张琴结束 */
 // 万吉坤开始
 import * as FltDelaySortieCount from './FltDelaySortieCount/mock.FltDelaySortieCount';
 
@@ -17,10 +23,17 @@ import * as ReleaseRate from './ReleaseRate/mock.ReleaseRate';
 // 昝家威结束
 
 export {
-  // 昝家威开始
-  ReleaseRate,
-  // 昝家威结束
-  // 万吉坤开始
-  FltDelaySortieCount,
-  // 万吉坤结束
+    /* 张琴开始 */
+    TaxiingFlightCount,
+    FltSafeguardAnalyze,
+    PsgEnterOutCount,
+    PsgHourlyDistribution,
+    /* 张琴结束 */
+
+    // 昝家威开始
+    ReleaseRate,
+    // 昝家威结束
+    // 万吉坤开始
+    FltDelaySortieCount,
+    // 万吉坤结束
 }

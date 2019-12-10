@@ -8,6 +8,12 @@
  * 每一个组件名称最后必须以,结尾
  */
 
+// 昝家威开始
+import * as ReleaseRate from './ReleaseRate/mock.ReleaseRate';
+// 昝家威结束
+
 export {
-    
+  // 昝家威开始
+  ReleaseRate,
+  // 昝家威结束
 }

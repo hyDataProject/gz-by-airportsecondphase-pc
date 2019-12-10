@@ -11,8 +11,13 @@ export default class ReleaseRateBarLine extends Component {
     this._drawChart();
   }
 
+  componentDidUpdate() {
+    this._drawChart();
+  }
+
   _drawChart() {
     let myChart = echarts.init(document.getElementById("ReleaseRateBarLine"));
+    myChart.clear();
     let option = {
       grid: {
         left: 20,
@@ -34,7 +39,7 @@ export default class ReleaseRateBarLine extends Component {
       color: ["#fefe44"],
       xAxis: [
         {
-          data: ["13时", "14时", "15时", "16时", "17时", "18时", "19时"],
+          data: this.props.xaxis || [],
           axisLine: {
             show: true
           },
@@ -55,7 +60,7 @@ export default class ReleaseRateBarLine extends Component {
           }
         },
         {
-          data: ["13时", "14时", "15时", "16时", "17时", "18时", "19时"],
+          data: this.props.xaxis || [],
           axisLine: {
             show: false
           },
@@ -98,38 +103,19 @@ export default class ReleaseRateBarLine extends Component {
               fontFamily: "lcd"
             }
           }
-        },
-        {
-          type: "value",
-          splitLine: {
-            show: false
-          },
-          splitLine: {
-            show: false
-          },
-          axisTick: {
-            show: false
-          },
-          axisLine: {
-            show: false
-          },
-          axisLabel: {
-            show: false
-          }
         }
       ],
       series: [
         {
           name: "累计积压",
           type: "line",
-          yAxisIndex: 1,
           symbol: "line",
           showSymbol: false,
           symbolSize: 0,
           lineStyle: {
             color: "#fefe44"
           },
-          data: [4.2, 3.8, 4.8, 3.5, 2.9, 2.8, 3, 5]
+          data: this.props.lineData || []
         },
         {
           name: "积压数量",
@@ -149,7 +135,7 @@ export default class ReleaseRateBarLine extends Component {
             borderColor: "rgba(0, 194, 245, 0.2)",
             borderWidth: 5
           },
-          data: [4.2, 3.8, 4.8, 3.5, 2.9, 2.8, 3, 5]
+          data: this.props.barData || []
         },
         {
           // 柱图背景纹理
@@ -164,7 +150,7 @@ export default class ReleaseRateBarLine extends Component {
               repeat: "repeat"
             }
           },
-          data: [4.2, 3.8, 4.8, 3.5, 2.9, 2.8, 3, 5]
+          data: this.props.barData || []
         }
       ]
     };
@@ -182,4 +168,8 @@ export default class ReleaseRateBarLine extends Component {
 }
 
 ReleaseRateBarLine.propTypes = {};
-ReleaseRateBarLine.defaultProps = {};
+ReleaseRateBarLine.defaultProps = {
+  barData: ["2", "2", "0", "0", "0", "7", "2", "32"],
+  lineData: ["2", "4", "3", "2", "0", "7", "9", "41"],
+  xaxis: ["09时", "10时", "11时", "12时", "13时", "14时", "15时", "16时"]
+};

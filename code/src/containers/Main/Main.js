@@ -2,6 +2,7 @@
  * Created by xiaohe on 2018/5/7.
  */
 import {Switch,Route} from 'react-router-dom';
+import { Header } from "com/index";
 import {
     TerminalCont,
     FlyCont,
@@ -34,7 +35,7 @@ export default class Main extends Component {
             <div className={"Layer"}>
                 {/*默认加载判断路由*/}
                 <div className="header">
-                    投不投不
+                    <Header></Header>
                 </div>
                 <div className="container">
                     <Switch>

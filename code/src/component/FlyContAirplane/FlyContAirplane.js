@@ -2,7 +2,7 @@
  Crate by wanjikun on 19/12/10.
 */
 import './FlyContAirplane.scss';
-import { ImportantNodeFlight,FlightSecurity,FlightDelayCom } from "com/index";
+import { ImportantNodeFlight,FlightSecurity,FlightDelayCom, ReleaseRate } from "com/index";
 export default class FlyContAirplane extends Component{
  constructor(props) {
    super(props)
@@ -21,7 +21,7 @@ export default class FlyContAirplane extends Component{
             <FlightSecurity />
         </div>
         <div className="Backlog">
-            出港积压
+            <ReleaseRate />
         </div> 
         <div className="FlightDelay">
             <FlightDelayCom></FlightDelayCom>

@@ -23,6 +23,11 @@ import FlightDelayCom from "./FlightDelayCom/FlightDelayCom";
 import PiechartCom from "./PiechartCom/PiechartCom";
 import Header from "./Header/Header";
 //万吉坤结束
+
+// 昝家威开始
+import ReleaseRate from './ReleaseRate/ReleaseRate'
+// 昝家威结束
+
 export {
     /*张琴-开始 */
     FlightSecurity,
@@ -41,4 +46,7 @@ export {
     PiechartCom,
     Header,
     //万吉坤结束
+    // 昝家威开始
+    ReleaseRate,
+    // 昝家威结束
 };

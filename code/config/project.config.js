@@ -8,6 +8,7 @@ const project = {
      * 数组[2]，用来访问Jarvis,false为关闭当前功能，如若开启请输入端口后，例:8889
      * */
     "devPort": [8081, 8082, 8083],
+    // "devPort": [8082, false, false],
     /*工程的整体名称，对应影响浏览器中的title*/
     "webTitle": "白云机场生产可视化分析系统",
     /*

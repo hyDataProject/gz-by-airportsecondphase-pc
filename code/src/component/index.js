@@ -12,10 +12,17 @@ import TerminalContPassengerService from "./TerminalContPassengerService/Termina
 import TitleCom from "./TitleCom/TitleCom";
 //万吉坤结束
 
+// 昝家威开始
+import ReleaseRate from './ReleaseRate/ReleaseRate'
+// 昝家威结束
+
 export {
     //万吉坤开始
     FlyContAirplane,
     TerminalContPassengerService,
     TitleCom,
     //万吉坤结束
+    // 昝家威开始
+    ReleaseRate,
+    // 昝家威结束
 };

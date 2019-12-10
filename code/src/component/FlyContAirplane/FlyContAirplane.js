@@ -1,7 +1,7 @@
 /**
  Crate by wanjikun on 19/12/10.
 */
-import { TitleCom  } from "com/index";
+import { TitleCom, ReleaseRate  } from "com/index";
 import './FlyContAirplane.scss';
 export default class FlyContAirplane extends Component{
  constructor(props) {
@@ -21,7 +21,7 @@ export default class FlyContAirplane extends Component{
             航班保障实时分析
         </div>
         <div className="Backlog">
-            出港积压
+            <ReleaseRate />
         </div> 
         <div className="FlightDelay">
             <TitleCom title="今日延误航班概览"></TitleCom>

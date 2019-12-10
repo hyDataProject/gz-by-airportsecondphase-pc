@@ -13,5 +13,6 @@ if (NODE_ENV === "pro") {
   InterfaceSwitch = true;
 }
 export const InterfaceList = {
-  ReleaseRate: true
+  ReleaseRate: true,
+  FltDelaySortieCount:true,
 };

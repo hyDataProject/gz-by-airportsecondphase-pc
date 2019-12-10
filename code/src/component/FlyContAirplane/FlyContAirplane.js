@@ -3,6 +3,7 @@
 */
 import { TitleCom  } from "com/index";
 import './FlyContAirplane.scss';
+import { ImportantNodeFlight,FlightSecurity } from "com/index";
 export default class FlyContAirplane extends Component{
  constructor(props) {
    super(props)
@@ -15,10 +16,10 @@ export default class FlyContAirplane extends Component{
    return(
     <div className={'FlyContAirplane'}>
         <div className="FlightOverview">
-            重要节点航班实时概览
+            <ImportantNodeFlight />
         </div>  
         <div className="FlightGuarantee">
-            航班保障实时分析
+            <FlightSecurity />
         </div>
         <div className="Backlog">
             出港积压

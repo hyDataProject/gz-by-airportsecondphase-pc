@@ -19,6 +19,8 @@ import CarPoolFree from './CarPoolFree/CarPoolFree'
 import FlyContAirplane from "./FlyContAirplane/FlyContAirplane";
 import TerminalContPassengerService from "./TerminalContPassengerService/TerminalContPassengerService";
 import TitleCom from "./TitleCom/TitleCom";
+import FlightDelayCom from "./FlightDelayCom/FlightDelayCom";
+import PiechartCom from "./PiechartCom/PiechartCom";
 //万吉坤结束
 export {
     /*张琴-开始 */
@@ -34,5 +36,7 @@ export {
     FlyContAirplane,
     TerminalContPassengerService,
     TitleCom,
+    FlightDelayCom,
+    PiechartCom,
     //万吉坤结束
 };

@@ -13,5 +13,5 @@ if (NODE_ENV === "pro") {
   InterfaceSwitch = true;
 }
 export const InterfaceList = {
-  
+  FltDelaySortieCount:true,
 };

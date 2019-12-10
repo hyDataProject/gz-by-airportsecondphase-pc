@@ -7,7 +7,13 @@
  * }
  * 每一个组件名称最后必须以,结尾
  */
+// 万吉坤开始
+import * as FltDelaySortieCount from './FltDelaySortieCount/mock.FltDelaySortieCount';
+
+// 万吉坤结束
 
 export {
-    
+    // 万吉坤开始
+    FltDelaySortieCount,
+    // 万吉坤结束
 }

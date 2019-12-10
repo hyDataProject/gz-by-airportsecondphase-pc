@@ -5,9 +5,9 @@ import {Switch,Route} from 'react-router-dom';
 import {
     TerminalCont,
     FlyCont,
-    PublicArea
+    PublicArea,
+    Nav
 } from 'con/index.js'
-import { Nav } from "con/index.js";
 import "./Main.scss";
 
 export default class Main extends Component {
@@ -41,7 +41,7 @@ export default class Main extends Component {
                         <Route path="/main/terminalCont" component={TerminalCont}/>
                         <Route path="/main/flyCont" component={FlyCont}/>
                         <Route path="/main/publicArea" component={PublicArea}/>
-                        <Route path="/" component={FlyCont}/>
+                        <Route path="/" component={Nav}/>
                     </Switch>
                 </div>
             </div>

@@ -1,0 +1,28 @@
+.TerminalCont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .leftCon{
+        width: 364px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .leftConNav{
+            width: 30px;
+            height: 100%;
+        }
+        .leftConRoute{
+            flex: 1;
+            height: 100%;
+        }
+    }
+    .rightCon{
+        flex: 1;
+        height: 100%;
+    }
+}

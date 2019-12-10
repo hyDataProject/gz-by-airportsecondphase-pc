@@ -9,11 +9,13 @@
 //万吉坤开始
 import FlyContAirplane from "./FlyContAirplane/FlyContAirplane";
 import TerminalContPassengerService from "./TerminalContPassengerService/TerminalContPassengerService";
+import TitleCom from "./TitleCom/TitleCom";
 //万吉坤结束
 
 export {
     //万吉坤开始
     FlyContAirplane,
     TerminalContPassengerService,
+    TitleCom,
     //万吉坤结束
 };

@@ -18,6 +18,8 @@ export default class FlyCont extends Component{
         <div className="leftCon">
             <div className="leftConNav"></div>
             <div className="leftConRoute">
+              <div className="topBorderLine"></div>
+              <div className="leftBorderLine"></div>
               <Switch>
                   <Route path="/" component={FlyContAirplane}/>
               </Switch>

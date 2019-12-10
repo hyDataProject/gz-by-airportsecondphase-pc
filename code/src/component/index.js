@@ -6,6 +6,15 @@
  * 组件名称
  * }
  */
+/*张琴-开始 */
+import FlightSecurity from './FlightSecurity/FlightSecurity';
+import ImportantNodeFlight from './ImportantNodeFlight/ImportantNodeFlight'
+import PassengerImportOrExport from './PassengerImportOrExport/PassengerImportOrExport'
+import PassengerHourDistribution from './PassengerHourDistribution/PassengerHourDistribution'
+import HotelFreeRate from './HotelFreeRate/HotelFreeRate'
+import CarPoolFree from './CarPoolFree/CarPoolFree'
+/*张琴-结束 */
+
 //万吉坤开始
 import FlyContAirplane from "./FlyContAirplane/FlyContAirplane";
 import TerminalContPassengerService from "./TerminalContPassengerService/TerminalContPassengerService";
@@ -17,6 +26,15 @@ import ReleaseRate from './ReleaseRate/ReleaseRate'
 // 昝家威结束
 
 export {
+    /*张琴-开始 */
+    FlightSecurity,
+    ImportantNodeFlight,
+    PassengerImportOrExport,
+    PassengerHourDistribution,
+    HotelFreeRate,
+    CarPoolFree,
+    /*张琴-结束 */
+
     //万吉坤开始
     FlyContAirplane,
     TerminalContPassengerService,

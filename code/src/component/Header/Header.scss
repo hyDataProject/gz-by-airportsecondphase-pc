@@ -1,0 +1,30 @@
+.Header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .leftCont{
+        width: 630px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .logo{
+            width: 200px;
+            height: 100%;
+            position: relative;
+        }
+        .logo:after{
+            position: absolute;
+            width: 2px;
+            height: 40px;
+            content: '';
+            right: 0;
+            top: 50%;
+            margin-top: -20px;
+            background: linear-gradient(to bottom, #0853AE 0%,#3F70A3 100%);;
+        }
+    }
+}

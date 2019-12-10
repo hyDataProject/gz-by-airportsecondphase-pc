@@ -1,9 +1,8 @@
 /**
  Crate by wanjikun on 19/12/10.
 */
-import { TitleCom  } from "com/index";
 import './FlyContAirplane.scss';
-import { ImportantNodeFlight,FlightSecurity } from "com/index";
+import { ImportantNodeFlight,FlightSecurity,FlightDelayCom, ReleaseRate } from "com/index";
 export default class FlyContAirplane extends Component{
  constructor(props) {
    super(props)
@@ -22,11 +21,10 @@ export default class FlyContAirplane extends Component{
             <FlightSecurity />
         </div>
         <div className="Backlog">
-            出港积压
+            <ReleaseRate />
         </div> 
         <div className="FlightDelay">
-            <TitleCom title="今日延误航班概览"></TitleCom>
-            今日航班延误概览
+            <FlightDelayCom></FlightDelayCom>
         </div>
         <div className="VehicleProtection">
             {/* 保障车辆实时分析 这块先放着不做 */}

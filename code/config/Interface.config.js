@@ -19,4 +19,6 @@ export const InterfaceList = {
   PsgEnterOutCount: true,
   PsgHourlyDistribution: true,
   /* 张琴结束 */
+  ReleaseRate: true,
+  FltDelaySortieCount:true,
 };

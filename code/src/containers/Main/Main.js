@@ -3,9 +3,11 @@
  */
 import {Switch,Route} from 'react-router-dom';
 import {
-    AirPortMockTest
-} from 'com/index.js'
-import { Nav } from "con/index.js";
+    TerminalCont,
+    FlyCont,
+    PublicArea,
+    Nav
+} from 'con/index.js'
 import "./Main.scss";
 
 export default class Main extends Component {
@@ -31,10 +33,17 @@ export default class Main extends Component {
         return (
             <div className={"Layer"}>
                 {/*默认加载判断路由*/}
-                哈哈哈哈哈哈
-                <Switch>
-                    <Route path="/main" component={Nav}/>
-                </Switch>
+                <div className="header">
+                    投不投不
+                </div>
+                <div className="container">
+                    <Switch>
+                        <Route path="/main/terminalCont" component={TerminalCont}/>
+                        <Route path="/main/flyCont" component={FlyCont}/>
+                        <Route path="/main/publicArea" component={PublicArea}/>
+                        <Route path="/" component={Nav}/>
+                    </Switch>
+                </div>
             </div>
 
         )

@@ -21,6 +21,7 @@ import TerminalContPassengerService from "./TerminalContPassengerService/Termina
 import TitleCom from "./TitleCom/TitleCom";
 import FlightDelayCom from "./FlightDelayCom/FlightDelayCom";
 import PiechartCom from "./PiechartCom/PiechartCom";
+import Header from "./Header/Header";
 //万吉坤结束
 export {
     /*张琴-开始 */
@@ -38,5 +39,6 @@ export {
     TitleCom,
     FlightDelayCom,
     PiechartCom,
+    Header,
     //万吉坤结束
 };

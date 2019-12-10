@@ -3,6 +3,7 @@
  */
 import './ImportantNodeFlight.scss';
 import CountUp from 'react-countup';
+import { TitleCom } from "com/index";
 export default class ImportantNodeFlight extends Component {
     constructor(props){
         super(props);
@@ -13,7 +14,7 @@ export default class ImportantNodeFlight extends Component {
     render(){
         return(
             <div className="ImportantNodeFlight">
-                <div className="title">重要节点航班实时概览</div>
+                <TitleCom title="重要节点航班实时概览"></TitleCom>
                 <div className="flexCon">
                     <div className="flexItem">
                         <div className="left">

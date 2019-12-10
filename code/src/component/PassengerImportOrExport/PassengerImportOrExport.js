@@ -2,6 +2,7 @@
  * Created by zhangqin on 2019/12/10.
  */
 import './PassengerImportOrExport.scss';
+import { TitleCom } from "com/index";
 export default class PassengerImportOrExport extends Component {
     constructor(props){
         super(props);
@@ -118,7 +119,7 @@ export default class PassengerImportOrExport extends Component {
     render(){
         return(
             <div className="PassengerImportOrExportCom">
-                <div className='title'>旅客进出港</div>
+                <TitleCom title="旅客进出港"></TitleCom>
                 <div id="PassengerImportOrExport"></div>
             </div>
         )

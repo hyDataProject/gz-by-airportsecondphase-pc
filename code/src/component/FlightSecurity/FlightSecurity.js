@@ -2,6 +2,7 @@
  * Created by zhangqin on 2019/12/10.
  */
 import './FlightSecurity.scss';
+import { TitleCom } from "com/index";
 export default class FlightSecurity extends Component {
     constructor(props){
         super(props);
@@ -19,7 +20,7 @@ export default class FlightSecurity extends Component {
     }
     draw(){
         let option = {
-            backgroundColor: '#1e3367',
+            // backgroundColor: '#1e3367',
             color: ['red','#09EDB4', '#00C2F5', '#DAF3FF'],
             legend: {
                 itemWidth: 11,
@@ -30,13 +31,13 @@ export default class FlightSecurity extends Component {
                 },
                 itemGap: 18,
                 right: 13,
-                bottom: 0,
+                bottom: 15,
                 data: ['保障完成', '保障中', '待保障']
             },
             grid: {
                 left: '12%',
                 right: '5%',
-                top: -20,
+                top: -35,
                 bottom: 0
             },
             xAxis: {
@@ -131,7 +132,7 @@ export default class FlightSecurity extends Component {
     render(){
         return(
             <div className="FlightSecurityCom">
-                <div className="title">航班保障实时分析</div>
+                <TitleCom title="航班保障实时分析"></TitleCom>
                 <p>今日计划：<span>170</span></p>
                 <div id="FlightSecurity"></div>
             </div>

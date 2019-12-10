@@ -19,10 +19,29 @@
         .leftConRoute{
             flex: 1;
             height: 100%;
+            position: relative;
+            background: linear-gradient(to right, #132647 0%,#11192B 100%);
+            .topBorderLine{
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                top: 0;
+                left: 0;
+                background: linear-gradient(to right, #4AE3FE 0%,rgba(74,227,254,0) 100%);
+            }
+            .leftBorderLine{
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: linear-gradient(to bottom, #4AE3FE 0%,rgba(74,227,254,0) 100%);
+            }
         }
     }
     .rightCon{
         flex: 1;
         height: 100%;
+        border: 2px solid #26538C;
     }
 }

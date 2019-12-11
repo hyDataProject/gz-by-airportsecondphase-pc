@@ -50,7 +50,7 @@ export default class ImportantNodeFlight extends Component {
         let {result} = this.state;
         return(
             <div className="ImportantNodeFlight">
-                <TitleCom title="重要节点航班实时概览"></TitleCom>
+                <TitleCom title="重要节点航班实时概览" />
                 <div className="flexCon">
                     {
                         result.map((item, index) => {

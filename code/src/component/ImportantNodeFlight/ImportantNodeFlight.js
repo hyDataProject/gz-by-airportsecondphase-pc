@@ -4,13 +4,15 @@
 import './ImportantNodeFlight.scss';
 import CountUp from 'react-countup';
 import { TitleCom } from "com/index";
-import Leave from "img/zyjs-leave.png";
-import Arrive from "img/zyjd-arrive.png";
+import Leave from "img/zyjd_leave.png";
+import Safeguard from "img/zyjd_safeguard.png";
+import Arrive from "img/zyjd_arrive.png";
+import Stay from "img/zyjd_stay.png";
 var itemArr = [
     {name: '进港滑行',img: Arrive},
-    {name: '保障中',img: Arrive},
+    {name: '保障中',img: Safeguard},
     {name: '出港滑行',img: Leave},
-    {name: '过夜停场',img: Leave},
+    {name: '过夜停场',img: Stay},
 ]
 export default class ImportantNodeFlight extends Component {
     constructor(props){

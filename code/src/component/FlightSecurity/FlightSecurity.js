@@ -69,13 +69,13 @@ export default class FlightSecurity extends Component {
                 },
                 itemGap: 18,
                 right: 13,
-                bottom: 25,
+                bottom: 26,
                 data: ['保障完成', '保障中', '待保障']
             },
             grid: {
                 left: '12%',
                 right: 17,
-                top: -45,
+                top: -55,
                 bottom: 0
             },
             xAxis: {

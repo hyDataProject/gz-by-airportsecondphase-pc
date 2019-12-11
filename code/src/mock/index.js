@@ -20,6 +20,8 @@ import * as FltDelaySortieCount from './FltDelaySortieCount/mock.FltDelaySortieC
 
 // 昝家威开始
 import * as ReleaseRate from './ReleaseRate/mock.ReleaseRate';
+import * as PsgSecCheckAnalysis from './PsgSecCheckAnalysis/mock.PsgSecCheckAnalysis';
+import * as EnterPsgFlowAnalyze from './EnterPsgFlowAnalyze/mock.EnterPsgFlowAnalyze';
 // 昝家威结束
 
 export {
@@ -32,6 +34,8 @@ export {
 
     // 昝家威开始
     ReleaseRate,
+    PsgSecCheckAnalysis,
+    EnterPsgFlowAnalyze,
     // 昝家威结束
     // 万吉坤开始
     FltDelaySortieCount,

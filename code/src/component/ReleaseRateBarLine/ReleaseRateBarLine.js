@@ -5,6 +5,7 @@ bg.src = lineBar;
 export default class ReleaseRateBarLine extends Component {
   constructor(props) {
     super(props);
+    this.dom = null;
   }
 
   componentDidMount() {
@@ -16,7 +17,7 @@ export default class ReleaseRateBarLine extends Component {
   }
 
   _drawChart() {
-    let myChart = echarts.init(document.getElementById("ReleaseRateBarLine"));
+    let myChart = echarts.init(this.dom);
     myChart.clear();
     let option = {
       grid: {
@@ -160,8 +161,11 @@ export default class ReleaseRateBarLine extends Component {
   render() {
     return (
       <div
-        id={"ReleaseRateBarLine"}
+        className={"ReleaseRateBarLine"}
         style={{ width: "100%", height: "100%" }}
+        ref={ref => {
+          this.dom = ref;
+        }}
       ></div>
     );
   }

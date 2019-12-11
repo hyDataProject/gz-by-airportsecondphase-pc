@@ -27,6 +27,7 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
         },
         data: ["E1", "E3", "W1", "W2", "W3"]
       },
+      color: ["#00c2f5", "#d255fb", "#00ffde", "#508aff", "#fff656"],
       grid: {
         left: 40,
         right: 10,
@@ -92,8 +93,15 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
         {
           name: "E1",
           type: "line",
-          areaStyle: {},
-          lineStyle: {},
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "rgba(0,194,245,1)" },
+              { offset: 1, color: "rgba(7,99,173,0)" }
+            ])
+          },
+          lineStyle: {
+            width: 1
+          },
           symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.E1) || []
@@ -101,8 +109,15 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
         {
           name: "E3",
           type: "line",
-          areaStyle: {},
-          lineStyle: {},
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "rgba(210,85,251,1)" },
+              { offset: 1, color: "rgba(7,99,173,0)" }
+            ])
+          },
+          lineStyle: {
+            width: 1
+          },
           symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.E3) || []
@@ -110,8 +125,15 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
         {
           name: "W1",
           type: "line",
-          areaStyle: {},
-          lineStyle: {},
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "rgba(0,255,222,1)" },
+              { offset: 1, color: "rgba(7,99,173,0)" }
+            ])
+          },
+          lineStyle: {
+            width: 1
+          },
           symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.W1) || []
@@ -119,8 +141,15 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
         {
           name: "W2",
           type: "line",
-          areaStyle: {},
-          lineStyle: {},
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "rgba(80,138,255,1)" },
+              { offset: 1, color: "rgba(7,99,173,0)" }
+            ])
+          },
+          lineStyle: {
+            width: 1
+          },
           symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.W2) || []
@@ -128,8 +157,15 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
         {
           name: "W3",
           type: "line",
-          areaStyle: {},
-          lineStyle: {},
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "rgba(255,246,86,1)" },
+              { offset: 1, color: "rgba(7,99,173,0)" }
+            ])
+          },
+          lineStyle: {
+            width: 1
+          },
           symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.W3) || []

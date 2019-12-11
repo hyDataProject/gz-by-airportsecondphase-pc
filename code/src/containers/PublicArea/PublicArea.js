@@ -3,6 +3,7 @@
 */
 import {Switch,Route} from 'react-router-dom';
 import './PublicArea.scss';
+import {HotelFreeRate,CarPoolFree} from 'com/index';
 export default class PublicArea extends Component{
  constructor(props) {
    super(props)
@@ -21,10 +22,10 @@ export default class PublicArea extends Component{
                  停车场实时空闲率分析
               </div>
               <div className="Hotel">
-                 酒店实时空闲率分析
+                 <HotelFreeRate />
               </div>
               <div className="StorageTank">
-                 蓄车池实时空闲率分析
+                 <CarPoolFree />
               </div>
               <div className="Traffic">
                  白云机场主干道车流总量分析

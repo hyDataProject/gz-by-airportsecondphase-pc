@@ -1,7 +1,8 @@
 /* Create by zhangqin on 2019/12/10 */
 const rurl = '/pc/psgHourlyDistribution';
 const rtype = 'get';
-let Random = Mock.Random
+let Random = Mock.Random;
+import a from './psgHourlyDistribution.json'
 
 function createData(){
     let data = [],currentTime = Random.integer(0,23);

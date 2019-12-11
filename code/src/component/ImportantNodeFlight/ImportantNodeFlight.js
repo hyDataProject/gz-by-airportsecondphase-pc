@@ -63,7 +63,7 @@ export default class ImportantNodeFlight extends Component {
                                         <img src={itemArr[index].img}></img>
                                     </div>
                                     <div className="right">
-                                        <p><CountUp end={item} /><i>辆</i></p>
+                                        <p><CountUp end={item} /><i>架次</i></p>
                                         <span>{itemArr[index].name}</span>
                                     </div>
                                 </div>

@@ -19,8 +19,9 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
       legend: {
         top: 5,
         right: 0,
-        itemWidth: 10,
-        itemHeight: 10,
+        itemGap: 7,
+        itemWidth: 13,
+        itemHeight: 5,
         textStyle: {
           color: "#ffffff"
         },
@@ -92,9 +93,8 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
           name: "E1",
           type: "line",
           areaStyle: {},
-          symbol: "line",
-          showSymbol: false,
-          symbolSize: 0,
+          lineStyle: {},
+          symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.E1) || []
         },
@@ -102,9 +102,8 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
           name: "E3",
           type: "line",
           areaStyle: {},
-          symbol: "line",
-          showSymbol: false,
-          symbolSize: 0,
+          lineStyle: {},
+          symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.E3) || []
         },
@@ -112,9 +111,8 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
           name: "W1",
           type: "line",
           areaStyle: {},
-          symbol: "line",
-          showSymbol: false,
-          symbolSize: 0,
+          lineStyle: {},
+          symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.W1) || []
         },
@@ -122,9 +120,8 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
           name: "W2",
           type: "line",
           areaStyle: {},
-          symbol: "line",
-          showSymbol: false,
-          symbolSize: 0,
+          lineStyle: {},
+          symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.W2) || []
         },
@@ -132,9 +129,8 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
           name: "W3",
           type: "line",
           areaStyle: {},
-          symbol: "line",
-          showSymbol: false,
-          symbolSize: 0,
+          lineStyle: {},
+          symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.W3) || []
         }

@@ -57,6 +57,15 @@ toggleSelectShow=()=>{
             <div className="middleContItem">五大业务流程</div>
         </div>
         <div className="rightCont">
+            <div className="line"></div>
+            <div className="year">
+                <div className="yearIcon">
+
+                </div>
+                <div className="yearTxt">
+                    2019.10.31
+                </div>
+            </div>
         </div>   
      </div>
    )

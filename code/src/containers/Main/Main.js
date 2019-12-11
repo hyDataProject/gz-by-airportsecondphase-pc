@@ -19,7 +19,8 @@ export default class Main extends Component {
 
 
     componentWillMount() {
-        this.saveToken();
+        // this.saveToken();
+        
     }
     //存储token
     saveToken(){
@@ -42,7 +43,7 @@ export default class Main extends Component {
                         <Route path="/main/terminalCont" component={TerminalCont}/>
                         <Route path="/main/flyCont" component={FlyCont}/>
                         <Route path="/main/publicArea" component={PublicArea}/>
-                        <Route path="/" component={Nav}/>
+                        <Route path="/" component={FlyCont}/>
                     </Switch>
                 </div>
             </div>

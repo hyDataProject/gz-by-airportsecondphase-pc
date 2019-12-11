@@ -1,6 +1,5 @@
 import "./ReleaseRate.scss";
-import { TitleCom } from "com/index";
-import ReleaseRateLine from "./ReleaseRateBarLine";
+import { TitleCom, ReleaseRateBarLine } from "com/index";
 
 export default class ReleaseRate extends Component {
   constructor(props) {
@@ -46,7 +45,7 @@ export default class ReleaseRate extends Component {
       <div className={"ReleaseRate"}>
         <TitleCom title="今日出港积压" />
         <div className={"ReleaseRateBox"}>
-          <ReleaseRateLine
+          <ReleaseRateBarLine
             xaxis={xaxis}
             barData={barData}
             lineData={lineData}

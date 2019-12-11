@@ -4,38 +4,60 @@
 import './PassengerImportOrExport.scss';
 import barBg from 'img/passenger_bar_bg.png';
 import yAxisBg from 'img/passenger_yAxis_bg.png';
+import CountUp from 'react-countup';
 export default class PassengerImportOrExport extends Component {
     constructor(props){
         super(props);
         this.state = {
-
+            lastSum: 0,
+            futureSum: 0
         }
         this.myChart = null;
     }
     componentDidMount(){
         this.myChart = echarts.init(document.getElementById('PassengerImportOrExport'))
-        this.draw()
-        this.getData();
+        // this.draw()
+        this.getData(this.props.terminal);
         this.reloadId = setInterval(() => {
-            this.getData();
+            this.getData(this.props.terminal);
         },globalTimer.psgEnterOutCount)
     }
     componentWillReceiveProps(nextProps){
-
+        if (this.props.terminal !== nextProps.terminal) {
+            this.reloadId && clearInterval(this.reloadId);
+            this.getData(nextProps.terminal);
+            this.reloadId = setInterval(() => {
+                this.getData(nextProps.terminal);
+            }, globalTimer.psgHourlyDistribution)
+        }
     }
     componentWillUnmount(){
         clearInterval(this.reloadId);
     }
-    getData(){
+    getData(terminal){
         axios({
             method: 'get',
-            url: realAddress[0].url + '/pc/psgEnterOutCount',
+            url: realAddress[0].url + '/pc/psgEnterOutCount/'+terminal,
         }).then((res) => {
             if(res.data.code === 0){
                 let result = res.data.result;
-                // console.log(result)
+                let lastSum = result.lastEnter+result.lastOut,//两小时内进出港旅客总量
+                    futureSum = result.futureEnter+result.futureOut;//未来两小时进出港旅客总量
+                let enterData = [-this.chartDataFormat(result.lastEnter,lastSum),-this.chartDataFormat(result.futureEnter,futureSum)],
+                    outData = [this.chartDataFormat(result.lastOut,lastSum),this.chartDataFormat(result.futureOut,futureSum)];
+                
+                this.setState({
+                    lastSum: lastSum,
+                    futureSum: futureSum
+                })
+                 this.draw(enterData,outData);
             }
         });
+    }
+    chartDataFormat(data,sum){
+        let rate = 0;
+        rate = ((data/sum)*100).toFixed(0)
+        return rate;
     }
     renderItem(params, api) {
         // 自定义系列
@@ -56,16 +78,18 @@ export default class PassengerImportOrExport extends Component {
                 type: 'image',
                 style: {
                     image: yAxisBg,
-                    x: 312.5,
-                    y: 62,
+                    width: 1,
+                    height:80,
+                    x: 210,
+                    y: 42,
                 }
             }]
         }
     }
-    draw(){
+    draw(enterData,outData){
         this.myChart.clear();
         let option = {
-            color: ["blue", "#00C2F5","#DAF3FF"],
+            color: ["blue", "#00C2F5","#07edb5"],
             legend: {
                 itemWidth: 11,
                 itemHeight: 11,
@@ -74,14 +98,14 @@ export default class PassengerImportOrExport extends Component {
                     fontSize: 14
                 },
                 data: ['进港', '出港'],
-                itemGap: 18,
-                top: 0,
+                itemGap: 45,
+                top: 18,
                 right: '5%'
             },
             grid: {
                 left: '42%',
-                top:'20%',
-                bottom: '6%',
+                top:'35%',
+                bottom: '10%',
                 right: 3,
             },
             xAxis: {
@@ -93,16 +117,8 @@ export default class PassengerImportOrExport extends Component {
             ,
             yAxis: {
                 type: 'category',
-                axisTick: { show: false },
                 inverse: true,
-                nameGap:0,
-                axisLabel: {
-                    color: '#ffffff',
-                    fontSize: 14
-                },
-                axisLine: {
-                    // show: false
-                },
+                show: false,
                 data: ['2小时内：', '未来两小时：']
             },
             series: [
@@ -134,18 +150,20 @@ export default class PassengerImportOrExport extends Component {
                         fontSize: 12,
                         offset: [0, -2]
                     },
-                    data: [{
-                        value: -100,
-                        itemStyle: {
-                            color: new echarts.graphic.LinearGradient(
-                                0, 0, 1, 1,
-                                [
-                                    { offset: 0, color: 'rgba(0,194,245,.9)' },
-                                    { offset: 1, color: 'rgba(0,194,245,.2)' }
-                                ]
-                            ),
-                        },
-                    },-100]
+                    data: enterData.map(item => {
+                        return {
+                            value: item,
+                            itemStyle: {
+                                color: new echarts.graphic.LinearGradient(
+                                    0, 0, 1, 1,
+                                    [
+                                        { offset: 0, color: 'rgba(0,194,245,.9)' },
+                                        { offset: 1, color: 'rgba(0,194,245,.2)' }
+                                    ]
+                                ),
+                            },
+                        }
+                    }),
                 },
                 {
                     name: '出港',
@@ -165,26 +183,35 @@ export default class PassengerImportOrExport extends Component {
                         fontSize: 12,
                         offset: [0, -2]
                     },
-                    data: [{
-                        value:100,
-                        itemStyle: {
-                            color: new echarts.graphic.LinearGradient(
-                                0, 0, 1, 1,
-                                [
-                                    { offset: 0, color: 'rgba(9,237,179,.2)' },
-                                    { offset: 1, color: 'rgba(9,237,179,.9)' }
-                                ]
-                            )
-                        },
-                    },100]
+                    data: outData.map(item => {
+                        return{
+                            value:item,
+                            itemStyle: {
+                                color: new echarts.graphic.LinearGradient(
+                                    0, 0, 1, 1,
+                                    [
+                                        { offset: 0, color: 'rgba(9,237,179,.2)' },
+                                        { offset: 1, color: 'rgba(9,237,179,.9)' }
+                                    ]
+                                )
+                            },
+                        }
+                    }),
                 }
             ]
         }
         this.myChart.setOption(option)
     }
     render(){
+        let {lastSum,futureSum} = this.state;
         return(
             <div className="PassengerImportOrExportCom">
+                <div className="category">
+                    {/* <p>2小时内:<CountUp end={lastSum} /></p>
+                    <p>未来2小时:<CountUp end={futureSum} /></p> */}
+                    <p>2小时内:<span>{lastSum}</span></p>
+                    <p>未来2小时:<span>{futureSum}</span></p>
+                </div>
                 <div id="PassengerImportOrExport"></div>
             </div>
         )

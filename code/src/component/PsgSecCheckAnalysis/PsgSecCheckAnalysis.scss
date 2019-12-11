@@ -1,4 +1,18 @@
 .PsgSecCheckAnalysis {
   width: 100%;
   height: 100%;
+  .PsgSecCheckAnalysisBox {
+    width: 100%;
+    height: 85%;
+    text-align: center;
+    margin-top: 15px;
+    .PsgSec-Head {
+      color: aqua;
+      font-size: 12px;
+    }
+    .PsgSec-Body {
+      color: #ffffff;
+      font-size: 12px;
+    }
+  }
 }

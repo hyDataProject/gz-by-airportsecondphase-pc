@@ -8,19 +8,19 @@ function createData() {
   let obj = {
     internalEast: {
       open: Random.integer(0, 10),
-      total: Random.integer(0, 10),
+      total: 10,
       waitTime: Random.integer(0, 10),
       futrueOneHour: Random.integer(0, 10)
     },
     internalWest: {
       open: Random.integer(0, 10),
-      total: Random.integer(0, 10),
+      total: 10,
       waitTime: Random.integer(0, 10),
       futrueOneHour: Random.integer(0, 10)
     },
     international: {
       open: Random.integer(0, 10),
-      total: Random.integer(0, 10),
+      total: 10,
       waitTime: Random.integer(0, 10),
       futrueOneHour: Random.integer(0, 10)
     }

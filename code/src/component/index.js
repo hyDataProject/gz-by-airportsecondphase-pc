@@ -22,6 +22,8 @@ import TitleCom from "./TitleCom/TitleCom";
 import FlightDelayCom from "./FlightDelayCom/FlightDelayCom";
 import PiechartCom from "./PiechartCom/PiechartCom";
 import Header from "./Header/Header";
+import PositionHeating from "./PositionHeating/PositionHeating";
+import RunWay from "./RunWay/RunWay";
 //万吉坤结束
 
 // 昝家威开始
@@ -29,6 +31,7 @@ import ReleaseRate from './ReleaseRate/ReleaseRate'
 import ReleaseRateBarLine from './ReleaseRateBarLine/ReleaseRateBarLine'
 import PsgSecCheckAnalysis from './PsgSecCheckAnalysis/PsgSecCheckAnalysis'
 import EnterPsgFlowAnalyze from './EnterPsgFlowAnalyze/EnterPsgFlowAnalyze'
+import MainStreetFlow from './MainStreetFlow/MainStreetFlow'
 // 昝家威结束
 
 export {
@@ -48,11 +51,14 @@ export {
     FlightDelayCom,
     PiechartCom,
     Header,
+    PositionHeating,
+    RunWay,
     //万吉坤结束
     // 昝家威开始
     ReleaseRate,
     ReleaseRateBarLine,
     PsgSecCheckAnalysis,
     EnterPsgFlowAnalyze,
+    MainStreetFlow,
     // 昝家威结束
 };

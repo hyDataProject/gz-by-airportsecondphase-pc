@@ -98,7 +98,7 @@
         }
     }
     .rightCont{
-        width: 500px;
+        width: 520px;
         height: 60px;
         display: flex;
         flex-direction: row;
@@ -115,6 +115,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            padding: 0 10px;
             .yearIcon{
                 width: 20px;
                 height: 20px;
@@ -123,9 +124,96 @@
                 background-position: center center;
                 background-repeat: no-repeat;
             }
-            // .yearTxt{
-            //     font
-            // }
+            .yearTxt{
+                font-size: 20px;
+                font-family: lcd;
+                color: #fff;
+            }
+        }
+        .mai{
+            width: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            .maiIcon{
+                width: 20px;
+                height: 20px;
+                background: url(~img/mai.png);
+                background-size:18px 13px;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+            .maiTxt{
+                font-size: 20px;
+                font-family: lcd;
+                color: #fff;
+            }
+        }
+        .time{
+            width: 106px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            .timeIcon{
+                width: 20px;
+                height: 20px;
+                background: url(~img/clock.png);
+                background-size:14px 14px;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+            .timeTxt{
+                font-size: 20px;
+                font-family: lcd;
+                color: #fff;
+                .second{
+                    display: inline-block;
+                    width:22px;
+                    margin-left: 3px;
+                    border-bottom: 3px solid #05A5D2;
+                    font-size: 14px;
+                    position: relative;
+                    bottom: 5px;
+                    line-height: 14px;
+                }
+            }
+        }
+        .temp{
+            width: 90px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            .tempIcon{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .tempTxt{
+                font-size: 20px;
+                font-family: lcd;
+                color: #fff;
+                .tem{
+                    color: #02CFFF;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .setting{
+            width: 65px;
+            height: 33px;
+            background: url(~img/setting.png);
+            text-align: center;
+            line-height: 33px;
+            color: #fff;
+            cursor: pointer;
+            margin-left: 20px;
         }
     }
 }

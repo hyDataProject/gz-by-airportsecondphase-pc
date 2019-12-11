@@ -13,7 +13,9 @@ export default class Header extends Component{
         areaActive:1
     }
  }
-
+componentWillMount(){
+    console.log('props',this.props);
+}
  componentDidMount() {
     document.body.addEventListener('click', e => { 
         if (!(e.target && (e.target.matches('.toggleItem') || e.target.matches('.navlink') || e.target.matches('.toggleSelect')))) { 
@@ -41,8 +43,7 @@ toggleSelectShow=()=>{
         </div>
         <div className="middleCont">
             <div className="middleContItem">
-                {/* 综合运行态势 */}
-                <NavLink to={"/main/terminalCont"}>综合运行态势</NavLink>
+                综合运行态势
             </div>
             <div className="middleContItem threeArea active">
                 <div onClick={this.toggleSelectShow} className="toggleSelect">场区运行监控</div>

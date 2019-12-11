@@ -2,7 +2,7 @@
  Crate by wanjikun on 19/12/10.
 */
 import './TerminalContPassengerService.scss';
-import {PassengerImportOrExport, EnterPsgFlowAnalyze, PsgSecCheckAnalysis} from 'com/index'
+import {PassengerImportOrExport, EnterPsgFlowAnalyze, PsgSecCheckAnalysis, PassengerHourDistribution} from 'com/index'
 export default class TerminalContPassengerService extends Component{
  constructor(props) {
    super(props)
@@ -18,7 +18,7 @@ export default class TerminalContPassengerService extends Component{
             <PassengerImportOrExport />
         </div>
         <div className="PassengersToday">
-            今日旅客小时分布
+            <PassengerHourDistribution />
         </div>
         <div className="TodayArrive">
             <EnterPsgFlowAnalyze />

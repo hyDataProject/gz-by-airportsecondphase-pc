@@ -99,7 +99,7 @@ export default class PassengerImportOrExport extends Component {
                 },
                 data: ['进港', '出港'],
                 itemGap: 45,
-                top: 18,
+                top: 13,
                 right: '5%'
             },
             grid: {

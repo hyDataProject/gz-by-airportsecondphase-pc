@@ -102,7 +102,7 @@ export default class PassengerHourDistribution extends Component {
                 left: 0,
                 right: 0,
                 top: '18%',
-                bottom: '3%',
+                bottom: '15%',
                 containLabel: true
             },
             xAxis: [

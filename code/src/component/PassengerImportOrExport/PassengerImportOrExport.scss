@@ -1,7 +1,29 @@
 .PassengerImportOrExportCom{
     width: 100%;
     height: 100%;
-    background: #1e3367;
+    position: relative;
+    .category {
+        position: absolute;
+        left: 0;
+        top: 47px;
+        
+        p {
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 5.5px;
+            text-align: right;
+            max-width: 116px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            span {
+                font-size: 20px;
+                padding-right: 2px;
+                font-family: 'lcd';
+                color: #f8b608;
+            }
+        }
+    }
     #PassengerImportOrExport{
         width: 100%;
         height: 100%;   

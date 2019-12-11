@@ -1,5 +1,6 @@
 import "./EnterPsgFlowAnalyze.scss";
 import { TitleCom } from "com";
+import EnterPsgFlowAnalyzeLine from "./EnterPsgFlowAnalyzeLine";
 
 export default class EnterPsgFlowAnalyze extends Component {
   constructor(props) {
@@ -36,7 +37,9 @@ export default class EnterPsgFlowAnalyze extends Component {
     return (
       <div className={"EnterPsgFlowAnalyze"}>
         <TitleCom title="今日到港旅客流量分析" />
-        <div className={"EnterPsgFlowAnalyzeBox"}></div>
+        <div className={"EnterPsgFlowAnalyzeBox"}>
+          <EnterPsgFlowAnalyzeLine />
+        </div>
       </div>
     );
   }

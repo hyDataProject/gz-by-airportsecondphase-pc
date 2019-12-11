@@ -22,6 +22,8 @@ import TitleCom from "./TitleCom/TitleCom";
 import FlightDelayCom from "./FlightDelayCom/FlightDelayCom";
 import PiechartCom from "./PiechartCom/PiechartCom";
 import Header from "./Header/Header";
+import PositionHeating from "./PositionHeating/PositionHeating";
+import RunWay from "./RunWay/RunWay";
 //万吉坤结束
 
 // 昝家威开始
@@ -48,6 +50,8 @@ export {
     FlightDelayCom,
     PiechartCom,
     Header,
+    PositionHeating,
+    RunWay,
     //万吉坤结束
     // 昝家威开始
     ReleaseRate,

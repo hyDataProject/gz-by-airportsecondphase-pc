@@ -10,12 +10,13 @@ export default class Header extends Component{
    super(props);
     this.state={
         selectShow:false,
-        areaActive:1
+        defaultActive:0
     }
  }
 componentWillMount(){
-    console.log('props',this.props);
+    // console.log('props',this.props);
 }
+
  componentDidMount() {
     document.body.addEventListener('click', e => { 
         if (!(e.target && (e.target.matches('.toggleItem') || e.target.matches('.navlink') || e.target.matches('.toggleSelect')))) { 
@@ -32,7 +33,7 @@ toggleSelectShow=()=>{
     })
 }
  render() {
-    let {selectShow,areaActive} = this.state;
+    let {selectShow,defaultActive} = this.state;
    return(
      <div className={'Header'}>
         <div className="leftCont">
@@ -49,13 +50,22 @@ toggleSelectShow=()=>{
                 <div onClick={this.toggleSelectShow} className="toggleSelect">场区运行监控</div>
                 <div className={selectShow ? "selectCont active" : "selectCont"}>
                     <div className="toggleItem"><NavLink className="navlink" to={"/main/terminalCont"}>航站区</NavLink></div>
-                    <div className="toggleItem"><NavLink className="navlink" to={"/main/flyCont"}>飞行区</NavLink></div>
+                    <div className="toggleItem"><NavLink className={defaultActive === 1 ? "navlink active" : "navlink"} to={"/main/flyCont"}>飞行区</NavLink></div>
                     <div className="toggleItem"><NavLink  className="navlink" to={"/main/publicArea"}>公共区</NavLink></div>
                 </div>
             </div>
             <div className="middleContItem">五大业务流程</div>
         </div>
         <div className="rightCont">
+            <div className="line"></div>
+            <div className="year">
+                <div className="yearIcon">
+
+                </div>
+                <div className="yearTxt">
+                    2019.10.31
+                </div>
+            </div>
         </div>   
      </div>
    )

@@ -29,6 +29,7 @@ import ReleaseRate from './ReleaseRate/ReleaseRate'
 import ReleaseRateBarLine from './ReleaseRateBarLine/ReleaseRateBarLine'
 import PsgSecCheckAnalysis from './PsgSecCheckAnalysis/PsgSecCheckAnalysis'
 import EnterPsgFlowAnalyze from './EnterPsgFlowAnalyze/EnterPsgFlowAnalyze'
+import MainStreetFlow from './MainStreetFlow/MainStreetFlow'
 // 昝家威结束
 
 export {
@@ -54,5 +55,6 @@ export {
     ReleaseRateBarLine,
     PsgSecCheckAnalysis,
     EnterPsgFlowAnalyze,
+    MainStreetFlow,
     // 昝家威结束
 };

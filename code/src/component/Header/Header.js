@@ -15,7 +15,6 @@ export default class Header extends Component{
     }
  }
 componentWillMount(){
-    // console.log('props',this.props);
 }
 
  componentDidMount() {

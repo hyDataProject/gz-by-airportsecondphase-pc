@@ -1,10 +1,18 @@
 import "./PsgSecCheckAnalysis.scss";
 import { TitleCom } from "com";
 
+const area = [
+  { key: "international", name: "国际" },
+  { key: "internalEast", name: "国内东区" },
+  { key: "internalWest", name: "国内西区" }
+];
+
 export default class PsgSecCheckAnalysis extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      data: {}
+    };
   }
 
   componentDidMount() {
@@ -26,17 +34,39 @@ export default class PsgSecCheckAnalysis extends Component {
     }).then(result => {
       if (result.data.code == 0) {
         const data = result.data.result;
-        console.log("psg:", data);
-        this.setState({});
+        this.setState({ data });
       }
     });
   }
 
   render() {
+    const { data } = this.state;
+    let option = area.map((ele, index) => {
+      let oneData = data[ele.key];
+      if (!oneData) return;
+      return (
+        <tr key={index} className={"PsgSec-Body"}>
+          <td>{ele.name}</td>
+          <td>
+            {oneData.open || 0}/{oneData.total || 10}
+          </td>
+          <td>{oneData.waitTime}min</td>
+          <td>{oneData.futrueOneHour}</td>
+        </tr>
+      );
+    });
     return (
       <div className={"PsgSecCheckAnalysis"}>
         <TitleCom title="安检效能分析" />
-        <div className={"PsgSecCheckAnalysisBox"}></div>
+        <table className={"PsgSecCheckAnalysisBox"}>
+          <tr className={"PsgSec-Head"}>
+            <th>地点</th>
+            <th>安检口</th>
+            <th>平均通过</th>
+            <th>未来一小时</th>
+          </tr>
+          {option}
+        </table>
       </div>
     );
   }

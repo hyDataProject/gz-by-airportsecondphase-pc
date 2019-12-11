@@ -51,7 +51,6 @@ export default class FlightDelayCom extends Component {
                 this.setState({
                     seriesData: data
                 })
-                console.log('ddd',data);
                 
             }
 

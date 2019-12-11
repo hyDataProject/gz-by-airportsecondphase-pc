@@ -3,6 +3,7 @@
 */
 import './Header.scss';
 import logo from "img/logo.png";
+import cloud from "img/cloud.png";
 import {NavLink} from 'react-router-dom';
 
 export default class Header extends Component{
@@ -65,6 +66,36 @@ toggleSelectShow=()=>{
                 <div className="yearTxt">
                     2019.10.31
                 </div>
+            </div>
+            <div className="line"></div>
+            <div className="mai">
+                <div className="maiIcon">
+
+                </div>
+                <div className="maiTxt">
+                    5
+                </div>
+            </div>
+            <div className="line"></div>
+            <div className="time">
+                <div className="timeIcon">
+
+                </div>
+                <div className="timeTxt">
+                    12:36<span className="second">:30</span>
+                </div>
+            </div>
+            <div className="line"></div>
+            <div className="temp">
+                <div className="tempIcon">
+                    <img src={cloud}></img>
+                </div>
+                <div className="tempTxt">
+                    22<span className="tem">℃</span>
+                </div>
+            </div>
+            <div className="setting">
+                设置
             </div>
         </div>   
      </div>

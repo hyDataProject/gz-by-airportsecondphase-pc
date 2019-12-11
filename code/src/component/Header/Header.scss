@@ -100,5 +100,32 @@
     .rightCont{
         width: 500px;
         height: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .line{
+            width: 2px;
+            height: 23px;
+            background: url(~img/line.png);
+        }
+        .year{
+            width: 110px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .yearIcon{
+                width: 20px;
+                height: 20px;
+                background: url(~img/year.png);
+                background-size:13px 13px;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+            // .yearTxt{
+            //     font
+            // }
+        }
     }
 }

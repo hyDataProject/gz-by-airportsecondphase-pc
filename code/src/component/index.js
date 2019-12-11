@@ -24,6 +24,9 @@ import PiechartCom from "./PiechartCom/PiechartCom";
 import Header from "./Header/Header";
 import PositionHeating from "./PositionHeating/PositionHeating";
 import RunWay from "./RunWay/RunWay";
+import Luggage from "./Luggage/Luggage";
+import BoardingGate from "./BoardingGate/BoardingGate";
+import Equipment from "./Equipment/Equipment";
 //万吉坤结束
 
 // 昝家威开始
@@ -53,6 +56,9 @@ export {
     Header,
     PositionHeating,
     RunWay,
+    Luggage,
+    BoardingGate,
+    Equipment,
     //万吉坤结束
     // 昝家威开始
     ReleaseRate,

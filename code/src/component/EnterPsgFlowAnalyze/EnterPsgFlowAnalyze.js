@@ -5,7 +5,16 @@ import EnterPsgFlowAnalyzeLine from "./EnterPsgFlowAnalyzeLine";
 export default class EnterPsgFlowAnalyze extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      data: {
+        E1: [],
+        E3: [],
+        W1: [],
+        W2: [],
+        W3: [],
+        hour: []
+      }
+    };
   }
 
   componentDidMount() {
@@ -27,8 +36,22 @@ export default class EnterPsgFlowAnalyze extends Component {
     }).then(result => {
       if (result.data.code == 0) {
         const data = result.data.result;
-        console.log("enter:", data);
-        this.setState({});
+        let dataObj = {
+          E1: [],
+          E3: [],
+          W1: [],
+          W2: [],
+          W3: [],
+          hour: []
+        };
+        data.forEach(ele => {
+          for (let key in ele) {
+            dataObj[key].push(ele[key]);
+          }
+        });
+        this.setState({
+          data: dataObj
+        });
       }
     });
   }
@@ -38,7 +61,7 @@ export default class EnterPsgFlowAnalyze extends Component {
       <div className={"EnterPsgFlowAnalyze"}>
         <TitleCom title="今日到港旅客流量分析" />
         <div className={"EnterPsgFlowAnalyzeBox"}>
-          <EnterPsgFlowAnalyzeLine />
+          <EnterPsgFlowAnalyzeLine data={this.state.data} />
         </div>
       </div>
     );

@@ -16,13 +16,6 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
     let myChart = echarts.init(this.dom);
     myChart.clear();
     let option = {
-      grid: {
-        left: 20,
-        right: 10,
-        bottom: 40,
-        top: 40,
-        containLabel: false
-      },
       legend: {
         top: 5,
         right: 0,
@@ -31,12 +24,18 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
         textStyle: {
           color: "#ffffff"
         },
-        data: ["积压数量", "累计积压"]
+        data: ["E1", "E3", "W1", "W2", "W3"]
       },
-      color: ["#fefe44"],
+      grid: {
+        left: 40,
+        right: 10,
+        bottom: 40,
+        top: 40,
+        containLabel: false
+      },
       xAxis: [
         {
-          data: this.props.xaxis || [],
+          type: "category",
           axisLine: {
             show: true
           },
@@ -54,22 +53,8 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
             lineStyle: {
               color: "#757C9D"
             }
-          }
-        },
-        {
-          data: this.props.xaxis || [],
-          axisLine: {
-            show: false
           },
-          axisTick: {
-            show: false
-          },
-          axisLabel: {
-            show: false
-          },
-          axisLine: {
-            show: false
-          }
+          data: (this.props.data && this.props.data.hour) || []
         }
       ],
       yAxis: [
@@ -104,38 +89,58 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
       ],
       series: [
         {
-          name: "累计积压",
+          name: "E1",
           type: "line",
+          areaStyle: {},
           symbol: "line",
           showSymbol: false,
           symbolSize: 0,
-          lineStyle: {
-            color: "#fefe44"
-          },
-          data: this.props.lineData || []
+          smooth: true,
+          data: (this.props.data && this.props.data.E1) || []
         },
         {
-          name: "积压数量",
-          type: "bar",
-          barWidth: 10,
-          itemStyle: {
-            color: new echarts.graphic.LinearGradient(0, 1, 0, 0, [
-              {
-                offset: 0,
-                color: "rgba(0, 194, 245, 0.3)"
-              },
-              {
-                offset: 1,
-                color: "rgba(5, 210, 246, 0.9)"
-              }
-            ]),
-            borderColor: "rgba(0, 194, 245, 0.2)",
-            borderWidth: 5
-          },
-          data: this.props.barData || []
+          name: "E3",
+          type: "line",
+          areaStyle: {},
+          symbol: "line",
+          showSymbol: false,
+          symbolSize: 0,
+          smooth: true,
+          data: (this.props.data && this.props.data.E3) || []
+        },
+        {
+          name: "W1",
+          type: "line",
+          areaStyle: {},
+          symbol: "line",
+          showSymbol: false,
+          symbolSize: 0,
+          smooth: true,
+          data: (this.props.data && this.props.data.W1) || []
+        },
+        {
+          name: "W2",
+          type: "line",
+          areaStyle: {},
+          symbol: "line",
+          showSymbol: false,
+          symbolSize: 0,
+          smooth: true,
+          data: (this.props.data && this.props.data.W2) || []
+        },
+        {
+          name: "W3",
+          type: "line",
+          areaStyle: {},
+          symbol: "line",
+          showSymbol: false,
+          symbolSize: 0,
+          smooth: true,
+          data: (this.props.data && this.props.data.W3) || []
         }
       ]
     };
+
     myChart.setOption(option);
   }
 
@@ -153,4 +158,13 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
 }
 
 EnterPsgFlowAnalyzeLine.propTypes = {};
-EnterPsgFlowAnalyzeLine.defaultProps = {};
+EnterPsgFlowAnalyzeLine.defaultProps = {
+  data: {
+    E1: [],
+    E3: [],
+    W1: [],
+    W2: [],
+    W3: [],
+    hour: []
+  }
+};

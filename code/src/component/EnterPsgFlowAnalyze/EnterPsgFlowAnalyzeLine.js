@@ -19,13 +19,15 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
       legend: {
         top: 5,
         right: 0,
-        itemWidth: 10,
-        itemHeight: 10,
+        itemGap: 7,
+        itemWidth: 13,
+        itemHeight: 5,
         textStyle: {
           color: "#ffffff"
         },
         data: ["E1", "E3", "W1", "W2", "W3"]
       },
+      color: ["#00c2f5", "#d255fb", "#00ffde", "#508aff", "#fff656"],
       grid: {
         left: 40,
         right: 10,
@@ -91,50 +93,80 @@ export default class EnterPsgFlowAnalyzeLine extends Component {
         {
           name: "E1",
           type: "line",
-          areaStyle: {},
-          symbol: "line",
-          showSymbol: false,
-          symbolSize: 0,
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "rgba(0,194,245,1)" },
+              { offset: 1, color: "rgba(7,99,173,0)" }
+            ])
+          },
+          lineStyle: {
+            width: 1
+          },
+          symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.E1) || []
         },
         {
           name: "E3",
           type: "line",
-          areaStyle: {},
-          symbol: "line",
-          showSymbol: false,
-          symbolSize: 0,
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "rgba(210,85,251,1)" },
+              { offset: 1, color: "rgba(7,99,173,0)" }
+            ])
+          },
+          lineStyle: {
+            width: 1
+          },
+          symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.E3) || []
         },
         {
           name: "W1",
           type: "line",
-          areaStyle: {},
-          symbol: "line",
-          showSymbol: false,
-          symbolSize: 0,
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "rgba(0,255,222,1)" },
+              { offset: 1, color: "rgba(7,99,173,0)" }
+            ])
+          },
+          lineStyle: {
+            width: 1
+          },
+          symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.W1) || []
         },
         {
           name: "W2",
           type: "line",
-          areaStyle: {},
-          symbol: "line",
-          showSymbol: false,
-          symbolSize: 0,
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "rgba(80,138,255,1)" },
+              { offset: 1, color: "rgba(7,99,173,0)" }
+            ])
+          },
+          lineStyle: {
+            width: 1
+          },
+          symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.W2) || []
         },
         {
           name: "W3",
           type: "line",
-          areaStyle: {},
-          symbol: "line",
-          showSymbol: false,
-          symbolSize: 0,
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "rgba(255,246,86,1)" },
+              { offset: 1, color: "rgba(7,99,173,0)" }
+            ])
+          },
+          lineStyle: {
+            width: 1
+          },
+          symbol: "none",
           smooth: true,
           data: (this.props.data && this.props.data.W3) || []
         }

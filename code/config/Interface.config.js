@@ -23,4 +23,6 @@ export const InterfaceList = {
   FltDelaySortieCount:true,
   EnterPsgFlowAnalyze: true,
   PsgSecCheckAnalysis: true,
+  MainStreetFlow: true,
+  ParkLeisureRate: true,
 };

@@ -3,6 +3,7 @@
 */
 import {Switch,Route} from 'react-router-dom';
 import './PublicArea.scss';
+import {MainStreetFlow} from 'com/index'
 export default class PublicArea extends Component{
  constructor(props) {
    super(props)
@@ -27,7 +28,7 @@ export default class PublicArea extends Component{
                  蓄车池实时空闲率分析
               </div>
               <div className="Traffic">
-                 白云机场主干道车流总量分析
+                 <MainStreetFlow />
               </div>
             </div>
         </div>

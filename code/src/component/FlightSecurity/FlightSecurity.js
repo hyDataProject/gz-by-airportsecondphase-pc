@@ -59,7 +59,7 @@ export default class FlightSecurity extends Component {
     draw(result){
         this.myChart.clear();
         let option = {
-            color: ['red','#09eeb4', '#00c2f5', '#daf3ff'],
+            color: ['red','#08efb4', '#00c4f4', '#daf4f4'],
             legend: {
                 itemWidth: 11,
                 itemHeight: 11,
@@ -129,8 +129,8 @@ export default class FlightSecurity extends Component {
                             color: new echarts.graphic.LinearGradient(
                                 0, 0, 1, 0,
                                 [
-                                    { offset: 0, color: 'rgba(11,147,168,0.7)' },
-                                    { offset: 1, color: 'rgba(6,231,157,0.7)' }
+                                    { offset: 0, color: 'rgba(9,237,179,0.5)' },
+                                    { offset: 1, color: 'rgba(9,237,179,0.9)' }
                                 ]
                             )
                         },
@@ -155,8 +155,8 @@ export default class FlightSecurity extends Component {
                             color: new echarts.graphic.LinearGradient(
                                 0, 0, 1, 0,
                                 [
-                                    { offset: 0, color: 'rgba(10,71,175,0.3)' },
-                                    { offset: 1, color: 'rgba(10,71,175,0.7)' }
+                                    { offset: 0, color: 'rgba(0,194,245,0.5)' },
+                                    { offset: 1, color: 'rgba(0,194,245,0.9)' }
                                 ]
                             )
                         },
@@ -190,8 +190,8 @@ export default class FlightSecurity extends Component {
                             color: new echarts.graphic.LinearGradient(
                                 0, 0, 1, 0,
                                 [
-                                    { offset: 0, color: 'rgba(172,205,255,0.3)' },
-                                    { offset: 1, color: 'rgba(172,205,255,0.7)' }
+                                    { offset: 0, color: 'rgba(255,255,255,0.5)' },
+                                    { offset: 1, color: 'rgba(255,255,255,0.9)' }
                                 ]
                             )
                         },

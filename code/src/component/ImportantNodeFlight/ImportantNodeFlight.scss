@@ -64,14 +64,15 @@
                         overflow: hidden;
                         text-overflow:ellipsis;
                         white-space: nowrap;
-                        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#F9B60B), to(#F9FF45));
+                        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#F9FF45), to(#F9B60B));
                         -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
                         -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
                     }
                     i {
                         font-size: 14px;
+                        font-weight: bold;
                         color: #F9B60B;
-                        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#F9B60B), to(#F9FF45));
+                        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#F9FF45), to(#F9B60B));
                         -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
                         -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
                     }

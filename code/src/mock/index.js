@@ -12,6 +12,7 @@ import * as TaxiingFlightCount from './TaxiingFlightCount/mock.TaxiingFlightCoun
 import * as FltSafeguardAnalyze from './FltSafeguardAnalyze/mock.FltSafeguardAnalyze.js';
 import * as PsgEnterOutCount from './PsgEnterOutCount/mock.PsgEnterOutCount.js';
 import * as PsgHourlyDistribution from './PsgHourlyDistribution/mock.PsgHourlyDistribution.js';
+import * as CarPoolLeisureRate from './CarPoolLeisureRate/mock.CarPoolLeisureRate.js';
 /* 张琴结束 */
 // 万吉坤开始
 import * as FltDelaySortieCount from './FltDelaySortieCount/mock.FltDelaySortieCount';
@@ -32,6 +33,7 @@ export {
     FltSafeguardAnalyze,
     PsgEnterOutCount,
     PsgHourlyDistribution,
+    CarPoolLeisureRate,
     /* 张琴结束 */
 
     // 昝家威开始

@@ -18,6 +18,7 @@ export const InterfaceList = {
   FltSafeguardAnalyze: true,
   PsgEnterOutCount: true,
   PsgHourlyDistribution: true,
+  CarPoolLeisureRate: true,
   /* 张琴结束 */
   ReleaseRate: true, 
   FltDelaySortieCount:true,

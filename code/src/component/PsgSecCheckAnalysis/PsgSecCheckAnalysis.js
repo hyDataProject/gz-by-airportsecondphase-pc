@@ -34,7 +34,7 @@ export default class PsgSecCheckAnalysis extends Component {
     }).then(result => {
       if (result.data.code == 0) {
         const data = result.data.result;
-        this.setState({ data });
+        this.setState({ data: [] });
       }
     });
   }
@@ -59,13 +59,15 @@ export default class PsgSecCheckAnalysis extends Component {
       <div className={"PsgSecCheckAnalysis"}>
         <TitleCom title="安检效能分析" />
         <table className={"PsgSecCheckAnalysisBox"}>
-          <tr className={"PsgSec-Head"}>
-            <th>地点</th>
-            <th>安检口</th>
-            <th>平均通过</th>
-            <th>未来一小时</th>
-          </tr>
-          {option}
+          <thead>
+            <tr className={"PsgSec-Head"}>
+              <th>地点</th>
+              <th>安检口</th>
+              <th>平均通过</th>
+              <th>未来一小时</th>
+            </tr>
+          </thead>
+          <tbody>{option}</tbody>
         </table>
       </div>
     );

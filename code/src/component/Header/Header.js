@@ -4,6 +4,20 @@
 import './Header.scss';
 import logo from "img/logo.png";
 import cloud from "img/cloud.png";
+// //晴天
+// import sun from "img/sun.png";
+// //阵雨
+// import shower from "img/shower.png";
+// //霾
+// import haze from "img/haze.png";
+// //雾
+// import fog from "img/fog.png";
+// //小雪
+// import lightSnow from "img/lightSnow.png";
+// //小雨
+// import lightRain from "img/lightRain.png";
+// //中雨
+// import rain from "img/rain.png";
 import {NavLink} from 'react-router-dom';
 
 export default class Header extends Component{
@@ -11,8 +25,13 @@ export default class Header extends Component{
    super(props);
     this.state={
         selectShow:false,
-        defaultActive:0
+        defaultActive:0,
+        year:'',
+        day:'',
+        weather:'',
+        temperature:''
     }
+    this.timer=null;
  }
 componentWillMount(){
 }
@@ -25,15 +44,71 @@ componentWillMount(){
             }) 
         }             
     }); 
+    this.getData();
+    this.setTimer();
  }
+setTimer=()=>{
+    this.timer = setInterval(()=>{
+        this.getData();
+    },globalTimer.headerInterval)
+}
+getData=()=>{
+    axios({
+        method: 'get',
+        url: realAddress[0].url + `/pc/getCurrentTime/${'CAN'}`,
+    }).then((res) => {
+        if(res.data.code === 0){
+            let result = res.data.result;
+            let {weather,time,day,temperature} = result;
+            this.setState({
+                weather:weather,
+                year:day,
+                day:time,
+                temperature:temperature
+            })
+            
+        }
+    });
+}
 toggleSelectShow=()=>{
     let {selectShow} = this.state;
     this.setState({
         selectShow:!selectShow
     })
 }
+handleWeather=(e)=>{
+    let icon = '';
+    switch (e) {
+        case '阵雨':
+            icon = '';
+            break;
+        case '晴':
+            icon = '';
+            break;
+        case '雾':
+            icon = cloud;
+            break;
+        case '小雨':
+            icon = '';
+            break;
+        case '霾':
+            icon = '';
+            break;
+        case '小雪':
+            icon = '';
+            break;
+        case '中雨':
+            icon = '';
+            break;
+        default:
+            break;
+    }
+    return icon;
+}
  render() {
-    let {selectShow,defaultActive} = this.state;
+    let {selectShow,defaultActive,weather,year,day,temperature} = this.state;
+    let tem =temperature !== '' ? (temperature.split('-')[1]).split('℃')[0] : '';
+    let weatherIcon = this.handleWeather(weather);
    return(
      <div className={'Header'}>
         <div className="leftCont">
@@ -66,10 +141,10 @@ toggleSelectShow=()=>{
 
                 </div>
                 <div className="yearTxt">
-                    2019.10.31
+                    {year}
                 </div>
             </div>
-            <div className="line"></div>
+            {/* <div className="line"></div>
             <div className="mai">
                 <div className="maiIcon">
 
@@ -77,23 +152,24 @@ toggleSelectShow=()=>{
                 <div className="maiTxt">
                     5
                 </div>
-            </div>
+            </div> */}
             <div className="line"></div>
             <div className="time">
                 <div className="timeIcon">
 
                 </div>
                 <div className="timeTxt">
-                    12:36<span className="second">:30</span>
+                    {day}
+                    {/* <span className="second">:30</span> */}
                 </div>
             </div>
             <div className="line"></div>
             <div className="temp">
                 <div className="tempIcon">
-                    <img src={cloud}></img>
+                    <img src={weatherIcon}></img>
                 </div>
                 <div className="tempTxt">
-                    22<span className="tem">℃</span>
+                    {tem}<span className="tem">℃</span>
                 </div>
             </div>
             <div className="setting">

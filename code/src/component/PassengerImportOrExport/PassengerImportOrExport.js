@@ -69,9 +69,9 @@ export default class PassengerImportOrExport extends Component {
                 type: 'image',
                 style: {
                     image: barBg,
-                    width: 189,
+                    width: 186,
                     height:17,
-                    x: 118.5,
+                    x: 112.5,
                     y: start[1] - 8.5,
                 }
             }, {// 中垂线
@@ -80,7 +80,7 @@ export default class PassengerImportOrExport extends Component {
                     image: yAxisBg,
                     width: 1,
                     height:80,
-                    x: 210,
+                    x: 205,
                     y: 42,
                 }
             }]
@@ -103,7 +103,7 @@ export default class PassengerImportOrExport extends Component {
                 right: '5%'
             },
             grid: {
-                left: '42%',
+                left: '39%',
                 top:'35%',
                 bottom: '10%',
                 right: 3,

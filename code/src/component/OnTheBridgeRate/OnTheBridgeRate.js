@@ -1,27 +1,20 @@
 /* Create by zhangqin on 2019/10/30 */
 import './OnTheBridgeRate.scss'
 import {TitleCom} from 'com/index'
-import barBg from 'img/jskq_bar_bg.png';
+import barBg from 'img/jrkq_bar_bg.png';
 import scatterImg from 'img/scatter_img.png';
 
 export default class OnTheBridgeRate extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            rate: null
-        };
         this.myChart = null;
-        this.defaultOption = this.defaultOption.bind(this)
     }
     componentDidMount(){
         this.myChart = echarts.init(document.getElementById("barChart"))
-        this.defaultOption();
-        // this.getData();
-        // this.reloadID = setInterval(() => {
-        //     this.myChart.clear();
-        //     this.defaultOption();
-        //     this.draw(this.state.rate)
-        // },globalTimer.positionTotalityByBridgeRate)
+        this.getData();
+        this.reloadId = setInterval(() => {
+            this.getData();
+        },globalTimer.positionTotalityByBridgeRate)
     }
     getData(){// 获取数据
         axios({
@@ -30,21 +23,17 @@ export default class OnTheBridgeRate extends Component {
         }).then((res) => {
             if(res.data.code === 0){
                 let result = res.data.result;
-                console.log('=============>',result)
                 this.draw(result.rate);
-                this.setState({
-                    rate: result.rate
-                })
             }
         });
     }
     componentWillUnmount(){
-        clearInterval(this.reloadID);
+        clearInterval(this.reloadId);
     }
     renderItem(params, api){
         let categoryIndex = api.value(1);
         let start = api.coord([api.value(1), categoryIndex]);
-        let x = 273*api.value(0)/100;//柱图在x轴上的长度
+        let x = 263*api.value(0)/100;//柱图在x轴上的长度
         return {
             type: 'group',
             children: [
@@ -52,7 +41,7 @@ export default class OnTheBridgeRate extends Component {
                     type: 'image',
                     style: {
                         image: barBg,
-                        width: 293,
+                        width: 283,
                         height: 26,
                         x: 0,
                         y: start[1]-25
@@ -78,22 +67,23 @@ export default class OnTheBridgeRate extends Component {
 
         }
     }
-    defaultOption(){
+    draw(rate){
+        this.myChart.clear();
         var option = {
             grid: {
                 left: 0,
-                right: 20,
+                right: 30,
                 top: 65,
                 bottom: 18
             },
             xAxis: {
                 type: 'value',
-                // show: false,
+                show: false,
                 max: 100,
             },
             yAxis: {
                 type: 'category',
-                // show: false,
+                show: false,
                 data: [],
             },
             series: [
@@ -101,11 +91,11 @@ export default class OnTheBridgeRate extends Component {
                 type: 'custom',
                 id: 'barBg',
                 renderItem: this.renderItem,
-                data: [100],
+                data: [rate],
                 silent: true,
             },
             {
-                data: [100],
+                data: [rate],
                 type: 'bar',
                 id: 'rate',
                 barWidth: 26,
@@ -113,7 +103,7 @@ export default class OnTheBridgeRate extends Component {
                 label: {
                     show: true,
                     position: "insideRight",
-                    offset: [15, -45],
+                    offset: rate<5&&String(rate).indexOf('.')>0?[60, -45]:[28,-45],
                     // offset: [100, -80],
                     fontSize: 24,
                     color: "#F5E22B",
@@ -125,28 +115,28 @@ export default class OnTheBridgeRate extends Component {
                 }
             },
             {
-                data: [100],
+                data: [rate],
                 type: 'scatter',
                 id: 'scatter',
                 symbol: 'image://'+scatterImg,
-                symbolSize: 100,
-                symbolOffset: [12,-12],
-                symbolRotate: -6,
+                symbolSize: 60,
+                symbolOffset: [9,-12],
+                symbolRotate: -7,
                 silent: true,
             }
         ]
         }
         this.myChart.setOption(option)
     }
-    draw(rate){
-        this.myChart.setOption({
-            series: [
-                {id: 'rate', data: [rate]},
-                {id: 'barBg', data: [rate]},
-                {id: 'scatter', data: [rate]},
-            ]
-        })
-    }
+    // draw(rate){
+    //     this.myChart.setOption({
+    //         series: [
+    //             {id: 'rate', data: [rate]},
+    //             {id: 'barBg', data: [rate]},
+    //             {id: 'scatter', data: [rate]},
+    //         ]
+    //     })
+    // }
     render(){
         return(
             <div className="OnTheBridgeRate">

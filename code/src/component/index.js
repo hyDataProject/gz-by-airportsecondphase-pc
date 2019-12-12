@@ -15,6 +15,7 @@ import HotelFreeRate from './HotelFreeRate/HotelFreeRate'
 import CarPoolFree from './CarPoolFree/CarPoolFree'
 import FreePlanPosition from './FreePlanPosition/FreePlanPosition'
 import OnTheBridgeRate from './OnTheBridgeRate/OnTheBridgeRate'
+import ParkLeisureRate from './ParkLeisureRate/ParkLeisureRate'
 /*张琴-结束 */
 
 //万吉坤开始
@@ -49,6 +50,7 @@ export {
     CarPoolFree,
     FreePlanPosition,
     OnTheBridgeRate,
+    ParkLeisureRate,
     /*张琴-结束 */
 
     //万吉坤开始

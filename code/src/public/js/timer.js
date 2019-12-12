@@ -6,6 +6,7 @@ var globalTimer = {
     carPoolLeisureRate: 30000,//蓄车池实时空闲率分析
     positionUsedInfo: 30000,//机位空闲情况实时分析
     positionTotalityByBridgeRate: 30000,//今日靠桥率
+    parkLeisureRate: 30000,//停车场实时空闲率分析
     leaveOverstocked: 30000,  // 今日出港积压
     fltDelaySortieCountDelay:30000,//今日延误航班概览
     enterPsgFlowAnalyze:30000,// 今日到港旅客流量分析

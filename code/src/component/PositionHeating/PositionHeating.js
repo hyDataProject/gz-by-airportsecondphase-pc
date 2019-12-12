@@ -18,7 +18,7 @@ export default class PositionHeating extends Component{
             <FreePlanPosition />
         </div>
         <div className="bridgeRate">
-            {/* <OnTheBridgeRate /> */}
+            <OnTheBridgeRate />
         </div>
         <div className="keyAirlines">今日重点航司靠桥率分析</div>
         <div className="msg">消息通告</div>

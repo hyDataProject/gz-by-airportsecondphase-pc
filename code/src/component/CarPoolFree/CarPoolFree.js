@@ -16,7 +16,7 @@ export default class CarPoolFree extends Component {
         this.getData();
         this.reloadId = setInterval(() => {
             this.getData()
-        },globalTimer.fltSafeguardAnalyze)
+        },globalTimer.carPoolLeisureRate)
     }
     componentWillReceiveProps(nextProps){
 

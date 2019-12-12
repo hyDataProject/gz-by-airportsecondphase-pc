@@ -13,6 +13,8 @@ import PassengerImportOrExport from './PassengerImportOrExport/PassengerImportOr
 import PassengerHourDistribution from './PassengerHourDistribution/PassengerHourDistribution'
 import HotelFreeRate from './HotelFreeRate/HotelFreeRate'
 import CarPoolFree from './CarPoolFree/CarPoolFree'
+import FreePlanPosition from './FreePlanPosition/FreePlanPosition'
+import OnTheBridgeRate from './OnTheBridgeRate/OnTheBridgeRate'
 /*张琴-结束 */
 
 //万吉坤开始
@@ -45,6 +47,8 @@ export {
     PassengerHourDistribution,
     HotelFreeRate,
     CarPoolFree,
+    FreePlanPosition,
+    OnTheBridgeRate,
     /*张琴-结束 */
 
     //万吉坤开始

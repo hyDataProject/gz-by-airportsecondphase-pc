@@ -18,6 +18,8 @@ import * as PositionTotalityByBridgeRate from './PositionTotalityByBridgeRate/mo
 /* 张琴结束 */
 // 万吉坤开始
 import * as FltDelaySortieCount from './FltDelaySortieCount/mock.FltDelaySortieCount';
+import * as HeaderTime from './HeaderTime/mock.HeaderTime';
+
 
 // 万吉坤结束
 
@@ -49,5 +51,6 @@ export {
     // 昝家威结束
     // 万吉坤开始
     FltDelaySortieCount,
+    HeaderTime,
     // 万吉坤结束
 }

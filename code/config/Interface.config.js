@@ -10,7 +10,7 @@ export let InterfaceSwitch;
 if (NODE_ENV === "pro") {
   InterfaceSwitch = mock;
 } else {
-  InterfaceSwitch = true;
+  InterfaceSwitch = false;
 }
 export const InterfaceList = {
   /* 张琴开始 */
@@ -28,4 +28,7 @@ export const InterfaceList = {
   PsgSecCheckAnalysis: true,
   MainStreetFlow: true,
   ParkLeisureRate: true,
+  /**万吉坤开始 */
+  HeaderTime:true,
+  /**万吉坤结束 */
 };

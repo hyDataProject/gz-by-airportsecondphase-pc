@@ -11,4 +11,5 @@ var globalTimer = {
     enterPsgFlowAnalyze:30000,// 今日到港旅客流量分析
     psgSecCheckAnalysis:30000,//安检效能分析
     mainStreetFlow: 30000, // 白云机场主干道车流总量分析
+    headerInterval:30000,//头部
 }

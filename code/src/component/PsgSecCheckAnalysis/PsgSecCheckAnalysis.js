@@ -34,7 +34,7 @@ export default class PsgSecCheckAnalysis extends Component {
     }).then(result => {
       if (result.data.code == 0) {
         const data = result.data.result;
-        this.setState({ data: [] });
+        this.setState({ data });
       }
     });
   }

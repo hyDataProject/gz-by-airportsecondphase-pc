@@ -127,8 +127,8 @@ handleWeather=(e)=>{
                     <div className="toggleItem"><NavLink className="navlink" to={"/main/terminalCont"}>航站区</NavLink></div>
                     <div className="toggleItem"><NavLink className={defaultActive === 1 ? "navlink active" : "navlink"} to={"/main/flyCont"}>飞行区</NavLink></div>
                     <div className="toggleItem">
-                        {/* <NavLink  className="navlink" to={"/main/publicArea"}>公共区</NavLink> */}
-                        公共区
+                        <NavLink  className="navlink" to={"/main/publicArea"}>公共区</NavLink>
+                        {/* 公共区 */}
                     </div>
                 </div>
             </div>

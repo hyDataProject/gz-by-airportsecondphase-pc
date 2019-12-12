@@ -81,7 +81,7 @@ export default class FlightSecurity extends Component {
             xAxis: {
                 type: 'value',
                 show: false,
-                max: result.done+result.process+result.wait
+                max: result.done+result.working+result.wait
             },
             yAxis: {
                 type: 'category',
@@ -150,7 +150,7 @@ export default class FlightSecurity extends Component {
                     barWidth: 21,
                     silent: true,
                     data: [{
-                        value: result.process,
+                        value: result.working,
                         itemStyle: {
                             color: new echarts.graphic.LinearGradient(
                                 0, 0, 1, 0,

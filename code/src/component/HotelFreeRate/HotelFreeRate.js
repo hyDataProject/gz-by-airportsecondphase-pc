@@ -67,8 +67,9 @@ export default class HotelFreeRate extends Component {
                 }
             },
             series: [{//背景
-                data: [200, 200, 200, 200, 200, 200],
+                data: [],
                 type: 'bar',
+                id: 'bgBar',
                 barWidth: 19,
                 silent: true,
                 itemStyle: {
@@ -116,7 +117,21 @@ export default class HotelFreeRate extends Component {
                 },
             }]
         }
-        this.myChart.setOption(option)
+        this.myChart.setOption(option);
+        //取value轴最大值
+        let max = this.myChart.getModel().getComponent('yAxis', 0).axis.scale.getExtent()[1]
+        let dataShadow = [];//阴影数据
+        for(var i = 0; i <6; i++){
+            dataShadow.push(max)
+        }
+        this.myChart.setOption({
+            series: [
+                { // 背景阴影
+                    id: 'bgBar',
+                    data: dataShadow,
+                }
+            ]
+        })
     }
     render(){
         return(

@@ -15,16 +15,16 @@ export default class TerminalContPassengerService extends Component{
    return(
      <div className={'TerminalContPassengerService'}>
         <div className="inAndOut">
-            <PassengerImportOrExport />
+            <PassengerImportOrExport terminal="T1" />
         </div>
         <div className="PassengersToday">
-            <PassengerHourDistribution />
+            <PassengerHourDistribution terminal="T1"/>
         </div>
         <div className="TodayArrive">
-            <EnterPsgFlowAnalyze />
+            <EnterPsgFlowAnalyze terminal="T1" />
         </div>
         <div className="SecurityEffectiveness">
-            <PsgSecCheckAnalysis />
+            <PsgSecCheckAnalysis terminal="T1" />
         </div>
     </div>
    )

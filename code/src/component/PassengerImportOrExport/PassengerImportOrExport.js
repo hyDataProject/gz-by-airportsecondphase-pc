@@ -89,7 +89,7 @@ export default class PassengerImportOrExport extends Component {
     draw(enterData,outData){
         this.myChart.clear();
         let option = {
-            color: ["blue", "#00C2F5","#07edb5"],
+            color: ["blue", "#00C2F5","#09edb3"],
             legend: {
                 itemWidth: 11,
                 itemHeight: 11,
@@ -209,8 +209,8 @@ export default class PassengerImportOrExport extends Component {
                 <div className="category">
                     {/* <p>2小时内:<CountUp end={lastSum} /></p>
                     <p>未来2小时:<CountUp end={futureSum} /></p> */}
-                    <p>2小时内:<span>{lastSum}</span></p>
-                    <p>未来2小时:<span>{futureSum}</span></p>
+                    <p>2小时内: <span>{lastSum}</span></p>
+                    <p>未来2小时: <span>{futureSum}</span></p>
                 </div>
                 <div id="PassengerImportOrExport"></div>
             </div>

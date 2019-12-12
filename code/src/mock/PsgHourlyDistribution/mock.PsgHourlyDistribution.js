@@ -5,8 +5,9 @@ let Random = Mock.Random;
 import a from './psgHourlyDistribution.json'
 
 function createData(){
-    let data = [],currentTime = Random.integer(0,23);
-    for(var i = 0; i< 24;i++){
+    let time = Random.integer(0,23);
+    let data = [],currentTime = Random.integer(0,time);
+    for(var i = 0; i< time;i++){
         let dataItem = {}
         if(i<currentTime){
             dataItem = {

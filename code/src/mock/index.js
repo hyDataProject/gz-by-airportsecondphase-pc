@@ -13,6 +13,8 @@ import * as FltSafeguardAnalyze from './FltSafeguardAnalyze/mock.FltSafeguardAna
 import * as PsgEnterOutCount from './PsgEnterOutCount/mock.PsgEnterOutCount.js';
 import * as PsgHourlyDistribution from './PsgHourlyDistribution/mock.PsgHourlyDistribution.js';
 import * as CarPoolLeisureRate from './CarPoolLeisureRate/mock.CarPoolLeisureRate.js';
+import * as PositionUsedInfo from './PositionUsedInfo/mock.PositionUsedInfo.js';
+import * as PositionTotalityByBridgeRate from './PositionTotalityByBridgeRate/mock.PositionTotalityByBridgeRate';
 /* 张琴结束 */
 // 万吉坤开始
 import * as FltDelaySortieCount from './FltDelaySortieCount/mock.FltDelaySortieCount';
@@ -34,6 +36,8 @@ export {
     PsgEnterOutCount,
     PsgHourlyDistribution,
     CarPoolLeisureRate,
+    PositionUsedInfo,
+    PositionTotalityByBridgeRate,
     /* 张琴结束 */
 
     // 昝家威开始

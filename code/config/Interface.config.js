@@ -19,6 +19,8 @@ export const InterfaceList = {
   PsgEnterOutCount: true,
   PsgHourlyDistribution: true,
   CarPoolLeisureRate: true,
+  PositionUsedInfo: true,
+  PositionTotalityByBridgeRate: true,
   /* 张琴结束 */
   ReleaseRate: true, 
   FltDelaySortieCount:true,

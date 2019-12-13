@@ -7,7 +7,7 @@ function createData(){
     let data = {
         "plan": Random.integer(0,1000),//今日计划
         "done": Random.integer(0,1000),//保障完成
-        "process": Random.integer(0,1000),//保障中
+        "working": Random.integer(0,1000),//保障中
         "wait": Random.integer(0,1000),//待保障
     }
     return data

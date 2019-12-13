@@ -169,7 +169,7 @@ export default class CarPoolFree extends Component {
                                         {
                                             offset: 0, color: 'rgba(0, 194, 245, 0.8)',
                                           },{
-                                            offset: 1, color: 'rgba(5, 210, 246, 0.3)'
+                                            offset: 1, color: 'rgba(5, 210, 246, 0.1)'
                                           }
                                     ]
                                 )
@@ -231,7 +231,7 @@ export default class CarPoolFree extends Component {
                                         {
                                             offset: 0, color: 'rgba(0,211,111,0.8)',
                                           },{
-                                            offset: 1, color: 'rgba(0,211,111,0.3)'
+                                            offset: 1, color: 'rgba(0,211,111,0.1)'
                                           }
                                     ]
                                 )

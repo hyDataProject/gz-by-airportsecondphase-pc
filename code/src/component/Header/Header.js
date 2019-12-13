@@ -4,20 +4,20 @@
 import './Header.scss';
 import logo from "img/logo.png";
 import cloud from "img/cloud.png";
-// //晴天
-// import sun from "img/sun.png";
-// //阵雨
-// import shower from "img/shower.png";
-// //霾
-// import haze from "img/haze.png";
-// //雾
-// import fog from "img/fog.png";
-// //小雪
-// import lightSnow from "img/lightSnow.png";
-// //小雨
-// import lightRain from "img/lightRain.png";
-// //中雨
-// import rain from "img/rain.png";
+//晴天
+import sun from "img/sun.png";
+//阵雨
+import shower from "img/shower.png";
+//霾
+import haze from "img/haze.png";
+//雾
+import fog from "img/fog.png";
+//小雪
+import lightSnow from "img/lightSnow.png";
+//小雨
+import lightRain from "img/lightRain.png";
+//中雨
+import rain from "img/rain.png";
 import {NavLink} from 'react-router-dom';
 
 export default class Header extends Component{
@@ -80,25 +80,25 @@ handleWeather=(e)=>{
     let icon = '';
     switch (e) {
         case '阵雨':
-            icon = '';
+            icon = shower;
             break;
         case '晴':
-            icon = '';
+            icon = sun;
             break;
         case '雾':
-            icon = cloud;
+            icon = fog;
             break;
         case '小雨':
-            icon = '';
+            icon = lightRain;
             break;
         case '霾':
-            icon = '';
+            icon = haze;
             break;
         case '小雪':
-            icon = '';
+            icon = lightSnow;
             break;
         case '中雨':
-            icon = '';
+            icon = rain;
             break;
         default:
             break;

@@ -18,21 +18,30 @@ export default class EnterPsgFlowAnalyze extends Component {
   }
 
   componentDidMount() {
-    this._getData();
+    this._getData(this.props.terminal);
     this.timer = setInterval(() => {
-      this._getData();
+      this._getData(this.props.terminal);
     }, globalTimer.enterPsgFlowAnalyze);
   }
 
+  componentWillReceiveProps(nextProps){
+    if (this.props.terminal !== nextProps.terminal) {
+        this.reloadId && clearInterval(this.reloadId);
+        this.getData(nextProps.terminal);
+        this.reloadId = setInterval(() => {
+            this.getData(nextProps.terminal);
+        }, globalTimer.psgHourlyDistribution)
+    }
+}
   componentWillUnmount() {
     this.timer && clearInterval(this.timer);
   }
 
-  _getData() {
+  _getData(terminal) {
     axios({
       //进港每小时放行概览
       method: "get",
-      url: realAddress[0].url + `/pc/enterPsgFlowAnalyze/${this.props.terminal}`
+      url: realAddress[0].url + `/pc/enterPsgFlowAnalyze/${terminal}`
     }).then(result => {
       if (result.data.code == 0) {
         const data = result.data.result;

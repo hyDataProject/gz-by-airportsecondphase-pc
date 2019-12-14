@@ -13,4 +13,5 @@ var globalTimer = {
     psgSecCheckAnalysis:30000,//安检效能分析
     mainStreetFlow: 30000, // 白云机场主干道车流总量分析
     headerInterval:30000,//头部
+    hotelInterval:30000,//酒店
 }

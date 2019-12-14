@@ -44,8 +44,8 @@ const project = {
             // "url": "172.20.10.15",
             // "port": "8086",
             // "path":"/ivs-gis"
-            "url": "192.168.1.151",
-            "port": "8080",
+            "url": "10.135.23.116",
+            "port": "802",
             "path":""
         },
         {
@@ -69,7 +69,7 @@ const project = {
     }],
     "webScript": [{
         name: 'public',
-        value: ['js/timer']
+        value: ['js/vex.channel.min','js/vexWS','js/timer']
     },{
         name: "js",
         value: ["timer", "vendors.bundle", "app.bundle"]

@@ -10,12 +10,86 @@ export default class HotelFreeRate extends Component {
     }
     componentDidMount(){
         this.myChart = echarts.init(document.getElementById('HotelFreeRate'))
-        this.draw()
+        // this.draw()
+        this.getData();
+        this.reloadId = setInterval(() => {
+            this.getData()
+        },globalTimer.hotelInterval)
     }
     componentWillReceiveProps(nextProps){
 
     }
-    draw(){
+    componentWillUnmount(){
+        clearInterval(this.reloadId);
+    }
+    getData(){
+        // axios({
+        //     method: 'get',
+        //     url: realAddress[0].url + '/pc/hotelRoomLeisureNum',
+        // }).then((res) => {
+        //     if(res.data.code === 0){
+                let result = {
+                    "code": 0,
+                    "msg": "调用成功!",
+                    "result": [
+                        {
+                            "hotelName": "香榭丽",
+                            "leisureRoomNum": 7
+                        },
+                        {
+                            "hotelName": "铂尔曼",
+                            "leisureRoomNum": 35
+                        },
+                        {
+                            "hotelName": "城市便捷",
+                            "leisureRoomNum": 35
+                        },
+                        {
+                            "hotelName": "广州汉群",
+                            "leisureRoomNum": 49
+                        },
+                        {
+                            "hotelName": "广州飞航",
+                            "leisureRoomNum": 77
+                        },
+                        {
+                            "hotelName": "远方的家",
+                            "leisureRoomNum": 86
+                        },
+                        {
+                            "hotelName": "广州宜客",
+                            "leisureRoomNum": 94
+                        },
+                        {
+                            "hotelName": "广州名利",
+                            "leisureRoomNum": 115
+                        },
+                        {
+                            "hotelName": "广州逸云",
+                            "leisureRoomNum": 131
+                        },
+                        {
+                            "hotelName": "尚品假日",
+                            "leisureRoomNum": 257
+                        }
+                    ]
+                }
+                // let result = res.data.result;
+                let data = result.result;
+                if (data && data.length) {
+                    let xAxisData=[],seriesData=[];
+                    data.forEach(ele=>{
+                        xAxisData.push(ele.hotelName);
+                        seriesData.push(Number(ele.leisureRoomNum));
+                        this.draw(xAxisData,seriesData);
+
+                    })
+                    
+                }
+            }
+        // });
+    // }
+    draw(xAxisData,seriesData){
         this.myChart.clear();
         let option = {
             grid:{
@@ -27,13 +101,14 @@ export default class HotelFreeRate extends Component {
             },
             xAxis: {
                 type: 'category',
-                data: ['60%及以上', '40-60%', '30-40%', '20-30%', '10-30%', '10%以下'],
+                data: xAxisData,
                 axisLabel: {
                     color: "#709dbc",
                     fontFamily: "lcd",
                     fontSize: 12,
                     margin: 4,
-                    interval:0
+                    interval:0,
+                    rotate:45
                 },
                 axisTick: {
                     show: false,
@@ -78,7 +153,7 @@ export default class HotelFreeRate extends Component {
                     barBorderRadius:[5,5,0,0]
                 }
             },{//柱图
-                data: [120, 180, 150, 80, 70, 110],
+                data: seriesData,
                 type: 'bar',
                 barWidth: 19,
                 silent: true,
@@ -101,7 +176,7 @@ export default class HotelFreeRate extends Component {
                 },
                 barGap: '-100%'
             },{//象形柱图
-                data: [120, 180, 150, 80, 70, 110],
+                data: seriesData,
                 type: 'pictorialBar',
                 barWidth: 19,
                 symbol: 'rect',
@@ -121,7 +196,7 @@ export default class HotelFreeRate extends Component {
         //取value轴最大值
         let max = this.myChart.getModel().getComponent('yAxis', 0).axis.scale.getExtent()[1]
         let dataShadow = [];//阴影数据
-        for(var i = 0; i <6; i++){
+        for(var i = 0; i <seriesData.length; i++){
             dataShadow.push(max)
         }
         this.myChart.setOption({

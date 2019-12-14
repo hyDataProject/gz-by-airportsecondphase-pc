@@ -44,9 +44,12 @@ const project = {
             // "url": "172.20.10.15",
             // "port": "8086",
             // "path":"/ivs-gis"
-            "url": "10.135.23.116",
-            "port": "802",
-            "path":""
+            "url": "10.135.23.56", //测试环境电脑IP
+            "port": "8080",
+            "path":"/ivs-gis-pc"
+            // "url": "10.135.23.116",//胡佳电脑IP
+            // "port": "802",
+            // "path":""
         },
         {
             "name": "urlThree",
@@ -62,7 +65,7 @@ const project = {
      * 每个要处理的文件夹名以字符串的形式定义
      * '/文件夹名'
      * */
-    "publicResources": ["js/timer.js"],
+    "publicResources": ["js/timer.js",'js/vex.channel.min.js','js/vexWS.js'],
     "webCss": [{
         name: "css",
         value: ["vendors", "app"]
@@ -75,9 +78,8 @@ const project = {
         value: ["timer", "vendors.bundle", "app.bundle"]
     }],
     /*工程应用中的服务名，影响接口访问路径*/
-    // "publicPath": "/ivs-lsd/",
-    // "publicPath": "/cq1123/",
-    "publicPath": "/",
+    "publicPath": "/ivs-lsd-pc/",
+    // "publicPath": "/",
     /*工程中需要全局声明的第三方库，对应影响webpack.ProvidePlugin*/
     "providePlugin": {
         "_": ["lodash"],

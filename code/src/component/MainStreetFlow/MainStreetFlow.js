@@ -77,7 +77,7 @@ export default class MainStreetFlow extends Component {
           </div>
         </div>
         <div className={"MainStreetFlowBox"}>
-          <MainStreetFlowLine time={time} totalFlow={totalFlow} />
+          <MainStreetFlowLine time={time} totalFlow={totalFlow} type={type}/>
         </div>
       </div>
     );

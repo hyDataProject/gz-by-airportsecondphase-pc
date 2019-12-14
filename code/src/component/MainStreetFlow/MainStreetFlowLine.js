@@ -14,6 +14,7 @@ export default class MainStreetFlowLine extends Component {
 
   _drawChart() {
     let myChart = echarts.init(this.dom);
+    let type = this.props.type === 1 ? '(日)' : '(月)'
     myChart.clear();
     let option = {
       grid: {
@@ -26,7 +27,7 @@ export default class MainStreetFlowLine extends Component {
       xAxis: [
         {
           type: "category",
-          name: "(日)",
+          name: type,
           nameTextStyle: {
             color: "#727a9e", //X轴文字颜色
             fontFamily: "lcd",
@@ -124,5 +125,6 @@ export default class MainStreetFlowLine extends Component {
 MainStreetFlowLine.propTypes = {};
 MainStreetFlowLine.defaultProps = {
   totalFlow: [],
-  time: []
+  time: [],
+  type:1
 };

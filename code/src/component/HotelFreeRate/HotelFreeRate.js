@@ -211,7 +211,7 @@ export default class HotelFreeRate extends Component {
     render(){
         return(
             <div className="HotelFreeRateCom">
-                <TitleCom title="酒店实时空闲率分析" />
+                <TitleCom title="酒店剩余房源统计" />
                 <div id="HotelFreeRate"></div>
             </div>
         )

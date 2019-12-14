@@ -14,6 +14,8 @@ export default class TerminalContPassengerService extends Component{
  componentDidMount() {
     let that = this;
     byjc_cq.on(monitorType, function (msg) {
+        console.log('msgg',msg);
+        
       if (msg.data.area && msg.data.area === "PC_TA1") {
         that.setState({
             terminal:'T1'
@@ -29,6 +31,8 @@ export default class TerminalContPassengerService extends Component{
 
  render() {
     let {terminal} = this.state;
+    console.log('terminal',terminal);
+    
    return(
      <div className={'TerminalContPassengerService'}>
         <div className="inAndOut">

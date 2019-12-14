@@ -27,9 +27,9 @@ export default class EnterPsgFlowAnalyze extends Component {
   componentWillReceiveProps(nextProps){
     if (this.props.terminal !== nextProps.terminal) {
         this.reloadId && clearInterval(this.reloadId);
-        this.getData(nextProps.terminal);
+        this._getData(nextProps.terminal);
         this.reloadId = setInterval(() => {
-            this.getData(nextProps.terminal);
+            this._getData(nextProps.terminal);
         }, globalTimer.psgHourlyDistribution)
     }
 }

@@ -1,0 +1,46 @@
+{
+	"code": 0,
+	"msg": "调用成功!",
+	"result": [
+		{
+			"hotelName": "香榭丽",
+			"leisureRoomNum": 7
+		},
+		{
+			"hotelName": "铂尔曼",
+			"leisureRoomNum": 35
+		},
+		{
+			"hotelName": "城市便捷",
+			"leisureRoomNum": 35
+		},
+		{
+			"hotelName": "广州汉群",
+			"leisureRoomNum": 49
+		},
+		{
+			"hotelName": "广州飞航",
+			"leisureRoomNum": 77
+		},
+		{
+			"hotelName": "远方的家",
+			"leisureRoomNum": 86
+		},
+		{
+			"hotelName": "广州宜客",
+			"leisureRoomNum": 94
+		},
+		{
+			"hotelName": "广州名利",
+			"leisureRoomNum": 115
+		},
+		{
+			"hotelName": "广州逸云",
+			"leisureRoomNum": 131
+		},
+		{
+			"hotelName": "尚品假日",
+			"leisureRoomNum": 257
+		}
+	]
+}

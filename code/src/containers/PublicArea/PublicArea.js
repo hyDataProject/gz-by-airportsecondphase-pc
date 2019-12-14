@@ -16,7 +16,7 @@ export default class PublicArea extends Component{
    return(
      <div className={'PublicArea'}>
         <div className="leftCon">
-            <div className="leftConNav"></div>
+            {/* <div className="leftConNav"></div> */}
             <div className="leftConRoute">
               <div className="ParkingLot">
                  <ParkLeisureRate />

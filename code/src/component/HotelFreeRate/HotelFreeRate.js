@@ -23,59 +23,59 @@ export default class HotelFreeRate extends Component {
         clearInterval(this.reloadId);
     }
     getData(){
-        // axios({
-        //     method: 'get',
-        //     url: realAddress[0].url + '/pc/hotelRoomLeisureNum',
-        // }).then((res) => {
-        //     if(res.data.code === 0){
-                let result = {
-                    "code": 0,
-                    "msg": "调用成功!",
-                    "result": [
-                        {
-                            "hotelName": "香榭丽",
-                            "leisureRoomNum": 7
-                        },
-                        {
-                            "hotelName": "铂尔曼",
-                            "leisureRoomNum": 35
-                        },
-                        {
-                            "hotelName": "城市便捷",
-                            "leisureRoomNum": 35
-                        },
-                        {
-                            "hotelName": "广州汉群",
-                            "leisureRoomNum": 49
-                        },
-                        {
-                            "hotelName": "广州飞航",
-                            "leisureRoomNum": 77
-                        },
-                        {
-                            "hotelName": "远方的家",
-                            "leisureRoomNum": 86
-                        },
-                        {
-                            "hotelName": "广州宜客",
-                            "leisureRoomNum": 94
-                        },
-                        {
-                            "hotelName": "广州名利",
-                            "leisureRoomNum": 115
-                        },
-                        {
-                            "hotelName": "广州逸云",
-                            "leisureRoomNum": 131
-                        },
-                        {
-                            "hotelName": "尚品假日",
-                            "leisureRoomNum": 257
-                        }
-                    ]
-                }
-                // let result = res.data.result;
-                let data = result.result;
+        axios({
+            method: 'get',
+            url: realAddress[0].url + '/pc/hotelRoomLeisureNum',
+        }).then((res) => {
+            if(res.data.code === 0){
+                // let result = {
+                //     "code": 0,
+                //     "msg": "调用成功!",
+                //     "result": [
+                //         {
+                //             "hotelName": "香榭丽",
+                //             "leisureRoomNum": 7
+                //         },
+                //         {
+                //             "hotelName": "铂尔曼",
+                //             "leisureRoomNum": 35
+                //         },
+                //         {
+                //             "hotelName": "城市便捷",
+                //             "leisureRoomNum": 35
+                //         },
+                //         {
+                //             "hotelName": "广州汉群",
+                //             "leisureRoomNum": 49
+                //         },
+                //         {
+                //             "hotelName": "广州飞航",
+                //             "leisureRoomNum": 77
+                //         },
+                //         {
+                //             "hotelName": "远方的家",
+                //             "leisureRoomNum": 86
+                //         },
+                //         {
+                //             "hotelName": "广州宜客",
+                //             "leisureRoomNum": 94
+                //         },
+                //         {
+                //             "hotelName": "广州名利",
+                //             "leisureRoomNum": 115
+                //         },
+                //         {
+                //             "hotelName": "广州逸云",
+                //             "leisureRoomNum": 131
+                //         },
+                //         {
+                //             "hotelName": "尚品假日",
+                //             "leisureRoomNum": 257
+                //         }
+                //     ]
+                // }
+                let result = res.data.result;
+                let data = result;
                 if (data && data.length) {
                     let xAxisData=[],seriesData=[];
                     data.forEach(ele=>{
@@ -87,8 +87,8 @@ export default class HotelFreeRate extends Component {
                     
                 }
             }
-        // });
-    // }
+        });
+    }
     draw(xAxisData,seriesData){
         this.myChart.clear();
         let option = {

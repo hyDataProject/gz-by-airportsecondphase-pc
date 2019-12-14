@@ -5,26 +5,43 @@ import './TerminalContPassengerService.scss';
 import {PassengerImportOrExport, EnterPsgFlowAnalyze, PsgSecCheckAnalysis, PassengerHourDistribution} from 'com/index'
 export default class TerminalContPassengerService extends Component{
  constructor(props) {
-   super(props)
+   super(props);
+    this.state={
+        terminal:'T2'
+    }
  }
 
  componentDidMount() {
+    let that = this;
+    byjc_cq.on(monitorType, function (msg) {
+      if (msg.data.area && msg.data.area === "PC_TA1") {
+        that.setState({
+            terminal:'T1'
+        })
+      }
+      if (msg.data.area && msg.data.area === "PC_TA2") {
+        that.setState({
+            terminal:'T2'
+        })
+      }
+    });
  }
 
  render() {
+    let {terminal} = this.state;
    return(
      <div className={'TerminalContPassengerService'}>
         <div className="inAndOut">
-            <PassengerImportOrExport terminal="T1" />
+            <PassengerImportOrExport terminal={terminal} />
         </div>
         <div className="PassengersToday">
-            <PassengerHourDistribution terminal="T1"/>
+            <PassengerHourDistribution terminal={terminal}/>
         </div>
         <div className="TodayArrive">
-            <EnterPsgFlowAnalyze terminal="T1" />
+            <EnterPsgFlowAnalyze terminal={terminal} />
         </div>
         <div className="SecurityEffectiveness">
-            <PsgSecCheckAnalysis terminal="T1" />
+            <PsgSecCheckAnalysis terminal={terminal} />
         </div>
     </div>
    )

@@ -19,7 +19,7 @@ import * as PositionTotalityByBridgeRate from './PositionTotalityByBridgeRate/mo
 // 万吉坤开始
 import * as FltDelaySortieCount from './FltDelaySortieCount/mock.FltDelaySortieCount';
 import * as HeaderTime from './HeaderTime/mock.HeaderTime';
-
+import * as HotelRoomLeisureNum from "./HotelRoomLeisureNum/mock.HotelRoomLeisureNum";
 
 // 万吉坤结束
 
@@ -52,5 +52,6 @@ export {
     // 万吉坤开始
     FltDelaySortieCount,
     HeaderTime,
+    HotelRoomLeisureNum,
     // 万吉坤结束
 }

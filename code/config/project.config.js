@@ -78,8 +78,8 @@ const project = {
         value: ["timer", "vendors.bundle", "app.bundle"]
     }],
     /*工程应用中的服务名，影响接口访问路径*/
-    "publicPath": "/ivs-lsd-pc/",
-    // "publicPath": "/",
+    // "publicPath": "/ivs-lsd-pc/",
+    "publicPath": "/",
     /*工程中需要全局声明的第三方库，对应影响webpack.ProvidePlugin*/
     "providePlugin": {
         "_": ["lodash"],

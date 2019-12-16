@@ -94,7 +94,7 @@ go=(e)=>{
             </div>
         </div>
         <div className="rightCon">
-            <iframe width="1625" height="944" src={realAddress[1].url+'/flightArea.html'}></iframe>
+            <iframe width="1526" height="944" src={realAddress[1].url+'/flightArea.html'}></iframe>
         </div>
     </div>
    )

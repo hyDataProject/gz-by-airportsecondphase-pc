@@ -10,7 +10,7 @@ export let InterfaceSwitch;
 if (NODE_ENV === "pro") {
   InterfaceSwitch = mock;
 } else {
-  InterfaceSwitch = false;
+  InterfaceSwitch = true;
 }
 export const InterfaceList = {
   /* 张琴开始 */

@@ -124,9 +124,9 @@ handleWeather=(e)=>{
             <div className="middleContItem threeArea active">
                 <div onClick={this.toggleSelectShow} className="toggleSelect">场区运行监控</div>
                 <div className={selectShow ? "selectCont active" : "selectCont"}>
-                    <div className="toggleItem"><NavLink className={defaultActive === 1 ? "navlink active" : "navlink"} to={"/main/flyCont"}>飞行区</NavLink></div>
-                    <div className="toggleItem"><NavLink className="navlink" to={"/main/terminalCont"}>航站区</NavLink></div>
-                    <div className="toggleItem"><NavLink  className="navlink" to={"/main/publicArea"}>公共区</NavLink></div>
+                    <div className="toggleItem"><NavLink   onClick={this.toggleSelectShow} className={defaultActive === 1 ? "navlink active" : "navlink"} to={"/main/flyCont"}>飞行区</NavLink></div>
+                    <div className="toggleItem"><NavLink  onClick={this.toggleSelectShow} className="navlink" to={"/main/terminalCont"}>航站区</NavLink></div>
+                    <div className="toggleItem"><NavLink  onClick={this.toggleSelectShow} className="navlink" to={"/main/publicArea"}>公共区</NavLink></div>
                 </div>
             </div>
             <div className="middleContItem">五大业务流程</div>

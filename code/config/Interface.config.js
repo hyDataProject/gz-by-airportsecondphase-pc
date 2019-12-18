@@ -21,6 +21,10 @@ export const InterfaceList = {
   CarPoolLeisureRate: true,
   PositionUsedInfo: true,
   PositionTotalityByBridgeRate: true,
+  LugCheckHourlyCount: true,
+  LugCheckPassList: true,
+  CurrentGateUseCount: true,
+  BoardingGateHourlyCount: true,
   /* 张琴结束 */
   ReleaseRate: true, 
   FltDelaySortieCount:true,
@@ -28,6 +32,7 @@ export const InterfaceList = {
   PsgSecCheckAnalysis: true,
   MainStreetFlow: true,
   ParkLeisureRate: true,
+  RunwayHourlySortie: true,
   /**万吉坤开始 */
   HeaderTime:true,
   HotelRoomLeisureNum:true,

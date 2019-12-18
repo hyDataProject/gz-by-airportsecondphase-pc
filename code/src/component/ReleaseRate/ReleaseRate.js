@@ -1,5 +1,6 @@
 import "./ReleaseRate.scss";
-import { TitleCom, ReleaseRateBarLine } from "com/index";
+import { TitleCom } from "com/index";
+import ReleaseRateBarLine from './ReleaseRateBarLine';
 
 export default class ReleaseRate extends Component {
   constructor(props) {

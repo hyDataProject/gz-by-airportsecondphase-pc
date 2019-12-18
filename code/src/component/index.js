@@ -16,6 +16,11 @@ import CarPoolFree from './CarPoolFree/CarPoolFree'
 import FreePlanPosition from './FreePlanPosition/FreePlanPosition'
 import OnTheBridgeRate from './OnTheBridgeRate/OnTheBridgeRate'
 import ParkLeisureRate from './ParkLeisureRate/ParkLeisureRate'
+import BaggageSort from './BaggageSort/BaggageSort'
+import LuggageCheckPassRate from './LuggageCheckPassRate/LuggageCheckPassRate'
+import CurrentGateUseCountCom from './CurrentGateUseCountCom/CurrentGateUseCountCom'
+import CurrentGateUseCountBar from './CurrentGateUseCountBar/CurrentGateUseCountBar'
+import CurrentGateUseCountLine from './CurrentGateUseCountLine/CurrentGateUseCountLine'
 /*张琴-结束 */
 
 //万吉坤开始
@@ -37,7 +42,7 @@ import Login from "./Login/Login";
 
 // 昝家威开始
 import ReleaseRate from './ReleaseRate/ReleaseRate'
-import ReleaseRateBarLine from './ReleaseRateBarLine/ReleaseRateBarLine'
+import BarLine from './BarLine/BarLine'
 import PsgSecCheckAnalysis from './PsgSecCheckAnalysis/PsgSecCheckAnalysis'
 import EnterPsgFlowAnalyze from './EnterPsgFlowAnalyze/EnterPsgFlowAnalyze'
 import MainStreetFlow from './MainStreetFlow/MainStreetFlow'
@@ -54,6 +59,11 @@ export {
     FreePlanPosition,
     OnTheBridgeRate,
     ParkLeisureRate,
+    BaggageSort,
+    LuggageCheckPassRate,
+    CurrentGateUseCountCom,
+    CurrentGateUseCountBar,
+    CurrentGateUseCountLine,
     /*张琴-结束 */
 
     //万吉坤开始
@@ -73,7 +83,7 @@ export {
     //万吉坤结束
     // 昝家威开始
     ReleaseRate,
-    ReleaseRateBarLine,
+    BarLine,
     PsgSecCheckAnalysis,
     EnterPsgFlowAnalyze,
     MainStreetFlow,

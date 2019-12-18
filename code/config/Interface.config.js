@@ -21,6 +21,10 @@ export const InterfaceList = {
   CarPoolLeisureRate: true,
   PositionUsedInfo: true,
   PositionTotalityByBridgeRate: true,
+  LugCheckHourlyCount: true,
+  LugCheckPassList: true,
+  CurrentGateUseCount: true,
+  BoardingGateHourlyCount: true,
   /* 张琴结束 */
   ReleaseRate: true, 
   FltDelaySortieCount:true,

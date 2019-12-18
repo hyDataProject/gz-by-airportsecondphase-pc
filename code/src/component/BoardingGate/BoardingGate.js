@@ -2,6 +2,7 @@
  Crate by wanjikun on 19/12/11.
 */
 import './BoardingGate.scss'
+import {CurrentGateUseCountCom} from 'com/index';
 export default class BoardingGate extends Component{
  constructor(props) {
    super(props)
@@ -13,7 +14,9 @@ export default class BoardingGate extends Component{
  render() {
    return(
      <div className={'BoardingGate'}>
-        <div className="currentBoardingGate">当前登机口使用航班数量统计</div>
+        <div className="currentBoardingGate">
+            <CurrentGateUseCountCom />
+        </div>
     </div>
    )
  }

@@ -16,6 +16,11 @@ import CarPoolFree from './CarPoolFree/CarPoolFree'
 import FreePlanPosition from './FreePlanPosition/FreePlanPosition'
 import OnTheBridgeRate from './OnTheBridgeRate/OnTheBridgeRate'
 import ParkLeisureRate from './ParkLeisureRate/ParkLeisureRate'
+import BaggageSort from './BaggageSort/BaggageSort'
+import LuggageCheckPassRate from './LuggageCheckPassRate/LuggageCheckPassRate'
+import CurrentGateUseCountCom from './CurrentGateUseCountCom/CurrentGateUseCountCom'
+import CurrentGateUseCountBar from './CurrentGateUseCountBar/CurrentGateUseCountBar'
+import CurrentGateUseCountLine from './CurrentGateUseCountLine/CurrentGateUseCountLine'
 /*张琴-结束 */
 
 //万吉坤开始
@@ -51,6 +56,11 @@ export {
     FreePlanPosition,
     OnTheBridgeRate,
     ParkLeisureRate,
+    BaggageSort,
+    LuggageCheckPassRate,
+    CurrentGateUseCountCom,
+    CurrentGateUseCountBar,
+    CurrentGateUseCountLine,
     /*张琴-结束 */
 
     //万吉坤开始

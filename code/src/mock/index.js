@@ -15,6 +15,10 @@ import * as PsgHourlyDistribution from './PsgHourlyDistribution/mock.PsgHourlyDi
 import * as CarPoolLeisureRate from './CarPoolLeisureRate/mock.CarPoolLeisureRate.js';
 import * as PositionUsedInfo from './PositionUsedInfo/mock.PositionUsedInfo.js';
 import * as PositionTotalityByBridgeRate from './PositionTotalityByBridgeRate/mock.PositionTotalityByBridgeRate';
+import * as LugCheckHourlyCount from './LugCheckHourlyCount/mock.LugCheckHourlyCount';
+import * as LugCheckPassList from './LugCheckPassList/mock.LugCheckPassList';
+import * as CurrentGateUseCount from './CurrentGateUseCount/mock.CurrentGateUseCount';
+import * as BoardingGateHourlyCount from './BoardingGateHourlyCount/mock.BoardingGateHourlyCount';
 /* 张琴结束 */
 // 万吉坤开始
 import * as FltDelaySortieCount from './FltDelaySortieCount/mock.FltDelaySortieCount';
@@ -40,6 +44,10 @@ export {
     CarPoolLeisureRate,
     PositionUsedInfo,
     PositionTotalityByBridgeRate,
+    LugCheckHourlyCount,
+    LugCheckPassList,
+    CurrentGateUseCount,
+    BoardingGateHourlyCount,
     /* 张琴结束 */
 
     // 昝家威开始

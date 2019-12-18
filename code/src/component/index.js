@@ -30,6 +30,9 @@ import RunWay from "./RunWay/RunWay";
 import Luggage from "./Luggage/Luggage";
 import BoardingGate from "./BoardingGate/BoardingGate";
 import Equipment from "./Equipment/Equipment";
+import Loading from "./Loading/Loading";
+import Login from "./Login/Login";
+
 //万吉坤结束
 
 // 昝家威开始
@@ -65,6 +68,8 @@ export {
     Luggage,
     BoardingGate,
     Equipment,
+    Loading,
+    Login,
     //万吉坤结束
     // 昝家威开始
     ReleaseRate,

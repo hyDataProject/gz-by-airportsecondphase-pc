@@ -1,0 +1,86 @@
+/*
+ * @Author: liqi@hiynn.com 
+ * @Date: 2018-03-13 12:11:23 
+ * @Description: 登录页
+ * @Last Modified by: liqi@hiynn.com
+ * @Last Modified time: 2018-03-20 15:39:22
+ */
+
+.login-panel {
+    .login-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -90%);
+        width: 1400px;
+        height: 220px;
+        background: url('~img/login/login-title.png') no-repeat center / 100% 100%;
+    }
+    .login-auth-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 40%);
+        width: 400px;
+        height: 160px;
+        .login-input {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 40px;
+            background: url('~img/login/login-input-bg.png') no-repeat center / 100% 100%;
+            .login-label-wrapper {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100px;
+                .icon {
+                    display: block;
+                    width: 12px;
+                    height: 16px;
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .icon-user-code {
+                    background: url('~img/login/login-usercode.png');
+                }
+                .icon-password {
+                    background: url('~img/login/login-password.png');
+                }
+                .login-label {
+                    width: 60px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #29ABE2;
+                }
+            }
+            input {
+                flex: 1;
+                display: block;
+                font-size: 18px;
+                font-weight: bold;
+                color: #00FFFF;
+                background: transparent;
+                border: none;
+                outline: none;
+            }
+        }
+        .login-submit {
+            cursor: pointer;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            margin-top: 12px;
+            text-align: center;
+            color: rgb(185, 185, 185);
+            font-size: 18px;
+            font-weight: bold;
+            background: url('~img/login/login-btn-bg.png') no-repeat center / 100% 100%;
+            transition: color 1000ms ease 0ms;
+        }
+        .login-submit:hover {
+            color: #FFF;
+        }
+    }
+}

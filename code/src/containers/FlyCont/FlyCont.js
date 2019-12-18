@@ -15,6 +15,9 @@ export default class FlyCont extends Component{
  componentDidMount() {
  }
 componentWillMount(){
+    this.setMoudleActive()
+}
+setMoudleActive=()=>{
     let str = this.props.location.pathname
     let path = str.substring(str.lastIndexOf("/"));
     let activeIndex=0;

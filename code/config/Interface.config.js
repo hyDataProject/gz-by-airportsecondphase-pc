@@ -28,6 +28,7 @@ export const InterfaceList = {
   PsgSecCheckAnalysis: true,
   MainStreetFlow: true,
   ParkLeisureRate: true,
+  RunwayHourlySortie: true,
   /**万吉坤开始 */
   HeaderTime:true,
   HotelRoomLeisureNum:true,

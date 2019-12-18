@@ -27,7 +27,7 @@ export default class MainStreetFlow extends Component {
     axios({
       //进港每小时放行概览
       method: "get",
-      url: realAddress[0].url + `/pc/mainStreetFlow/${this.state.type}`
+      url: realAddressUrlOne + `/pc/mainStreetFlow/${this.state.type}`
     }).then(result => {
       if (result.data.code == 0) {
         const data = result.data.result;

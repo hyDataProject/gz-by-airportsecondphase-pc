@@ -26,7 +26,7 @@ export default class Main extends Component {
     saveToken(){
         // axios({ //获取token
         //     method: 'get',
-        //     url: realAddress[0].url + '/screen/arrivalTotalAndDelayRate',
+        //     url: realAddressUrlOne + '/screen/arrivalTotalAndDelayRate',
         // }).then((result) => {
         // });
     }

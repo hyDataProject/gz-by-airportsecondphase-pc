@@ -38,7 +38,7 @@ export default class PsgSecCheckAnalysis extends Component {
     axios({
       //进港每小时放行概览
       method: "get",
-      url: realAddress[0].url + `/pc/psgSecCheckAnalysis/${terminal}`
+      url: realAddressUrlOne + `/pc/psgSecCheckAnalysis/${terminal}`
     }).then(result => {
       if (result.data.code == 0) {
         const data = result.data.result;

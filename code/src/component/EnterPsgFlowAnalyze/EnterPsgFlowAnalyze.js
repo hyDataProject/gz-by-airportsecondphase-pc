@@ -41,7 +41,7 @@ export default class EnterPsgFlowAnalyze extends Component {
     axios({
       //进港每小时放行概览
       method: "get",
-      url: realAddress[0].url + `/pc/enterPsgFlowAnalyze/${terminal}`
+      url: realAddressUrlOne + `/pc/enterPsgFlowAnalyze/${terminal}`
     }).then(result => {
       if (result.data.code == 0) {
         const data = result.data.result;

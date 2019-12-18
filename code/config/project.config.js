@@ -31,22 +31,22 @@ const project = {
     "realUrl": [{
             "name": "urlOne",
             "protocol": "http",
-            "url": "10.10.236.170",
-            "port": "60000",
-            "path":"/api",
-            // "url": "172.20.10.15",
-            // "port": "8081",
-            // "path":"/airport-apv-api-product"
+            // "url": "10.10.236.170",
+            // "port": "60000",
+            // "path":"/api",
+            "url": "172.20.10.15",
+            "port": "8086",
+            "path":"/api"
         },
         {
             "name": "urlTow",
-            "protocol": "http",
-            // "url": "172.20.10.15",
-            // "port": "8086",
-            // "path":"/ivs-gis"
-            "url": "10.135.23.56", //测试环境电脑IP
-            "port": "8080",
+            // "protocol": "http",
+            "url": "172.20.10.15",
+            "port": "8086",
             "path":"/ivs-gis-pc"
+            // "url": "10.135.23.56", //测试环境电脑IP
+            // "port": "8080",
+            // "path":"/ivs-gis-pc"
             // "url": "10.135.23.116",//胡佳电脑IP
             // "port": "802",
             // "path":""
@@ -78,7 +78,7 @@ const project = {
         value: ["timer", "vendors.bundle", "app.bundle"]
     }],
     /*工程应用中的服务名，影响接口访问路径*/
-    // "publicPath": "/ivs-lsd-pc/",
+    // "publicPath": "/ivs-pc/",
     "publicPath": "/",
     /*工程中需要全局声明的第三方库，对应影响webpack.ProvidePlugin*/
     "providePlugin": {

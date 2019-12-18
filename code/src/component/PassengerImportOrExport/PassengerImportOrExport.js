@@ -37,7 +37,7 @@ export default class PassengerImportOrExport extends Component {
     getData(terminal){
         axios({
             method: 'get',
-            url: realAddress[0].url + '/pc/psgEnterOutCount/'+terminal,
+            url: realAddressUrlOne + '/pc/psgEnterOutCount/'+terminal,
         }).then((res) => {
             if(res.data.code === 0){
                 let result = res.data.result;

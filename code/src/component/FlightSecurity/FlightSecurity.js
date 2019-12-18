@@ -29,7 +29,7 @@ export default class FlightSecurity extends Component {
     getData(){
         axios({
             method: 'get',
-            url: realAddress[0].url + '/pc/fltSafeguardAnalyze',
+            url: realAddressUrlOne + '/pc/fltSafeguardAnalyze',
         }).then((res) => {
             if(res.data.code === 0){
                 let result = res.data.result;

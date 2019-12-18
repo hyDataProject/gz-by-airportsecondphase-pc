@@ -15,7 +15,7 @@ export default class Main extends Component {
     constructor(props, context) {
         super(props);
         this.state={
-            isLogin:false
+            isLogin:true
         }
         this.saveToken = this.saveToken.bind(this);
     }
@@ -23,12 +23,12 @@ export default class Main extends Component {
 
     componentWillMount() {
         // this.saveToken();
-        this.judgeIfTocken();
-        this.props.history.listen(() => {
-            console.log('.....');
+        // this.judgeIfTocken();
+        // this.props.history.listen(() => {
+        //     console.log('.....');
             
-            this.judgeIfTocken();
-        })
+        //     this.judgeIfTocken();
+        // })
     }
     //存储token
     saveToken(){

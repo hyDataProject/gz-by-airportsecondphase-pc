@@ -34,7 +34,7 @@ import Equipment from "./Equipment/Equipment";
 
 // 昝家威开始
 import ReleaseRate from './ReleaseRate/ReleaseRate'
-import ReleaseRateBarLine from './ReleaseRateBarLine/ReleaseRateBarLine'
+import BarLine from './BarLine/BarLine'
 import PsgSecCheckAnalysis from './PsgSecCheckAnalysis/PsgSecCheckAnalysis'
 import EnterPsgFlowAnalyze from './EnterPsgFlowAnalyze/EnterPsgFlowAnalyze'
 import MainStreetFlow from './MainStreetFlow/MainStreetFlow'
@@ -68,7 +68,7 @@ export {
     //万吉坤结束
     // 昝家威开始
     ReleaseRate,
-    ReleaseRateBarLine,
+    BarLine,
     PsgSecCheckAnalysis,
     EnterPsgFlowAnalyze,
     MainStreetFlow,

@@ -29,6 +29,7 @@ import * as PsgSecCheckAnalysis from './PsgSecCheckAnalysis/mock.PsgSecCheckAnal
 import * as EnterPsgFlowAnalyze from './EnterPsgFlowAnalyze/mock.EnterPsgFlowAnalyze';
 import * as MainStreetFlow from './MainStreetFlow/mock.MainStreetFlow';
 import * as ParkLeisureRate from './ParkLeisureRate/mock.ParkLeisureRate';
+import * as RunwayHourlySortie from './RunwayHourlySortie/mock.RunwayHourlySortie';
 // 昝家威结束
 
 export {
@@ -48,6 +49,7 @@ export {
     EnterPsgFlowAnalyze,
     MainStreetFlow,
     ParkLeisureRate,
+    RunwayHourlySortie,
     // 昝家威结束
     // 万吉坤开始
     FltDelaySortieCount,

@@ -14,4 +14,5 @@ var globalTimer = {
     mainStreetFlow: 30000, // 白云机场主干道车流总量分析
     headerInterval:30000,//头部
     hotelInterval:30000,//酒店
+    runwayHourlySortie: 30000, // 每日每小时跑道分析
 }

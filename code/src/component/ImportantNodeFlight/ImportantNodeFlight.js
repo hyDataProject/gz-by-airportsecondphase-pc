@@ -33,7 +33,7 @@ export default class ImportantNodeFlight extends Component {
     getData(){
         axios({
             method: 'get',
-            url: realAddress[0].url + '/pc/taxiingFlightCount',
+            url: realAddressUrlOne + '/pc/taxiingFlightCount',
         }).then((res) => {
             if(res.data.code === 0){
                 let result = res.data.result;

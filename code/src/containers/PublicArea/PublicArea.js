@@ -33,7 +33,7 @@ export default class PublicArea extends Component{
             </div>
         </div>
         <div className="rightCon">
-            <iframe width="1526" height="944" src={realAddress[1].url+'/tingchechang.html'}></iframe>
+            <iframe width="1526" height="944" src={realAddressUrlTwo+'/tingchechang.html'}></iframe>
         </div>
     </div>
    )

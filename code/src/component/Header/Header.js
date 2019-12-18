@@ -55,7 +55,7 @@ setTimer=()=>{
 getData=()=>{
     axios({
         method: 'get',
-        url: realAddress[0].url + `/pc/getCurrentTime/${'CAN'}`,
+        url: realAddressUrlOne + `/pc/getCurrentTime/${'CAN'}`,
     }).then((res) => {
         if(res.data.code === 0){
             let result = res.data.result;

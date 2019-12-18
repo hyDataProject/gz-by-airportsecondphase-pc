@@ -28,7 +28,7 @@ export default class FreePlanPosition extends Component {
     getData(){
         axios({
             method: 'get',
-            url: realAddress[0].url + '/pc/positionUsedInfo',
+            url: realAddressUrlOne + '/pc/positionUsedInfo',
         }).then((res) => {
             if(res.data.code === 0){
                 let result = res.data.result,name = [],used = [], free = [],allNumber = [];

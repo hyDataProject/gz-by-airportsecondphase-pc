@@ -24,7 +24,7 @@ export default class FlightDelayCom extends Component {
     getData = () => {
         axios({ //进港每小时放行概览
             method: 'get',
-            url: realAddress[0].url + `/pc/fltDelaySortieCount`,
+            url: realAddressUrlOne + `/pc/fltDelaySortieCount`,
         }).then((res) => {
             // console.log('延误架次实时分析', res);
             const { code, result } = res.data;

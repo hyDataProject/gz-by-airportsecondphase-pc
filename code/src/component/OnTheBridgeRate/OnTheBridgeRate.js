@@ -19,7 +19,7 @@ export default class OnTheBridgeRate extends Component {
     getData(){// 获取数据
         axios({
             method: 'get',
-            url: realAddress[0].url + '/pc/positionTotalityByBridgeRate',
+            url: realAddressUrlOne + '/pc/positionTotalityByBridgeRate',
         }).then((res) => {
             if(res.data.code === 0){
                 let result = res.data.result;

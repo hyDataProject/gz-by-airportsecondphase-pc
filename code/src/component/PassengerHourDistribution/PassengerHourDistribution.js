@@ -33,7 +33,7 @@ export default class PassengerHourDistribution extends Component {
     getData(terminal) {// 获取接口数据
         axios({
             method: 'get',
-            url: realAddress[0].url + '/pc/psgHourlyDistribution/' + terminal,
+            url: realAddressUrlOne + '/pc/psgHourlyDistribution/' + terminal,
         }).then(res => {
             if (res.data.code === 0) {
                 let result = res.data.result,currentTime=null;

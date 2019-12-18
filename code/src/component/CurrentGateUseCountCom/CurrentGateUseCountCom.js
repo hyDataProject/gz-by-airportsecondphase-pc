@@ -25,7 +25,7 @@ export default class CurrentGateUseCountCom extends Component {
         })
         if(res1.data.code===0&&res2.data.code===0){
             let result1 = res1.data.result,result2 = res2.data.result;
-            console.log(result1,result2)
+            // console.log(result1,result2)
             this.setState({
                 farGate: result1.far,
                 nearGate:result1.near

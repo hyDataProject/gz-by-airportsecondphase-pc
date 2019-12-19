@@ -48,6 +48,10 @@ import EnterPsgFlowAnalyze from './EnterPsgFlowAnalyze/EnterPsgFlowAnalyze'
 import MainStreetFlow from './MainStreetFlow/MainStreetFlow'
 // 昝家威结束
 
+/** 缪佳耕 开始 */
+import Notification from './Notification/Notification'
+/** 缪佳耕 结束 */
+
 export {
     /*张琴-开始 */
     FlightSecurity,
@@ -88,4 +92,7 @@ export {
     EnterPsgFlowAnalyze,
     MainStreetFlow,
     // 昝家威结束
+    /** 缪佳耕 开始 */
+    Notification,
+    /** 缪佳耕 结束 */
 };

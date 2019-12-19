@@ -2,7 +2,7 @@
  Crate by wanjikun on 19/12/11.
 */
 import './PositionHeating.scss'
-import {FreePlanPosition,OnTheBridgeRate} from 'com/index'
+import {FreePlanPosition, OnTheBridgeRate, Notification} from 'com/index'
 export default class PositionHeating extends Component{
  constructor(props) {
    super(props)
@@ -21,7 +21,9 @@ export default class PositionHeating extends Component{
             <OnTheBridgeRate />
         </div>
         <div className="keyAirlines">今日重点航司靠桥率分析</div>
-        <div className="msg">消息通告</div>
+        <div className="msg">
+            <Notification />
+        </div>
     </div>
    )
  }

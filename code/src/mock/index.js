@@ -36,6 +36,10 @@ import * as ParkLeisureRate from './ParkLeisureRate/mock.ParkLeisureRate';
 import * as RunwayHourlySortie from './RunwayHourlySortie/mock.RunwayHourlySortie';
 // 昝家威结束
 
+/** 缪佳耕开始 */
+import * as PositionChange from './PositionChange/mock.PositionChange'
+/** 缪佳耕结束 */
+
 export {
     /* 张琴开始 */
     TaxiingFlightCount,
@@ -64,4 +68,8 @@ export {
     HeaderTime,
     HotelRoomLeisureNum,
     // 万吉坤结束
+    
+    /** 缪佳耕开始 */
+    PositionChange,
+    /** 缪佳耕结束 */
 }

@@ -41,11 +41,13 @@ import Login from "./Login/Login";
 //万吉坤结束
 
 // 昝家威开始
-import ReleaseRate from './ReleaseRate/ReleaseRate'
-import BarLine from './BarLine/BarLine'
-import PsgSecCheckAnalysis from './PsgSecCheckAnalysis/PsgSecCheckAnalysis'
-import EnterPsgFlowAnalyze from './EnterPsgFlowAnalyze/EnterPsgFlowAnalyze'
-import MainStreetFlow from './MainStreetFlow/MainStreetFlow'
+import ReleaseRate from './ReleaseRate/ReleaseRate';
+import BarLine from './BarLine/BarLine';
+import PsgSecCheckAnalysis from './PsgSecCheckAnalysis/PsgSecCheckAnalysis';
+import EnterPsgFlowAnalyze from './EnterPsgFlowAnalyze/EnterPsgFlowAnalyze';
+import MainStreetFlow from './MainStreetFlow/MainStreetFlow';
+import EachLugUsedFlightNum from './EachLugUsedFlightNum/EachLugUsedFlightNum';
+
 // 昝家威结束
 
 /** 缪佳耕 开始 */
@@ -91,6 +93,7 @@ export {
     PsgSecCheckAnalysis,
     EnterPsgFlowAnalyze,
     MainStreetFlow,
+    EachLugUsedFlightNum,
     // 昝家威结束
     /** 缪佳耕 开始 */
     Notification,

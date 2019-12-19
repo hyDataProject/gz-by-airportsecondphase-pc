@@ -16,6 +16,11 @@ import CarPoolFree from './CarPoolFree/CarPoolFree'
 import FreePlanPosition from './FreePlanPosition/FreePlanPosition'
 import OnTheBridgeRate from './OnTheBridgeRate/OnTheBridgeRate'
 import ParkLeisureRate from './ParkLeisureRate/ParkLeisureRate'
+import BaggageSort from './BaggageSort/BaggageSort'
+import LuggageCheckPassRate from './LuggageCheckPassRate/LuggageCheckPassRate'
+import CurrentGateUseCountCom from './CurrentGateUseCountCom/CurrentGateUseCountCom'
+import CurrentGateUseCountBar from './CurrentGateUseCountBar/CurrentGateUseCountBar'
+import CurrentGateUseCountLine from './CurrentGateUseCountLine/CurrentGateUseCountLine'
 /*张琴-结束 */
 
 //万吉坤开始
@@ -30,6 +35,9 @@ import RunWay from "./RunWay/RunWay";
 import Luggage from "./Luggage/Luggage";
 import BoardingGate from "./BoardingGate/BoardingGate";
 import Equipment from "./Equipment/Equipment";
+import Loading from "./Loading/Loading";
+import Login from "./Login/Login";
+
 //万吉坤结束
 
 // 昝家威开始
@@ -51,6 +59,11 @@ export {
     FreePlanPosition,
     OnTheBridgeRate,
     ParkLeisureRate,
+    BaggageSort,
+    LuggageCheckPassRate,
+    CurrentGateUseCountCom,
+    CurrentGateUseCountBar,
+    CurrentGateUseCountLine,
     /*张琴-结束 */
 
     //万吉坤开始
@@ -65,6 +78,8 @@ export {
     Luggage,
     BoardingGate,
     Equipment,
+    Loading,
+    Login,
     //万吉坤结束
     // 昝家威开始
     ReleaseRate,

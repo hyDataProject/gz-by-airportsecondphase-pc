@@ -13,6 +13,7 @@
     "d3-selection-multi": "^1.0.1",
     "echarts": "^4.2.0-rc.1",
     "echarts-gl": "^1.1.1",
+    "js-md5": "^0.7.3",
     "lodash": "^4.17.11",
     "mockjs": "^1.0.1-beta3",
     "moment": "^2.24.0",

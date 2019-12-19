@@ -36,6 +36,7 @@ export const InterfaceList = {
   /**万吉坤开始 */
   HeaderTime:true,
   HotelRoomLeisureNum:true,
+  Login:true,
   /**万吉坤结束 */
   /**缪佳耕开始 */
   PositionChange:true,

@@ -5,13 +5,7 @@ let Random = Mock.Random
 
 function createData(){
     let data = [];
-    let currentTime = Random.integer(0,23),num = null;
-    if((currentTime+1)/2 === 0){
-        num = (currentTime+1)/2
-    }else {
-        num = currentTime/2
-    }
-    for(var i = 0; i < num; i++){
+    for(var i = 0; i < 12; i++){
         data.push({
             "hour": (i+1)*2+'h',
             "amount": Random.integer(0,800),

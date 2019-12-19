@@ -9,7 +9,7 @@ import {withRouter} from 'react-router-dom'
 
 import React, { Component } from 'react'
 import { message } from 'antd'
-// import md5 from 'js-md5'
+import md5 from 'js-md5'
 import './Login.scss'
 import PropTypes from 'prop-types'
 
@@ -102,16 +102,33 @@ class Login extends Component {
 
 	/**
 	 * 当点击登录按钮时触发
-	 * - 发起登录请求, 将 token userName menuList 存入 localStorage 中, 并跳转页面
+	 * - 发起登录请求, 将 token userName menuList 存入 sessionStorage 中, 并跳转页面
 	 * @return {void} void
 	 */
 	handleLoginEvent() {
 		const { userCode, password } = this.state
 
 		this.setState({ spinning: true })	
-		setTimeout(()=>{
-			this.props.loginFun && this.props.loginFun(userCode, password)
-		},2000)	
+		// this.props.loginFun && this.props.loginFun(userCode, password)
+		axios({
+            method: 'post',
+			url: realAddressUrlOne + '/sys/login',
+			data:{
+				username:userCode,
+				password:md5(password)
+			}
+        }).then((res) => {
+			console.log('res',res);
+			
+            if(res.data.code === 200){
+				let token = res.data.result.token;
+				sessionStorage.setItem('token', token);
+				sessionStorage.setItem('userName', userCode);
+				sessionStorage.setItem('password', password);
+
+				this.props.history.push('/main/flyCont')
+            }
+        });	
 
 		// // 发起请求		
 		// post(`${baseUrl}login`, {
@@ -127,9 +144,9 @@ class Login extends Component {
 		// 		if(menuList.length > 0) {
 		// 			const routerPath = menuList[0].path;
 		// 			console.log('routerPath----->', routerPath)
-		// 			localStorage.setItem('token', token)
-		// 			localStorage.setItem('userName', userName)
-		// 			localStorage.setItem('menuList', JSON.stringify(menuList))
+		// 			sessionStorage.setItem('token', token)
+		// 			sessionStorage.setItem('userName', userName)
+		// 			sessionStorage.setItem('menuList', JSON.stringify(menuList))
 		// 			message.success(res.msg)
 		// 			window.location.pathname = routerPath;
 		// 		}else {
@@ -151,9 +168,9 @@ class Login extends Component {
 		// 	// 		this.setState({ spinning: false })
 
 		// 	// 		// 设置本地缓存
-		// 	// 		localStorage.setItem('token', token)
-		// 	// 		localStorage.setItem('userName', userName)
-		// 	// 		localStorage.setItem('menuList', JSON.stringify(menuList))
+		// 	// 		sessionStorage.setItem('token', token)
+		// 	// 		sessionStorage.setItem('userName', userName)
+		// 	// 		sessionStorage.setItem('menuList', JSON.stringify(menuList))
 		// 	// 		message.success(res.msg)
 
 		// 	// 		window.location.pathname = routerPath;	
@@ -169,7 +186,7 @@ class Login extends Component {
 }
 
 Login.propTypes = {
-	loginFun:PropTypes.func.isRequired,
+	// loginFun:PropTypes.func.isRequired,
 }
 Login.defaultProps = {}
 export default withRouter(Login)

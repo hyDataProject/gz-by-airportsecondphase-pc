@@ -4,7 +4,8 @@
 
 import {HashRouter, Route, NavLink, Link, Switch} from 'react-router-dom';
 import { hot } from 'react-hot-loader/root';
-import {Nav,Main} from 'con/index'
+import {Nav,Main} from 'con/index';
+import { Login } from "com/index";
 
 class Router extends Component {
     constructor(props, context) {
@@ -17,6 +18,7 @@ class Router extends Component {
                     <Switch>
                         <Route path="/nav" component={Nav}/>
                         <Route path="/main" component={Main}/>
+                        <Route path="/login" component={Login}/>
                         <Route path="/" component={Main}/>
                     </Switch>
             </HashRouter>

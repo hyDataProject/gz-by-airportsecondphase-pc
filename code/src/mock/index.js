@@ -24,7 +24,7 @@ import * as BoardingGateHourlyCount from './BoardingGateHourlyCount/mock.Boardin
 import * as FltDelaySortieCount from './FltDelaySortieCount/mock.FltDelaySortieCount';
 import * as HeaderTime from './HeaderTime/mock.HeaderTime';
 import * as HotelRoomLeisureNum from "./HotelRoomLeisureNum/mock.HotelRoomLeisureNum";
-
+import * as Login from "./Login/mock.Login";
 // 万吉坤结束
 
 // 昝家威开始
@@ -63,5 +63,6 @@ export {
     FltDelaySortieCount,
     HeaderTime,
     HotelRoomLeisureNum,
+    Login,
     // 万吉坤结束
 }

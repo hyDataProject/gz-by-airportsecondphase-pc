@@ -5,14 +5,29 @@ export default class CurrentGateUseCountCom extends Component {
         super(props);
         this.state = {
             farGate: 0,
-            nearGate: 0
+            nearGate: 0,
+            xData: [],
+            farNum: [],
+            nearNum: [],
         }
     }
     componentDidMount(){
-        this.getData()
+        this.getData(this.props.terminal);
+        this.reloadId = setInterval(() => {
+            this.getData(this.props.terminal);
+        },globalTimer.currentGateUseCount)
     }
     componentWillReceiveProps(nextProps){
-
+        if (this.props.terminal !== nextProps.terminal) {
+            this.reloadId && clearInterval(this.reloadId);
+            this.getData(nextProps.terminal);
+            this.reloadId = setInterval(() => {
+                this.getData(nextProps.terminal);
+            }, globalTimer.currentGateUseCount)
+        }
+    }
+    componentWillUnmount(){
+        clearInterval(this.reloadId);
     }
     async getData(terminal) {
         let res1 = await axios({//当前登机口使用航班数量统计
@@ -25,37 +40,33 @@ export default class CurrentGateUseCountCom extends Component {
         })
         if(res1.data.code===0&&res2.data.code===0){
             let result1 = res1.data.result,result2 = res2.data.result;
-            // console.log(result1,result2)
+            let xData = result2.map(item => {
+                return item.hours+1+'h'
+            }),
+                farNum = result2.map(item => {
+                    return item.farNum
+                }),
+                nearNum = result2.map(item => {
+                    return item.nearNum
+                });
             this.setState({
                 farGate: result1.far,
-                nearGate:result1.near
+                nearGate:result1.near,
+                xData: xData,
+                farNum: farNum,
+                nearNum: nearNum,
             })
         }
     }
-    getData1(terminal){// 获取当前登机口使用航班数量
-        axios({
-            method: 'get',
-            url: realAddressUrlOne + '/pc/currentGateUseCount/'+terminal,
-        }).then((res) => {
-            if(res.data.code === 0){
-                let result = res.data.result;
-                // x轴类目值
-                let xData = result.map(item => {
-                    return item.hour
-                }),
-                //y轴value值
-                seriesData = result.map(item => {
-                    return item.amount
-                });
-                this.draw(xData,seriesData);
-            }
-        });
-    }
     render(){
-        let {farGate,nearGate} = this.state;
+        let {farGate,nearGate,xData,farNum,nearNum} = this.state;
+        
         let farRate = ((farGate/(farGate+nearGate))*100).toFixed(2),//远机位占比
             nearRate = ((nearGate/(farGate+nearGate))*100).toFixed(2);//近机位占比
-        return(
+        
+        let LineData = {xData,farNum,nearNum}
+        console.log()
+            return(
             <div className="CurrentGateUseCountCom">
                 <TitleCom title="当前登机口使用航班数量统计" />
                 <p>远机位：<span>{farGate}</span></p>
@@ -63,7 +74,7 @@ export default class CurrentGateUseCountCom extends Component {
                 <p className="near">近机位：<span>{nearGate}</span></p>
                 <CurrentGateUseCountBar id={'NearBar'} nearRate={nearRate} />
                 
-                {/* <CurrentGateUseCountLine /> */}
+                <CurrentGateUseCountLine LineData={LineData} />
             </div>
         )
     }

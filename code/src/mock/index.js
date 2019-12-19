@@ -24,7 +24,7 @@ import * as BoardingGateHourlyCount from './BoardingGateHourlyCount/mock.Boardin
 import * as FltDelaySortieCount from './FltDelaySortieCount/mock.FltDelaySortieCount';
 import * as HeaderTime from './HeaderTime/mock.HeaderTime';
 import * as HotelRoomLeisureNum from "./HotelRoomLeisureNum/mock.HotelRoomLeisureNum";
-
+import * as Login from "./Login/mock.Login";
 // 万吉坤结束
 
 // 昝家威开始
@@ -35,6 +35,10 @@ import * as MainStreetFlow from './MainStreetFlow/mock.MainStreetFlow';
 import * as ParkLeisureRate from './ParkLeisureRate/mock.ParkLeisureRate';
 import * as RunwayHourlySortie from './RunwayHourlySortie/mock.RunwayHourlySortie';
 // 昝家威结束
+
+/** 缪佳耕开始 */
+import * as PositionChange from './PositionChange/mock.PositionChange'
+/** 缪佳耕结束 */
 
 export {
     /* 张琴开始 */
@@ -63,5 +67,10 @@ export {
     FltDelaySortieCount,
     HeaderTime,
     HotelRoomLeisureNum,
+    Login,
     // 万吉坤结束
+    
+    /** 缪佳耕开始 */
+    PositionChange,
+    /** 缪佳耕结束 */
 }

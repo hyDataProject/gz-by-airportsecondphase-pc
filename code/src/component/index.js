@@ -50,6 +50,10 @@ import EachLugUsedFlightNum from './EachLugUsedFlightNum/EachLugUsedFlightNum';
 
 // 昝家威结束
 
+/** 缪佳耕 开始 */
+import Notification from './Notification/Notification'
+/** 缪佳耕 结束 */
+
 export {
     /*张琴-开始 */
     FlightSecurity,
@@ -91,4 +95,7 @@ export {
     MainStreetFlow,
     EachLugUsedFlightNum,
     // 昝家威结束
+    /** 缪佳耕 开始 */
+    Notification,
+    /** 缪佳耕 结束 */
 };

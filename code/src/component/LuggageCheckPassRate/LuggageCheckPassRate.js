@@ -11,10 +11,6 @@ export default class LuggageCheckPassRate extends Component {
         }
         this.myChart = null;
     }
-    // componentDidMount(){
-    //     this.myChart = echarts.init(document.getElementById('LuggageCheckPassRate'))
-    //     this.draw()
-    // }
     componentDidMount(){
         this.myChart = echarts.init(document.getElementById('LuggageCheckPassRate'));
         this.getData(this.props.terminal);
@@ -39,7 +35,6 @@ export default class LuggageCheckPassRate extends Component {
             method: 'get',
             url: realAddressUrlOne + '/pc/lugCheckPassList/'+terminal,
         }).then((res) => {
-            console.log(res.data.result)
             if(res.data.code === 0){
                 let result = res.data.result;
                 // y轴类目值

@@ -7,7 +7,7 @@ function createData(){
     let data = [];
     for(var i = 0; i < 24; i++){
         data.push({
-            hours: Random.integer(0,23),//值机岛
+            hours: i,//值机岛
             farNum: Random.integer(0,1000),//远机位航班数
             nearNum: Random.integer(0,1000)//近机位航班数
         })

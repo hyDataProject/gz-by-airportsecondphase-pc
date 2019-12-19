@@ -19,4 +19,5 @@ var globalTimer = {
     headerInterval:30000,//头部
     hotelInterval:30000,//酒店
     runwayHourlySortie: 30000, // 每日每小时跑道分析
+    eachLugUsedFlightNum: 30000, //行李转盘使用航班数量实时分析
 }

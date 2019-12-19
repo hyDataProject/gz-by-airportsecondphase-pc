@@ -38,4 +38,7 @@ export const InterfaceList = {
   HotelRoomLeisureNum:true,
   Login:true,
   /**万吉坤结束 */
+  /**缪佳耕开始 */
+  PositionChange:true,
+  /**缪佳耕结束 */
 };

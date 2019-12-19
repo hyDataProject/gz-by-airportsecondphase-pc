@@ -34,7 +34,36 @@ export default class CurrentGateUseCountLine extends Component {
                 bottom: 0,
                 containLabel: true
             },
-            tooltip: {},
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow',
+                    shadowStyle: {
+                        color: {
+                            type: 'linear',
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                offset: 0, color: 'rgba(9,237,179,0.3)' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: 'rgba(29,215,252,0.05)' // 100% 处的颜色
+                            }],
+                            global: false // 缺省为 false
+                        }
+                    }
+                },
+                textStyle: {
+                    fontFamily: 'lcd'
+                },
+                formatter: (item) => {
+                    return item[1].dataIndex+1+'时<br />'
+                            +item[1].seriesName+'：'+item[1].data//近机位
+                            +'<br />'+item[0].seriesName+'：'+item[0].data//远机位
+                },
+                extraCssText: 'background-image: linear-gradient(to bottom, rgba(3,118,255,.8), rgba(0,39,191,.2));'
+            },
             xAxis: {
                 type: 'category',
                 axisLabel: {

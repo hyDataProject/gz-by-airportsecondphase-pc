@@ -65,12 +65,12 @@ export default class CurrentGateUseCountCom extends Component {
             nearRate = ((nearGate/(farGate+nearGate))*100).toFixed(2);//近机位占比
         
         let LineData = {xData,farNum,nearNum}
-        console.log()
             return(
             <div className="CurrentGateUseCountCom">
                 <TitleCom title="当前登机口使用航班数量统计" />
                 <p>远机位：<span>{farGate}</span></p>
                 <CurrentGateUseCountBar id={'FarBar'} farRate={farRate} />
+                
                 <p className="near">近机位：<span>{nearGate}</span></p>
                 <CurrentGateUseCountBar id={'NearBar'} nearRate={nearRate} />
                 

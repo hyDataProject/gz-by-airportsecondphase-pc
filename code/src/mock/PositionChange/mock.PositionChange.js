@@ -13,11 +13,11 @@ function createDate() {
       {
         "before": "509",
         "changeAir": "B8870",
-        "willFly": "",
+        "willFly": "11-19 05:49",
         "arrivePort": "CZ322",
         "time": "2019-11-19 09:12",
         "after": "169",
-        "leavePort": "",
+        "leavePort": "CZ323",
         "realArrive": "11-19 05:49",
         "msgId": Random.integer(0, 20) + ''
       }

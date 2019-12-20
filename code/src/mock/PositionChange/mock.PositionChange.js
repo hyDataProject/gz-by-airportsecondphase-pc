@@ -3,7 +3,7 @@
  * Created by wanjikun on 2019/10/21.
  */
 var Random = Mock.Random;
-const rurl = '/screen/positionChange';
+const rurl = '/pc/positionChange';
 const rtype = 'get';
 
 function createDate() {

@@ -19,4 +19,11 @@ var globalTimer = {
     headerInterval:30000,//头部
     hotelInterval:30000,//酒店
     runwayHourlySortie: 30000, // 每日每小时跑道分析
+    // 消息通知新配置
+    // 每一个阶段的动画时间
+    infoTime:'1.5s', 
+    // 每一阶段动画的间隔
+    infoInterval: 2000,
+    // 本次请求无数据，延迟一段时间再请求
+    infoNodataInterval: 2000,
 }

@@ -81,36 +81,50 @@
   }
 }
 
+.Notification .list {
+  position: relative;
+  .notiItem {
+    position: absolute;
+    top: 17px;
+    left: -285px;
+    &.noAnimation {
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
 
 @keyframes enter1 {
   to {
-    transform: translate(1123px, 0px);
+    transform: translate(285px, 0px);
   }
 }
 
 @keyframes enter2 {
   from {
-    transform: translate(1123px, 0px);
+    transform: translate(285px, 0px);
   }
   to {
-    transform: translate(1123px, 249px);
+    transform: translate(285px, 110px);
   }
 }
 
 @keyframes enter3 {
   from {
-    transform: translate(1123px, 249px);
+    transform: translate(285px, 110px);
   }
   to {
-    transform: translate(1123px, 498px);
+    transform: translate(285px, 220px);
   }
 }
 
 @keyframes enter4 {
   from {
-    transform: translate(1123px, 498px);
+    transform: translate(285px, 220px);
   }
   to {
-    transform: translate(1123px, 750px);
+    transform: translate(285px, 330px);
   }
 }

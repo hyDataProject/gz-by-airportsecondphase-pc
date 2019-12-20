@@ -2,6 +2,7 @@
  Crate by wanjikun on 19/12/10.
 */
 import { TitleCom,PiechartCom  } from "com/index";
+import axiosToken from "js/axiosToken";
 import './FlightDelayCom.scss'
 export default class FlightDelayCom extends Component {
     constructor(props) {
@@ -22,7 +23,7 @@ export default class FlightDelayCom extends Component {
     }
 
     getData = () => {
-        axios({ //进港每小时放行概览
+        axiosToken({ //进港每小时放行概览
             method: 'get',
             url: realAddressUrlOne + `/pc/fltDelaySortieCount`,
             headers: { 'Authorization': window.sessionStorage.getItem('token') },

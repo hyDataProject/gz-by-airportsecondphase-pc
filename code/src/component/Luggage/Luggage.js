@@ -2,7 +2,7 @@
  Crate by wanjikun on 19/12/11.
 */
 import './Luggage.scss';
-import {BaggageSort,LuggageCheckPassRate} from 'com/index'
+import {BaggageSort,LuggageCheckPassRate, EachLugUsedFlightNum} from 'com/index'
 export default class Luggage extends Component{
  constructor(props) {
    super(props);
@@ -24,7 +24,9 @@ export default class Luggage extends Component{
         <div className="PassRate">
             <LuggageCheckPassRate terminal={terminal} />
         </div>
-        <div className="EachLugUsed">行李转盘使用航班数量实时分析</div>
+        <div className="EachLugUsed">
+            <EachLugUsedFlightNum  terminal={terminal} />
+        </div>
         <div className="BaggageTurntableUsed">行李转盘使用数量小时分布</div>
     </div>
    )

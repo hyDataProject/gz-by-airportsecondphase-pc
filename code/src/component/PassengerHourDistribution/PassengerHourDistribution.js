@@ -52,7 +52,6 @@ export default class PassengerHourDistribution extends Component {
                         return this.formatData(item.enterActual)
                     }),
                     outPlan = result.map((item, index) => {//出港预测
-                        // console.log(index,currentTime)
                         if (index === currentTime) {
                             return item.outActual
                         } else {

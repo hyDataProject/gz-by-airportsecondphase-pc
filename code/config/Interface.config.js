@@ -33,6 +33,7 @@ export const InterfaceList = {
   MainStreetFlow: true,
   ParkLeisureRate: true,
   RunwayHourlySortie: true,
+  EachLugUsedFlightNum: true,
   /**万吉坤开始 */
   HeaderTime:true,
   HotelRoomLeisureNum:true,

@@ -27,4 +27,5 @@ var globalTimer = {
     // 本次请求无数据，延迟一段时间再请求
     infoNodataInterval: 2000,
     eachLugUsedFlightNum: 30000, //行李转盘使用航班数量实时分析
+    LadderControlEquipmentInterval:30000,//梯控设备
 }

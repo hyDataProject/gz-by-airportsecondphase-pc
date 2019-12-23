@@ -25,6 +25,7 @@ import * as FltDelaySortieCount from './FltDelaySortieCount/mock.FltDelaySortieC
 import * as HeaderTime from './HeaderTime/mock.HeaderTime';
 import * as HotelRoomLeisureNum from "./HotelRoomLeisureNum/mock.HotelRoomLeisureNum";
 import * as Login from "./Login/mock.Login";
+import * as GetElevatorRunStatus from "./GetElevatorRunStatus/mock.GetElevatorRunStatus";
 // 万吉坤结束
 
 // 昝家威开始
@@ -70,6 +71,7 @@ export {
     HeaderTime,
     HotelRoomLeisureNum,
     Login,
+    GetElevatorRunStatus,
     // 万吉坤结束
     
     /** 缪佳耕开始 */

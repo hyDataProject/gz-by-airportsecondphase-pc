@@ -39,6 +39,7 @@ import Loading from "./Loading/Loading";
 import Login from "./Login/Login";
 import LadderControlEquipment from "./LadderControlEquipment/LadderControlEquipment";
 import RunStatusPieChart from "./RunStatusPieChart/RunStatusPieChart";
+import BoardingBridgeStatus from "./BoardingBridgeStatus/BoardingBridgeStatus";
 //万吉坤结束
 
 // 昝家威开始
@@ -89,6 +90,7 @@ export {
     Login,
     LadderControlEquipment,
     RunStatusPieChart,
+    BoardingBridgeStatus,
     //万吉坤结束
     // 昝家威开始
     ReleaseRate,

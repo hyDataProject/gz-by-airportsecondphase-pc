@@ -26,6 +26,7 @@ import * as HeaderTime from './HeaderTime/mock.HeaderTime';
 import * as HotelRoomLeisureNum from "./HotelRoomLeisureNum/mock.HotelRoomLeisureNum";
 import * as Login from "./Login/mock.Login";
 import * as GetElevatorRunStatus from "./GetElevatorRunStatus/mock.GetElevatorRunStatus";
+import * as BoardingBridgeRunStatus from "./BoardingBridgeRunStatus/mock.BoardingBridgeRunStatus";
 // 万吉坤结束
 
 // 昝家威开始
@@ -72,6 +73,7 @@ export {
     HotelRoomLeisureNum,
     Login,
     GetElevatorRunStatus,
+    BoardingBridgeRunStatus,
     // 万吉坤结束
     
     /** 缪佳耕开始 */

@@ -29,4 +29,5 @@ var globalTimer = {
     eachLugUsedFlightNum: 30000, //行李转盘使用航班数量实时分析
     LadderControlEquipmentInterval:30000,//梯控设备
     BoardingBridgeStatusInterval:30000,//登机桥实时运行状态分析
+    positionAirlineByBridgeRate:30000,
 }

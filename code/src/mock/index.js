@@ -28,6 +28,7 @@ import * as Login from "./Login/mock.Login";
 import * as GetElevatorRunStatus from "./GetElevatorRunStatus/mock.GetElevatorRunStatus";
 import * as BoardingBridgeRunStatus from "./BoardingBridgeRunStatus/mock.BoardingBridgeRunStatus";
 import * as PositionAirlineByBridgeRate from "./PositionAirlineByBridgeRate/mock.positionAirlineByBridgeRate";
+import * as BaggageTurntableUsed from "./BaggageTurntableUsed/mock.BaggageTurntableUsed";
 
 // 万吉坤结束
 
@@ -77,6 +78,7 @@ export {
     GetElevatorRunStatus,
     BoardingBridgeRunStatus,
     PositionAirlineByBridgeRate,
+    BaggageTurntableUsed,
     // 万吉坤结束
     
     /** 缪佳耕开始 */

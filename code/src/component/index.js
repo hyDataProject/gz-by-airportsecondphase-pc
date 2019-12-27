@@ -41,6 +41,8 @@ import LadderControlEquipment from "./LadderControlEquipment/LadderControlEquipm
 import RunStatusPieChart from "./RunStatusPieChart/RunStatusPieChart";
 import BoardingBridgeStatus from "./BoardingBridgeStatus/BoardingBridgeStatus";
 import AirportBridge from "./AirportBridge/AirportBridge";
+import TerminalAreaLineChart from "./TerminalAreaLineChart/TerminalAreaLineChart";
+import BaggageTurntableUsed from "./BaggageTurntableUsed/BaggageTurntableUsed";
 //万吉坤结束
 
 // 昝家威开始
@@ -93,6 +95,8 @@ export {
     RunStatusPieChart,
     BoardingBridgeStatus,
     AirportBridge,
+    BaggageTurntableUsed,
+    TerminalAreaLineChart,
     //万吉坤结束
     // 昝家威开始
     ReleaseRate,

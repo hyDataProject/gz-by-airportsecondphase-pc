@@ -30,4 +30,5 @@ var globalTimer = {
     LadderControlEquipmentInterval:30000,//梯控设备
     BoardingBridgeStatusInterval:30000,//登机桥实时运行状态分析
     positionAirlineByBridgeRate:30000,
+    BaggageTurntableUsedInterval:30000,
 }

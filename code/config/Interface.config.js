@@ -41,6 +41,7 @@ export const InterfaceList = {
   GetElevatorRunStatus:true,
   BoardingBridgeRunStatus:true,
   PositionAirlineByBridgeRate:true,
+  BaggageTurntableUsed:true,
   /**万吉坤结束 */
   /**缪佳耕开始 */
   PositionChange:true,

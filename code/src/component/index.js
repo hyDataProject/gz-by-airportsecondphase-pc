@@ -43,6 +43,8 @@ import BoardingBridgeStatus from "./BoardingBridgeStatus/BoardingBridgeStatus";
 import AirportBridge from "./AirportBridge/AirportBridge";
 import TerminalAreaLineChart from "./TerminalAreaLineChart/TerminalAreaLineChart";
 import BaggageTurntableUsed from "./BaggageTurntableUsed/BaggageTurntableUsed";
+import BaggageCheckMachineChart from "./BaggageCheckMachineChart/BaggageCheckMachineChart";
+
 //万吉坤结束
 
 // 昝家威开始
@@ -97,6 +99,7 @@ export {
     AirportBridge,
     BaggageTurntableUsed,
     TerminalAreaLineChart,
+    BaggageCheckMachineChart,
     //万吉坤结束
     // 昝家威开始
     ReleaseRate,

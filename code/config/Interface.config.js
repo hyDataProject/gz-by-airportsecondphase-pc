@@ -34,6 +34,7 @@ export const InterfaceList = {
   ParkLeisureRate: true,
   RunwayHourlySortie: true,
   EachLugUsedFlightNum: true,
+  CheckMachineStatus: true,
   /**万吉坤开始 */
   HeaderTime:true,
   HotelRoomLeisureNum:true,

@@ -31,4 +31,5 @@ var globalTimer = {
     BoardingBridgeStatusInterval:30000,//登机桥实时运行状态分析
     positionAirlineByBridgeRate:30000,
     BaggageTurntableUsedInterval:30000,
+    checkMachineStatus: 30000
 }

@@ -40,6 +40,7 @@ import * as MainStreetFlow from './MainStreetFlow/mock.MainStreetFlow';
 import * as ParkLeisureRate from './ParkLeisureRate/mock.ParkLeisureRate';
 import * as RunwayHourlySortie from './RunwayHourlySortie/mock.RunwayHourlySortie';
 import * as EachLugUsedFlightNum from './EachLugUsedFlightNum/mock.EachLugUsedFlightNum';
+import * as CheckMachineStatus from './CheckMachineStatus/mock.CheckMachineStatus';
 // 昝家威结束
 
 /** 缪佳耕开始 */
@@ -69,6 +70,7 @@ export {
     ParkLeisureRate,
     RunwayHourlySortie,
     EachLugUsedFlightNum,
+    CheckMachineStatus,
     // 昝家威结束
     // 万吉坤开始
     FltDelaySortieCount,

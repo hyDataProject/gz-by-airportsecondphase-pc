@@ -1,17 +1,7 @@
-.BaggageCheckMachineChart{
-    width: 100%;
-    height: 100%;
-    .ReleaseRateBox{
-        height: calc(100% - 31px);
-        position: relative;
-        .item{
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 10px;
-            height: 10px;
-            // mask-image: url(~img/svgIcon2.svg);
-            // background-color: red;
-        }
-    }
+.BaggageCheckMachineChart {
+  width: 100%;
+  height: 100%;
+  .BaggageCheckMachinePie {
+    height: calc(100% - 31px);
+  }
 }

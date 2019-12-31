@@ -7,7 +7,7 @@ let Random = Mock.Random;
 function createData() {
   let obj = [];
 
-  let number = Random.integer(8, 14);
+  let number = Random.integer(11, 12);
   for (let i = 0; i < number; i++) {
     obj.push({
       id: i,

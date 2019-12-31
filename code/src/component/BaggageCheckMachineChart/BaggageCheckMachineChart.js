@@ -11,21 +11,29 @@ export default class BaggageCheckMachineChart extends Component {
   }
 
   componentDidMount() {
-    this._getData();
+    this._getData(this.props.terminal);
     this.timer = setInterval(() => {
-      this._getData();
+      this._getData(this.props.terminal);
     }, globalTimer.checkMachineStatus);
   }
-
+  componentWillReceiveProps(nextProps){
+    if (this.props.terminal !== nextProps.terminal) {
+        this.timer && clearInterval(this.timer);
+        this._getData(nextProps.terminal);
+        this.timer = setInterval(() => {
+            this._getData(nextProps.terminal);
+        }, globalTimer.checkMachineStatus)
+    }
+  }
   componentWillUnmount() {
     this.timer && clearInterval(this.timer);
   }
 
-  _getData() {
+  _getData(terminal) {
     axios({
       //进港每小时放行概览
       method: "get",
-      url: realAddressUrlOne + `/pc/checkMachineStatus/${this.props.terminal}`
+      url: realAddressUrlOne + `/pc/checkMachineStatus/${terminal}`
     }).then(result => {
       if (result.data.code == 0) {
         const data = result.data.result;

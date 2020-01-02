@@ -1,5 +1,6 @@
 import "./PsgSecCheckAnalysis.scss";
 import { TitleCom } from "com";
+import axiosToken from "js/axiosToken";
 
 const area = [
   { key: "international", name: "国际" },
@@ -35,7 +36,7 @@ export default class PsgSecCheckAnalysis extends Component {
   }
 
   _getData(terminal) {
-    axios({
+    axiosToken({
       //进港每小时放行概览
       method: "get",
       url: realAddressUrlOne + `/pc/psgSecCheckAnalysis/${terminal}`

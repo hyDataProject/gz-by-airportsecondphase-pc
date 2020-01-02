@@ -3,6 +3,8 @@
 */
 import { TitleCom ,RunStatusPieChart} from "com/index";
 import './BoardingBridgeStatus.scss'
+import axiosToken from "js/axiosToken";
+
 export default class BoardingBridgeStatus extends Component{
  constructor(props) {
    super(props);
@@ -30,7 +32,7 @@ export default class BoardingBridgeStatus extends Component{
  }
 
  getData=(terminal)=>{
-    axios({ 
+    axiosToken({ 
         method: 'get',
         url: realAddressUrlOne + `/pc/boardingBridgeRunStatus/${terminal}`,
     }).then((result) => {

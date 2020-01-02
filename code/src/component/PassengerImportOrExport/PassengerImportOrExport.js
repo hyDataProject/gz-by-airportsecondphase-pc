@@ -5,6 +5,8 @@ import './PassengerImportOrExport.scss';
 import barBg from 'img/passenger_bar_bg.png';
 import yAxisBg from 'img/passenger_yAxis_bg.png';
 import CountUp from 'react-countup';
+import axiosToken from "js/axiosToken";
+
 export default class PassengerImportOrExport extends Component {
     constructor(props){
         super(props);
@@ -35,7 +37,7 @@ export default class PassengerImportOrExport extends Component {
         clearInterval(this.reloadId);
     }
     getData(terminal){
-        axios({
+        axiosToken({
             method: 'get',
             url: realAddressUrlOne + '/pc/psgEnterOutCount/'+terminal,
         }).then((res) => {

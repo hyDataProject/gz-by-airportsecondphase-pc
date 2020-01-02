@@ -5,6 +5,8 @@ import './ParkLeisureRate.scss';
 import {TitleCom} from 'com/index';
 import Image from 'img/park_bar.png'
 import Scatter from 'img/park_scatter.png'
+import axiosToken from "js/axiosToken";
+
 export default class ParkLeisureRate extends Component {
     constructor(props){
         super(props);
@@ -28,7 +30,7 @@ export default class ParkLeisureRate extends Component {
         clearInterval(this.reloadId);
     }
     getData(){
-        axios({
+        axiosToken({
             method: 'get',
             url: realAddressUrlOne + '/pc/parkLeisureRate',
         }).then((res) => {

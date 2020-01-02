@@ -1,6 +1,7 @@
 import "./EnterPsgFlowAnalyze.scss";
 import { TitleCom } from "com";
 import EnterPsgFlowAnalyzeLine from "./EnterPsgFlowAnalyzeLine";
+import axiosToken from "js/axiosToken";
 
 export default class EnterPsgFlowAnalyze extends Component {
   constructor(props) {
@@ -38,7 +39,7 @@ export default class EnterPsgFlowAnalyze extends Component {
   }
 
   _getData(terminal) {
-    axios({
+    axiosToken({
       //进港每小时放行概览
       method: "get",
       url: realAddressUrlOne + `/pc/enterPsgFlowAnalyze/${terminal}`

@@ -4,6 +4,7 @@
 import "./EachLugUsedFlightNum.scss";
 import { TitleCom } from "com";
 import tooltip from "img/Luggage_tooltip.png";
+import axiosToken from "js/axiosToken";
 
 export default class EachLugUsedFlightNum extends Component {
   constructor(props) {
@@ -34,7 +35,7 @@ export default class EachLugUsedFlightNum extends Component {
   }
   getData(terminal) {
     // 获取数据
-    axios({
+    axiosToken({
       method: "get",
       url: realAddressUrlOne + "/pc/eachLugUsedFlightNum/" + terminal
     }).then(res => {

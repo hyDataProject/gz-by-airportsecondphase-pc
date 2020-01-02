@@ -1,6 +1,7 @@
 import "./BaggageCheckMachineChart.scss";
 import { TitleCom } from "com/index";
 import BaggageCheckMachinePie from "./BaggageCheckMachinePie";
+import axiosToken from "js/axiosToken";
 
 export default class BaggageCheckMachineChart extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ export default class BaggageCheckMachineChart extends Component {
   }
 
   _getData(terminal) {
-    axios({
+    axiosToken({
       //进港每小时放行概览
       method: "get",
       url: realAddressUrlOne + `/pc/checkMachineStatus/${terminal}`

@@ -1,5 +1,7 @@
 import './CurrentGateUseCountCom.scss';
 import { TitleCom,CurrentGateUseCountBar,CurrentGateUseCountLine } from "com/index";
+import axiosToken from "js/axiosToken";
+
 export default class CurrentGateUseCountCom extends Component {
     constructor(props){
         super(props);
@@ -30,15 +32,15 @@ export default class CurrentGateUseCountCom extends Component {
         clearInterval(this.reloadId);
     }
     async getData(terminal) {
-        let res1 = await axios({//当前登机口使用航班数量统计
+        let res1 = await axiosToken({//当前登机口使用航班数量统计
             method: 'get',
             url: realAddress[0].url + '/pc/currentGateUseCount/'+{terminal},
         })
-        let res2 = await axios({//登机口使用数量小时分布
+        let res2 = await axiosToken({//登机口使用数量小时分布
             method: 'get',
             url: realAddress[0].url + '/pc/boardingGateHourlyCount/'+{terminal},
         })
-        if(res1.data.code===0&&res2.data.code===0){
+        if(res1.data.code===0 && res2.data.code===0){
             let result1 = res1.data.result,result2 = res2.data.result;
             let xData = result2.map(item => {
                 return item.hours+1+'h'

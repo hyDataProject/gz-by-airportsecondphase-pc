@@ -127,7 +127,10 @@ class Login extends Component {
 				sessionStorage.setItem('password', password);
 
 				this.props.history.push('/main/flyCont')
-            }
+            }else{
+				this.setState({ spinning: false })
+				message.error(res.data.msg)
+			}
         });	
 
 		// // 发起请求		

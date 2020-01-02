@@ -1,6 +1,8 @@
 /**
  * Created by zhangqin on 2019/12/18.
  */
+import axiosToken from "js/axiosToken";
+
 import './BaggageSort.scss';
 import { TitleCom } from "com/index";
 import lineBar from 'img/texture_bg.png';
@@ -34,7 +36,7 @@ export default class BaggageSort extends Component {
         clearInterval(this.reloadId);
     }
     getData(terminal){// 获取数据
-        axios({
+        axiosToken({
             method: 'get',
             url: realAddressUrlOne + '/pc/lugCheckHourlyCount/'+terminal,
         }).then((res) => {

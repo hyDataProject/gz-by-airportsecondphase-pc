@@ -1,6 +1,8 @@
 /**
  * Created by zhangqin on 2019/12/10.
  */
+import axiosToken from "js/axiosToken";
+
 import './ImportantNodeFlight.scss';
 import CountUp from 'react-countup';
 import { TitleCom } from "com/index";
@@ -31,7 +33,7 @@ export default class ImportantNodeFlight extends Component {
         clearInterval(this.reloadId);
     }
     getData(){
-        axios({
+        axiosToken({
             method: 'get',
             url: realAddressUrlOne + '/pc/taxiingFlightCount',
         }).then((res) => {

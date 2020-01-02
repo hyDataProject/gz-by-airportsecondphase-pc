@@ -1,6 +1,8 @@
 import './CarPoolFree.scss';
 import { TitleCom } from "com/index";
 import lineBar from 'img/texture_bg.png';
+import axiosToken from "js/axiosToken";
+
 let bg = new Image();
     bg.src = lineBar;
 export default class CarPoolFree extends Component {
@@ -25,7 +27,7 @@ export default class CarPoolFree extends Component {
         clearInterval(this.reloadId);
     }
     getData(){
-        axios({
+        axiosToken({
             method: 'get',
             url: realAddressUrlOne + '/pc/carPoolLeisureRate',
         }).then((res) => {

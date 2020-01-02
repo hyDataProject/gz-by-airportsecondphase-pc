@@ -5,6 +5,8 @@ import './FlightSecurity.scss';
 import { TitleCom } from "com/index";
 import barBg from 'img/FlightSecurity_bar_bg.png';
 import CountUp from 'react-countup';
+import axiosToken from "js/axiosToken";
+
 export default class FlightSecurity extends Component {
     constructor(props){
         super(props);
@@ -27,7 +29,7 @@ export default class FlightSecurity extends Component {
         clearInterval(this.reloadId);
     }
     getData(){
-        axios({
+        axiosToken({
             method: 'get',
             url: realAddressUrlOne + '/pc/fltSafeguardAnalyze',
         }).then((res) => {

@@ -1,6 +1,7 @@
 import "./ReleaseRate.scss";
 import { TitleCom } from "com/index";
 import ReleaseRateBarLine from './ReleaseRateBarLine';
+import axiosToken from "js/axiosToken";
 
 export default class ReleaseRate extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class ReleaseRate extends Component {
   }
 
   _getData() {
-    axios({
+    axiosToken({
       //进港每小时放行概览
       method: "get",
       url: realAddressUrlOne + `/pc/leaveOverstocked`

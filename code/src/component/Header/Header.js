@@ -19,6 +19,7 @@ import lightRain from "img/lightRain.png";
 //中雨
 import rain from "img/rain.png";
 import {NavLink} from 'react-router-dom';
+import axiosToken from "js/axiosToken";
 
 export default class Header extends Component{
  constructor(props) {
@@ -53,7 +54,7 @@ setTimer=()=>{
     },globalTimer.headerInterval)
 }
 getData=()=>{
-    axios({
+    axiosToken({
         method: 'get',
         url: realAddressUrlOne + `/pc/getCurrentTime/${'CAN'}`,
     }).then((res) => {

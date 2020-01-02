@@ -3,6 +3,7 @@ import './OnTheBridgeRate.scss'
 import {TitleCom} from 'com/index'
 import barBg from 'img/jrkq_bar_bg.png';
 import scatterImg from 'img/scatter_img.png';
+import axiosToken from "js/axiosToken";
 
 export default class OnTheBridgeRate extends Component {
     constructor(props){
@@ -17,7 +18,7 @@ export default class OnTheBridgeRate extends Component {
         },globalTimer.positionTotalityByBridgeRate)
     }
     getData(){// 获取数据
-        axios({
+        axiosToken({
             method: 'get',
             url: realAddressUrlOne + '/pc/positionTotalityByBridgeRate',
         }).then((res) => {

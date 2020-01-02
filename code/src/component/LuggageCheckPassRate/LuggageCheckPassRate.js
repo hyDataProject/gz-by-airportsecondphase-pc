@@ -3,6 +3,8 @@
  */
 import './LuggageCheckPassRate.scss';
 import { TitleCom } from "com/index";
+import axiosToken from "js/axiosToken";
+
 export default class LuggageCheckPassRate extends Component {
     constructor(props){
         super(props);
@@ -31,7 +33,7 @@ export default class LuggageCheckPassRate extends Component {
         clearInterval(this.reloadId);
     }
     getData(terminal){// 获取数据
-        axios({
+        axiosToken({
             method: 'get',
             url: realAddressUrlOne + '/pc/lugCheckPassList/'+terminal,
         }).then((res) => {

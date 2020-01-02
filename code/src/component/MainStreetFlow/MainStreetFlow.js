@@ -1,6 +1,7 @@
 import "./MainStreetFlow.scss";
 import { TitleCom } from "com";
 import MainStreetFlowLine from "./MainStreetFlowLine";
+import axiosToken from "js/axiosToken";
 
 export default class MainStreetFlow extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class MainStreetFlow extends Component {
   }
 
   _getData() {
-    axios({
+    axiosToken({
       //进港每小时放行概览
       method: "get",
       url: realAddressUrlOne + `/pc/mainStreetFlow/${this.state.type}`

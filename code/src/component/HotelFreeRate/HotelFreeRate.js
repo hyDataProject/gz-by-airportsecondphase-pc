@@ -1,5 +1,7 @@
 import './HotelFreeRate.scss';
 import { TitleCom } from "com/index";
+import axiosToken from "js/axiosToken";
+
 export default class HotelFreeRate extends Component {
     constructor(props){
         super(props);
@@ -23,7 +25,7 @@ export default class HotelFreeRate extends Component {
         clearInterval(this.reloadId);
     }
     getData(){
-        axios({
+        axiosToken({
             method: 'get',
             url: realAddressUrlOne + '/pc/hotelRoomLeisureNum',
         }).then((res) => {

@@ -3,6 +3,8 @@ import './FreePlanPosition.scss'
 import {TitleCom} from 'com/index';
 import barBg from 'img/jwkx_bar_bg.png'
 import textureBg from 'img/texture_bg.png';
+import axiosToken from "js/axiosToken";
+
 var textureBgImg = new Image();
     textureBgImg.src = textureBg;
 
@@ -26,7 +28,7 @@ export default class FreePlanPosition extends Component {
         clearInterval(this.reloadId);
     }
     getData(){
-        axios({
+        axiosToken({
             method: 'get',
             url: realAddressUrlOne + '/pc/positionUsedInfo',
         }).then((res) => {

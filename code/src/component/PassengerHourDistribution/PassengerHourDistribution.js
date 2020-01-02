@@ -3,6 +3,8 @@
  */
 import './PassengerHourDistribution.scss';
 import {TitleCom} from 'com/index';
+import axiosToken from "js/axiosToken";
+
 export default class PassengerHourDistribution extends Component {
     constructor(props){
         super(props);
@@ -31,7 +33,7 @@ export default class PassengerHourDistribution extends Component {
         clearInterval(this.reloadId);
     }
     getData(terminal) {// 获取接口数据
-        axios({
+        axiosToken({
             method: 'get',
             url: realAddressUrlOne + '/pc/psgHourlyDistribution/' + terminal,
         }).then(res => {

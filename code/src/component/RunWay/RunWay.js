@@ -3,6 +3,8 @@
 */
 import "./RunWay.scss";
 import { TitleCom, BarLine } from "com/index";
+import axiosToken from "js/axiosToken";
+
 export default class RunWay extends Component {
   constructor(props) {
     super(props);
@@ -27,7 +29,7 @@ export default class RunWay extends Component {
   }
 
   _getData() {
-    axios({
+    axiosToken({
       //进港每小时放行概览
       method: "get",
       url: realAddressUrlOne + `/pc/runwayHourlySortie/${this.state.type}`

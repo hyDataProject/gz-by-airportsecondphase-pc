@@ -5,6 +5,8 @@ import './Notification.scss'
 import { TitleCom } from "com/index"
 import notiin from 'img/noti-in.png'
 import notiout from 'img/noti-out.png'
+import axiosToken from "js/axiosToken";
+
 export default class Notification extends Component{
   constructor(props) {
     super(props)
@@ -45,7 +47,7 @@ export default class Notification extends Component{
     let parma = 1;
     let url = `${realAddressUrlOne}/pc/positionChange/${parma}`
     // console.log('消息通知：', url)
-    axios({
+    axiosToken({
       url: url,
       method: 'get'
     }).then(result => {

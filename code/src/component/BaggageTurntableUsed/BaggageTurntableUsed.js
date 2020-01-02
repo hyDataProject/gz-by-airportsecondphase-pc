@@ -3,6 +3,8 @@
 */
 import { TitleCom ,TerminalAreaLineChart} from "com/index";
 import './BaggageTurntableUsed.scss'
+import axiosToken from "js/axiosToken";
+
 export default class BaggageTurntableUsed extends Component{
  constructor(props) {
    super(props);
@@ -29,7 +31,7 @@ componentWillUnmount() {
 }
 
 getData=(terminal)=>{
-    axios({ //行李转盘使用数量小时分布
+    axiosToken({ //行李转盘使用数量小时分布
         method: 'get',
         url: realAddressUrlOne + `/pc/lugFetchHourlyInternalCount/${terminal}`,
     }).then((result) => {

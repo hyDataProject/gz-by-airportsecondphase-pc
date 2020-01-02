@@ -1,6 +1,8 @@
 /**
  Crate by wanjikun on 19/12/02.
 */
+import axiosToken from "js/axiosToken";
+
 import { TitleCom ,
     RunStatusPieChart
 } from "com/index";
@@ -33,7 +35,7 @@ export default class LadderControlEquipment extends Component{
  }
 
  getData=(terminal)=>{
-    axios({ 
+    axiosToken({ 
         method: 'get',
         url: realAddressUrlOne + `/pc/elevatorRunStatus/${terminal}`,
     }).then((result) => {

@@ -12,6 +12,20 @@ export default class Luggage extends Component{
  }
 
  componentDidMount() {
+    let that = this;
+    byjc_cq.on(monitorType, function (msg) {
+        console.log('websocket',msg);
+      if (msg.data.area && msg.data.area === "PC_TA1") {
+        that.setState({
+            terminal:'T1'
+        })
+      }
+      if (msg.data.area && msg.data.area === "PC_TA2") {
+        that.setState({
+            terminal:'T2'
+        })
+      }
+    });
  }
 
  render() {

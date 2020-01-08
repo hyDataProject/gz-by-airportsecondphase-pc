@@ -3,7 +3,7 @@ export default function axiosToken(params) {
     return new Promise((resolve,reject)=>{
         let token = sessionStorage.getItem('token');
         let data = Object.assign(params,{
-            headers: { 'Authorization': token },
+            headers: { 'X-Access-Token': token },
         })
         axios(data)
             .then(response => {

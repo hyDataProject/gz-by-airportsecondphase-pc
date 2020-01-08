@@ -126,6 +126,8 @@ class Login extends Component {
 				sessionStorage.setItem('userName', userCode);
 				sessionStorage.setItem('password', password);
 
+				byjc_cq.call(monitorType, "byjc_cd", { area: 'token_pc',tokenPc:token }); //把token传给成都团队
+
 				this.props.history.push('/main/flyCont')
             }else{
 				this.setState({ spinning: false })

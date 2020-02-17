@@ -1,0 +1,76 @@
+.RunStatusPieChart{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .chartDom{
+        width: 100%;
+        height: 100%;
+    }
+    .boardingBridge,.ladderControl{
+        position: absolute;
+        width: 154px;
+        height: 157px;
+        left: 50%;
+        top: 50%;
+        margin-left: -77px;
+        margin-top: -78px;
+        z-index: 10;
+        transform: scale3d(0.8,0.8,1);
+    }
+    // .ladderControl{
+    //     width: 195px;
+    //     height: 182px;
+    //     margin-left: -97px;
+    //     margin-top: -91px;
+    // }
+    .runStatusEarth{
+        position: absolute;
+        width: 285px;
+        height: 294px;
+        left: 50%;
+        top: 50%;
+        margin-left: -142px;
+        margin-top: -147px;
+        z-index: 9;
+    }
+    .runStatusCircle{
+        position: absolute;
+        width: 264px;
+        height: 265px;
+        left: 50%;
+        top: 50%;
+        margin-left: -132px;
+        margin-top: -132px;
+        z-index: 8;
+    }
+    .runStatusEarthCircle{
+        position: absolute;
+        width: 137px;
+        height: 137px;
+        left: 50%;
+        top: 50%;
+        margin-left: -68px;
+        margin-top: -68px;
+        z-index: 10;
+        transform: scale3d(0.85,0.85,1);
+    }
+    .totalCount{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: #fff;
+        z-index: 20;
+        .number{
+            font-size: 26px;
+            font-family: lcd;
+            height: 26px;
+        }
+    }
+}

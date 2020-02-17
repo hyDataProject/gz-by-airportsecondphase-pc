@@ -8,6 +8,7 @@ const project = {
      * 数组[2]，用来访问Jarvis,false为关闭当前功能，如若开启请输入端口后，例:8889
      * */
     "devPort": [8081, 8082, 8083],
+    // "devPort": [8082, false, false],
     /*工程的整体名称，对应影响浏览器中的title*/
     "webTitle": "白云机场生产可视化分析系统",
     /*
@@ -30,22 +31,25 @@ const project = {
     "realUrl": [{
             "name": "urlOne",
             "protocol": "http",
-            "url": "10.10.236.170",
-            "port": "60000",
-            "path":"/api",
-            // "url": "172.20.10.15",
-            // "port": "8081",
-            // "path":"/airport-apv-api-product"
+            // "url": "10.10.236.170",
+            // "port": "60000",
+            // "path":"/api",
+            "url": "172.20.10.15",
+            "port": "8086",
+            "path":"/api"
         },
         {
             "name": "urlTow",
-            "protocol": "http",
-            // "url": "172.20.10.15",
-            // "port": "8086",
-            // "path":"/ivs-gis"
-            "url": "192.168.1.151",
-            "port": "8080",
-            "path":""
+            // "protocol": "http",
+            "url": "172.20.10.15",
+            "port": "8086",
+            "path":"/ivs-gis-pc"
+            // "url": "10.135.23.56", //测试环境电脑IP
+            // "port": "8080",
+            // "path":"/ivs-gis-pc"
+            // "url": "10.135.23.116",//胡佳电脑IP
+            // "port": "802",
+            // "path":""
         },
         {
             "name": "urlThree",
@@ -61,21 +65,20 @@ const project = {
      * 每个要处理的文件夹名以字符串的形式定义
      * '/文件夹名'
      * */
-    "publicResources": ["js/timer.js"],
+    "publicResources": ["js/timer.js",'js/vex.channel.min.js','js/vexWS.js'],
     "webCss": [{
         name: "css",
         value: ["vendors", "app"]
     }],
     "webScript": [{
         name: 'public',
-        value: ['js/timer']
+        value: ['js/vex.channel.min','js/vexWS','js/timer']
     },{
         name: "js",
         value: ["timer", "vendors.bundle", "app.bundle"]
     }],
     /*工程应用中的服务名，影响接口访问路径*/
-    // "publicPath": "/ivs-lsd/",
-    // "publicPath": "/cq1123/",
+    // "publicPath": "/ivs-pc/",
     "publicPath": "/",
     /*工程中需要全局声明的第三方库，对应影响webpack.ProvidePlugin*/
     "providePlugin": {

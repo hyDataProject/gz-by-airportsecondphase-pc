@@ -13,7 +13,9 @@ export default class Nav extends Component {
         return (
             <div className={"Layer"}>
                 <div className={"Nav"}>
-                    哈哈哈哈或者这个时nav
+                    <li><NavLink to={"/main/terminalCont"}>航站区</NavLink></li>
+                    <li><NavLink to={"/main/flyCont"}>飞行区</NavLink></li>
+                    <li><NavLink to={"/main/publicArea"}>公共区</NavLink></li>
                 </div>
             </div>
         )

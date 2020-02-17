@@ -14,8 +14,27 @@ body{
 #main{
   width: 1920px;
   height: 1080px;
+  background: #111432;
   .Layer{
     width: 100%;
     height: 100%;
+    .loggedContainer{
+      width: 100%;
+      height: 100%;
+      .header{
+        width: 100%;
+        height: 80px;
+      }
+      .container{
+        width: 100%;
+        height: calc(100% - 80px);
+        padding:26px 26px 26px 0;
+      }
+
+    }
+    .loginCont{
+      width: 100%;
+      height: 100%;
+    }
   }
 }

@@ -13,5 +13,38 @@ if (NODE_ENV === "pro") {
   InterfaceSwitch = true;
 }
 export const InterfaceList = {
-  
+  /* 张琴开始 */
+  TaxiingFlightCount: true,
+  FltSafeguardAnalyze: true,
+  PsgEnterOutCount: true,
+  PsgHourlyDistribution: true,
+  CarPoolLeisureRate: true,
+  PositionUsedInfo: true,
+  PositionTotalityByBridgeRate: true,
+  LugCheckHourlyCount: true,
+  LugCheckPassList: true,
+  CurrentGateUseCount: true,
+  BoardingGateHourlyCount: true,
+  /* 张琴结束 */
+  ReleaseRate: true, 
+  FltDelaySortieCount:true,
+  EnterPsgFlowAnalyze: true,
+  PsgSecCheckAnalysis: true,
+  MainStreetFlow: true,
+  ParkLeisureRate: true,
+  RunwayHourlySortie: true,
+  EachLugUsedFlightNum: true,
+  CheckMachineStatus: true,
+  /**万吉坤开始 */
+  HeaderTime:true,
+  HotelRoomLeisureNum:true,
+  Login:true,
+  GetElevatorRunStatus:true,
+  BoardingBridgeRunStatus:true,
+  PositionAirlineByBridgeRate:true,
+  BaggageTurntableUsed:true,
+  /**万吉坤结束 */
+  /**缪佳耕开始 */
+  PositionChange:true,
+  /**缪佳耕结束 */
 };

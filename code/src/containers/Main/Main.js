@@ -2,39 +2,57 @@
  * Created by xiaohe on 2018/5/7.
  */
 import {Switch,Route} from 'react-router-dom';
+import { Header,Login } from "com/index";
 import {
-    AirPortMockTest
-} from 'com/index.js'
-import { Nav } from "con/index.js";
+    TerminalCont,
+    FlyCont,
+    PublicArea,
+    Nav
+} from 'con/index.js'
 import "./Main.scss";
 
 export default class Main extends Component {
     constructor(props, context) {
         super(props);
-        this.saveToken = this.saveToken.bind(this);
     }
-
 
     componentWillMount() {
-        this.saveToken();
+        this.judgeIfTocken();
+        this.props.history.listen(() => {
+            this.judgeIfTocken();
+        })
     }
-    //存储token
-    saveToken(){
-        // axios({ //获取token
-        //     method: 'get',
-        //     url: realAddress[0].url + '/screen/arrivalTotalAndDelayRate',
-        // }).then((result) => {
-        // });
+
+    //监听路由变化没有token跳转登录页
+    judgeIfTocken=()=>{
+        let path = this.props.match.path;
+        let token = sessionStorage.getItem('token');
+        console.log('token',token);
+        
+        if (!token) {
+            this.props.history.push('/login')
+        }
+        
     }
+
 
     render() {
         return (
             <div className={"Layer"}>
                 {/*默认加载判断路由*/}
-                哈哈哈哈哈哈
-                <Switch>
-                    <Route path="/main" component={Nav}/>
-                </Switch>
+                <div className="loggedContainer">
+                    <div className="header">
+                        <Header></Header>
+                    </div>
+                    <div className="container">
+                        <Switch>
+                            <Route path="/main/flyCont" component={FlyCont}/>
+                            <Route path="/main/terminalCont" component={TerminalCont}/>
+                            <Route path="/main/publicArea" component={PublicArea}/>
+                            <Route path="/" component={FlyCont}/>
+                        </Switch>
+                    </div>
+                </div>
             </div>
 
         )

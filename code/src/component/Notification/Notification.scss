@@ -1,0 +1,130 @@
+.Notification {
+  width: 100%;
+  height: 100%;
+  .list {
+    width: 100%;
+    height: calc(100% - 31px);
+    overflow: hidden;
+    .notiItem {
+      height: 91px;
+      width: 285px;
+      display: flex;
+      background: url(~img/noti-bg.png);
+      background-size: 100% 100%;
+      color: #fff;
+      font-size: 14px;
+      overflow: hidden;
+      .notiLeft {
+        height: 100%;
+        width: 125px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        .time {
+          font-size: 12px;
+          font-family: lcd;
+          color: #6f9dbc;
+          position: relative;
+          top: -4px;
+        }
+        .number {
+          font-size: 22px;
+          color: #fbe326;
+          font-family: lcd;
+          position: relative;
+          top: -6px;
+        }
+        .detail {
+          font-size: 12px;
+          text-align: center;
+          position: relative;
+          top: -9px;
+          line-height: 16px;
+          position: relative;
+          left: -6px;
+          .num {
+            font-size: 16px;
+            font-family: lcd;
+            color: #fbe326;
+          }
+        }
+      }
+      .notiRight {
+        height: 100%;
+        width: calc(100% - 125px);
+        padding-left: 27px;
+        .port {
+          position: relative;
+          margin-top: 8px;
+          img {
+            position: absolute;
+          }
+          p {
+            margin-bottom: 0;
+            font-size: 12px;
+            margin-left: 34px;
+            line-height: 16px;
+            .num {
+              font-size: 16px;
+              font-family: lcd;
+              color: #fbe326;
+            }
+            .time {
+              font-size: 12px;
+              font-family: lcd;
+              color: #6f9dbc;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.Notification .list {
+  position: relative;
+  .notiItem {
+    position: absolute;
+    top: 17px;
+    left: -285px;
+    &.noAnimation {
+      position: relative;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+
+@keyframes enter1 {
+  to {
+    transform: translate(285px, 0px);
+  }
+}
+
+@keyframes enter2 {
+  from {
+    transform: translate(285px, 0px);
+  }
+  to {
+    transform: translate(285px, 110px);
+  }
+}
+
+@keyframes enter3 {
+  from {
+    transform: translate(285px, 110px);
+  }
+  to {
+    transform: translate(285px, 220px);
+  }
+}
+
+@keyframes enter4 {
+  from {
+    transform: translate(285px, 220px);
+  }
+  to {
+    transform: translate(285px, 330px);
+  }
+}

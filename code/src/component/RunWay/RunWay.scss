@@ -1,0 +1,27 @@
+.RunWay {
+  padding: 20px;
+  .runwayCont {
+    height: 800px;
+    .runway-switch {
+      height: 60px;
+      display: flex;
+      justify-content: space-around;
+      font-size: 12px;
+      color: #01aee2;
+      padding: 20px 45px;
+      .runway-btn {
+        text-align: center;
+        width: 85px;
+        height: 22px;
+        background: url(~img/runway_btn.png) no-repeat;
+        &.active {
+          color: #ffffff;
+          background: url(~img/runway_btn_active.png) no-repeat;
+        }
+      }
+    }
+    .runway-box {
+      height: 250px;
+    }
+  }
+}

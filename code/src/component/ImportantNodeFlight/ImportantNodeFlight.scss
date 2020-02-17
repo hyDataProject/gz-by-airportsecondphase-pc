@@ -1,0 +1,88 @@
+.ImportantNodeFlight {
+    width: 100%;
+    height: 100%;
+    .flexCon {
+        width: 100%;
+        height: 180px;
+        display: flex;
+        flex-wrap: wrap;
+        .flexItem {
+            width: 50%;
+            height: 50%;
+            padding-top: 10px;
+            .left {
+                display: inline-block;
+                float: left;
+                width: 58px;
+                height: 61px;
+                margin-top: 10px;
+                background: url(~img/zyjd_out.png) no-repeat;
+                background-size: 100% 100%;
+                position: relative;
+                .inside {
+                    width: 55px;
+                    height: 55px;
+                    margin: 3px auto;
+                    // background: blue;
+                    background: url(~img/zyjd_inside.png) no-repeat;
+                    background-size: 100% 100%;
+                    position: relative;
+                    overflow: hidden;
+                    animation: myinside 3s infinite linear;
+                }
+                @keyframes myinside {
+                    from {transform: rotate(0);}
+                    to {transform: rotate(360deg);}
+                }
+                img {
+                    width: 53px;
+                    height: 52px;
+                    display: block;
+                    position: absolute;
+                    left: 2px;
+                    top: 4px;
+                    // background: yellow;
+                }
+            }
+            .right {
+                display: inline-block;
+                // margin-left: 24px;
+                margin-left: 7px;
+                height: 100%;
+                padding-top: 22px;
+                p {
+                    margin-bottom: 0;
+                    height: 20px;
+                    line-height: 16px;
+                    span {
+                        display: inline-block;
+                        // width: 210px;
+                        padding-right: 4px;
+                        font-size: 22px;
+                        color: #F9B60B;
+                        font-family: "lcd";
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                        white-space: nowrap;
+                        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#F9FF45), to(#F9B60B));
+                        -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+                        -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
+                    }
+                    i {
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #F9B60B;
+                        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#F9FF45), to(#F9B60B));
+                        -webkit-background-clip: text; /*必需加前缀 -webkit- 才支持这个text值 */
+                        -webkit-text-fill-color: transparent; /*text-fill-color会覆盖color所定义的字体颜色： */
+                    }
+                }
+                
+                span {
+                    font-size: 14px;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

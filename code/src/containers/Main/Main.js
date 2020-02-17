@@ -17,6 +17,7 @@ export default class Main extends Component {
     }
 
     componentWillMount() {
+        //测试
         this.judgeIfTocken();
         this.props.history.listen(() => {
             this.judgeIfTocken();

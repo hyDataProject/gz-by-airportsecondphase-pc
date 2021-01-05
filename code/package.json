@@ -7,7 +7,7 @@
     "antd": "^3.18.2",
     "antd-iconfont": "^3.0.3",
     "antd-mobile": "^2.2.2",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "countup": "^1.8.2",
     "d3": "^5.9.2",
     "d3-selection-multi": "^1.0.1",
